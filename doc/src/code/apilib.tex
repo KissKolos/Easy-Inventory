@@ -1,0 +1,25 @@
+\block{
+	\section{API könyvtár}
+
+	\subsection{\mt{Áttekintés}{}}
+	
+	\p{\mt{%
+		Az API könyvtárat a mobil ás az asztali alkalmazás használja ahoz, hogy kommunikáljon az API szerverrel.
+		A könyvtárban az \code{API} osztály implementálja az összes funkciót amikkel tudunk kommunikálni az API-val.
+		A használatáról található egy részletesebb leírás a saját dokumentációjában.
+	}{}}
+}
+
+\block{
+	\subsection{\mt{HTTPConnector osztály}{}}
+
+	\p{\mt{
+			A \code{HTTPConnector} egy absztrakt osztály, amelynek feladata, hogy az adott paraméterek alapján létrehozzon egy kérést,
+			majd vissza adja annak eredményét.
+			Annak érdekében, hogy az osztályt használó programok hatékonyabban irányíthassák a kéréseket a könyvtár használata közben, ez az osztály nincs beépítve.
+		}{}
+
+		\lstinputlisting{generated/apilib.httpconnector.java}
+	}
+}
+

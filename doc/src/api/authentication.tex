@@ -1,0 +1,86 @@
+\block{
+	\section{\mt{Hitelesítés}{Authentication}}
+
+	\subsection{\mt{Felhasználó bejelentkeztetése}{User login}}
+
+	\postbox {/users/\param{user}/auth}
+}
+\params {
+	\userParam
+}
+\requestHeader{
+    \token
+    
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{LoginRequest} objektum.}{The password in JSON format}
+	
+	\lstinputlisting{authentication.auth.request.json}
+}
+\responseCodes{
+	\notFound
+
+	\ok
+}
+\response{
+	\mt{Egy \struct{LoginResponse} objektum.}{Expiration time in JSON format}
+
+	\lstinputlisting{authentication.auth.response.json}
+}
+
+\block{
+	\subsection{\mt{Token megújítása}{Token renew}}
+
+	\postbox {/tokens}
+}
+\requestHeader{
+    \token
+}
+\responseCodes{
+	\ok
+
+	\notFound
+}
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{RenewResponse} objektum.}{Expiration time in JSON format}
+	
+	\lstinputlisting{authentication.renew.response.json}
+}
+
+\block{
+	\subsection{\mt{Token törlése}{Delete a token}}
+
+	\deletebox {/tokens}
+}
+\requestHeader{
+    \token
+}
+\responseCodes{
+	\notFound
+}
+
+\block{
+	\subsection{\mt{A bejelentkezett felhasználó információinak lekérése}{Retrieval of the user's information}}
+
+	\getbox {/userinfo}
+}
+\requestHeader{
+    \token
+}
+\responseCodes{
+    \unauthorized
+
+	\ok
+}
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{UserinfoResponse} objektum.}{A JSON object which contains the logged in user's data}
+	
+	\lstinputlisting{authentication.userinfo.response.json}
+}

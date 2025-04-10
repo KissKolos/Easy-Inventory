@@ -1,0 +1,75 @@
+
+\block{%
+	\section{\mt{Bevezetés}{}}
+	
+	\p{\mt{%
+		Az alkalmazás célja, hogy lehetővé tegye cégek számára, hogy bármiféle képesítés vagy különösebb hozzáértés nélkül is egyszerűen tudják kezelni a legkomplexebb nyilvántartásokat is. A program lehetővé fogja tenni, hogy különböző jogköröket csatoljunk az egyes felhasználókhoz, melyek befolyásolják, hogy a nyilvántartás mely részeit tekintheti meg és milyen műveleteket hajthat végre a programon belül az adott illető. A rendszer képes lesz nyilvántartani a telephelyeket, raktárakat és cikkeket, miközben figyelembe veszi a különböző egységek és tárolóhelyek közötti kapcsolatok kezelését is. Mindezek mellett, egyik fő szempontunk, hogy a rendszer a lehető leg helytakarékosabb módon rendezze el az adott cikkeket a raktárokon és telephelyeken belül, figyelembe véve azt is, hogy ne kerülhessenek egymás mellé olyan anyagok, amelyek reakcióba lépése károsodásokhoz vezethet.
+Az alábbiakban részletesen ismertetjük a program főbb funkcióit és kezelési lehetőségeit.
+	}{}}
+}
+
+\block{%
+	\subsection{\mt{Fogalmak}{}}
+
+	\subsubsection{Telephelyek}
+
+	\p{\mt{%
+		A telephelyek különböző telkek vagy raktárépületek, amelyek területén különböző raktárak találhatóak.
+	}{}}
+}
+
+\block{%
+	\subsubsection{Raktárak}
+	
+	\p{\mt{%
+		Raktárak a legkisseb tároló egység amikben vannak az árucikkek nyilvántartva.
+		Ezeknek meg lehet adni, hogy cikkenként mennyi fér beléjük.
+	}{}}
+}
+
+\block{%
+	\subsubsection{Műveletek}
+
+	\p{\mt{%
+			A műveletek segítségével tudunk cikkeket hozzáadni vagy éppen eltávolítani a raktárakból. Mint arra a korábbi mondat is utalt, két féle művelet létezik: a hozzáadási és az eltávolítási.
+		}{}
+	}
+}
+
+\p{\paragraph{\mt{Hozzáadási művelet}{}}
+	\mt{%
+		A hozzáadási művelet használatával különböző cikkeket tudunk felvinni egy adott raktár nyilvántartásába. Létrehozásakor lehetőségünk van különböző követelmények megadására is, mellyekkel szabályozhatjuk, hogy hová kerülnek a hozzáadásra szánt cikkek.
+	}{}
+}
+
+\p{%
+	\paragraph{\mt{Eltávolítási művelet}{}}
+	\mt{%
+		Az eltávolítási művelet segítségével lehetőségünk van cikkek kivételére a hozzájuk tartozó raktárból. Létrehozásakor a hozzáadási művelethez hasonló képpen itt is lehetőségünk van szabályozni, hogy melyik raktárból és melyik cikkek kerüljenek eltávolításra, amit meghatározhatjuk lot-, vagy akár sorozatszám megadásával is.
+	}{}
+}
+
+
+\block{%
+	\subsubsection{Lot számok}
+	
+	\p{\mt{%
+		A lot számok különböző cikk csoportok megkülönböztetésére szolgáló kódok, amelyek nagyobb nyílvántartások kezelésének esetén nélkülözhetetlenek.
+	}{}}
+}
+
+\block{%
+	\subsubsection{Globális sorozat szám}
+	
+	\p{\mt{%
+		A globális sorozatszám egy olyan szám, amelynek az egész rendszeren belül egyedinek kell lennie, még az azonos árucikkek között is.
+	}{}}
+}
+
+\block{%
+	\subsubsection{Gyártói sorozat szám}
+	
+	\p{\mt{%
+		Minden hozzáadott árucikkhez hozzárendelhetünk egy gyártói sorozatszámot. Ezeknek a számoknak nem feltétlenül kell egyedieknek lenniük, mivel ha több gyártó állítja elő az adott árucikket akkor a sorozatszámaik akár ütközhetnek is.
+	}{}}
+}

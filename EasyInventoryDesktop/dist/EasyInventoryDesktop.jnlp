@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="EasyInventoryDesktop.jnlp">
+  <information>
+    <title>EasyInventoryDesktop</title>
+    <vendor>3041TAN-06</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="EasyInventoryDesktop.jar" size="241756" download="eager" />
+    <jar href="lib\EasyInventoryAPI.jar" size="51732" download="eager" />
+    <jar href="lib\json.jar" size="78332" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="easyinventorydesktop.EasyInventoryDesktop"  name="EasyInventoryDesktop" />
+  <update check="always"/>
+</jnlp>

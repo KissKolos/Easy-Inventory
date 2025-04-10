@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="16dp"
+    android:height="16dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+  <path
+      android:pathData="m0.145,3.663c-0.158,-0.086 0,8.626 0,8.626L8.035,15.883V7.976Z"
+      android:strokeLineJoin="miter"
+      android:strokeWidth="0.15061684"
+      android:fillColor="#00000000"
+      android:strokeColor="#000000"
+      android:strokeLineCap="butt"/>
+  <path
+      android:pathData="m8.035,7.976c0,0 7.89,-4.313 7.89,-4.313 0,0 0,8.626 0,8.626 0,0 -7.89,3.594 -7.89,3.594 0,0 0,-7.907 0,-7.907z"
+      android:strokeLineJoin="miter"
+      android:strokeWidth="0.15061684"
+      android:fillColor="#00000000"
+      android:strokeColor="#000000"
+      android:strokeLineCap="butt"/>
+  <path
+      android:pathData="m0.145,3.663c0,0 7.89,-3.594 7.89,-3.594"
+      android:strokeLineJoin="miter"
+      android:strokeWidth="0.15061684"
+      android:fillColor="#00000000"
+      android:strokeColor="#000000"
+      android:strokeLineCap="butt"/>
+  <path
+      android:pathData="m15.925,3.663c0,0 -7.89,-3.594 -7.89,-3.594"
+      android:strokeLineJoin="miter"
+      android:strokeWidth="0.15061684"
+      android:fillColor="#00000000"
+      android:strokeColor="#000000"
+      android:strokeLineCap="butt"/>
+  <path
+      android:pathData="M11.035,6.168C11.011,6.147 9.239,5.286 7.098,4.255 4.957,3.224 3.144,2.232 3.143,2.225 3.143,2.218 3.541,2.046 4.086,1.853l0.951,-0.49 4.103,1.869 4.103,1.869 -0.789,1.006c-0.428,0.234 -0.495,0.42 -0.502,0.42 -0.007,0 -0.082,0.115 -0.097,0.039l-0.033,-0.171V6.682L11.506,6.251 11.98,6.682C12.714,7.212 11.076,6.203 11.035,6.168Z"
+      android:strokeWidth="0.02689587"
+      android:fillColor="#000000"/>
+  <path
+      android:pathData="M11.349,7.832 L11.305,6.286 12.207,5.791c0.496,-0.272 0.866,-0.547 0.878,-0.547 0.012,-0.001 0,0.548 0,1.272l-0,1.316 -0.789,0.575 -0.947,0.719z"
+      android:strokeWidth="0.02689587"
+      android:fillColor="#000000"/>
+</vector>

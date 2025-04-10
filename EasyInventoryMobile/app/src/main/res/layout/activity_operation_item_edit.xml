@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/app_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/edit_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg_start"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/select_type"
+                android:text="@string/operation_item_type"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <TextView
+                android:id="@+id/selected_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical" />
+
+            <ImageButton
+                android:id="@+id/select_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/tab_storages"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                app:tint="?white_black"
+                android:src="@drawable/edit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/select_storage"
+                android:text="@string/operation_item_storage"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <TextView
+                android:id="@+id/selected_storage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical" />
+
+            <ImageButton
+                android:id="@+id/select_storage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/tab_storages"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                app:tint="?white_black"
+                android:src="@drawable/edit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/lot"
+                android:text="@string/operation_item_lot"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <EditText
+                android:id="@+id/lot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:layout_editor_absoluteX="234dp"
+                tools:layout_editor_absoluteY="58dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/serial"
+                android:text="@string/operation_item_serial_enable"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <CheckBox
+                android:id="@+id/serial_enable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:minHeight="48dp"
+                tools:layout_editor_absoluteX="234dp"
+                tools:layout_editor_absoluteY="58dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/serial"
+                android:text="@string/operation_item_serial"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <EditText
+                android:id="@+id/serial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:minHeight="48dp"
+                tools:layout_editor_absoluteX="234dp"
+                tools:layout_editor_absoluteY="58dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/manufacturer_serial"
+                android:text="@string/operation_item_manufacturer_serial"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <EditText
+                android:id="@+id/manufacturer_serial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:layout_editor_absoluteX="234dp"
+                tools:layout_editor_absoluteY="58dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg_end"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/amount"
+                android:text="@string/operation_item_amount"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:minHeight="48dp"
+                tools:layout_editor_absoluteX="234dp"
+                tools:layout_editor_absoluteY="58dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

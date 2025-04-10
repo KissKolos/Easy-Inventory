@@ -1,0 +1,210 @@
+{
+    "units": [
+        {
+            "id": "pallet",
+            "name": "Raklap",
+            "deleted": null
+        },
+        {
+            "id": "small_box",
+            "name": "Kis Doboz",
+            "deleted": null
+        },
+        {
+            "id": "pallet_archived",
+            "name": "Raklap2",
+            "deleted": "1739266437"
+        }
+    ],
+    "items": [
+        {
+            "id": "carrot_box",
+            "name": "R\u00e9pa",
+            "unit_id": "small_box",
+            "deleted": null
+        },
+        {
+            "id": "potato_box",
+            "name": "Krumpli",
+            "unit_id": "small_box",
+            "deleted": "1739266437"
+        }
+    ],
+    "warehouses": [
+        {
+            "id": "WH1",
+            "name": "Warehouse 1",
+            "address": "fake street",
+            "storages": [
+                {
+                    "id": "ST1",
+                    "name": "Storage 1",
+                    "limits": [
+                        {
+                            "item_id": "carrot_box",
+                            "amount": 100
+                        }
+                    ],
+                    "item_stacks": [
+                        {
+                            "item_id": "carrot_box",
+                            "amount": 3,
+                            "lot": "",
+                            "global_serial": 0,
+                            "manufacturer_serial": null
+                        },
+                        {
+                            "item_id": "carrot_box",
+                            "amount": 20,
+                            "lot": "L00001",
+                            "global_serial": 0,
+                            "manufacturer_serial": null
+                        },
+                        {
+                            "item_id": "carrot_box",
+                            "amount": 15,
+                            "lot": "L00002",
+                            "global_serial": 0,
+                            "manufacturer_serial": null
+                        }
+                    ],
+                    "deleted": null
+                },
+                {
+                    "id": "ST2",
+                    "name": "Storage 2",
+                    "limits": [
+                        {
+                            "item_id": "carrot_box",
+                            "amount": 4
+                        }
+                    ],
+                    "item_stacks": [
+                        {
+                            "item_id": "carrot_box",
+                            "amount": 80,
+                            "lot": "L00001",
+                            "global_serial": 0,
+                            "manufacturer_serial": null
+                        },
+                        {
+                            "item_id": "carrot_box",
+                            "amount": 55,
+                            "lot": "L00002",
+                            "global_serial": 0,
+                            "manufacturer_serial": null
+                        }
+                    ],
+                    "deleted": null
+                },
+                {
+                    "id": "ST4",
+                    "name": "Storage 4",
+                    "limits": [],
+                    "item_stacks": [],
+                    "deleted": 1739266437
+                }
+            ],
+            "operations": [
+                {
+                    "id": "OP0001",
+                    "name": "Test Operation",
+                    "is_add": false,
+                    "items": [],
+                    "created": 1739278083,
+                    "commited": null
+                },
+                {
+                    "id": "OP3",
+                    "name": "OP3",
+                    "is_add": false,
+                    "items": [],
+                    "created": 1739278083,
+                    "commited": null
+                },
+                {
+                    "id": "OP2",
+                    "name": "OP2",
+                    "is_add": true,
+                    "items": [
+                        {
+                            "item_id": "carrot_box",
+                            "amount": 4,
+                            "lot": "",
+                            "global_serial": 0,
+                            "manufacturer_serial": null,
+                            "storage_id": "ST1"
+                        }
+                    ],
+                    "created": 1739433095,
+                    "commited": 1739433127
+                },
+                {
+                    "id": "OP1",
+                    "name": "OP1",
+                    "is_add": true,
+                    "items": [
+                        {
+                            "item_id": "carrot_box",
+                            "amount": 3,
+                            "lot": "",
+                            "global_serial": 0,
+                            "manufacturer_serial": null,
+                            "storage_id": "ST1"
+                        }
+                    ],
+                    "created": 1739434977,
+                    "commited": 1739434989
+                }
+            ],
+            "deleted": null
+        },
+        {
+            "id": "WH2",
+            "name": "Warehouse 2",
+            "address": "fake street3",
+            "storages": [],
+            "operations": [],
+            "deleted": "1739266438"
+        }
+    ],
+    "users": [
+        {
+            "id": "admin",
+            "name": "Admin",
+            "manager_id": null,
+            "pass_hash": "$2y$10$XQdplsHHMEW9V3omZW8zEO82osbnxruGXbSoc5Zg3zpi4MBdQOISO",
+            "system_authorizations": [],
+            "local_authorizations": [
+                {
+                    "warehouse_id": "WH1",
+                    "authorization": "view"
+                }
+            ]
+        },
+        {
+            "id": "janos1990",
+            "name": "J\u00e1nos",
+            "manager_id": "admin",
+            "pass_hash": "$2y$10$XQdplsHHMEW9V3omZW8zEO82osbnxruGXbSoc5Zg3zpi4MBdQOISO",
+            "system_authorizations": [
+                "view_warehouses",
+                "delete_warehouses"
+            ],
+            "local_authorizations": [
+                {
+                    "warehouse_id": "WH1",
+                    "authorization": "view"
+                },
+                {
+                    "warehouse_id": "WH1",
+                    "authorization": "create_add_operation"
+                },
+                {
+                    "warehouse_id": "WH1",
+                    "authorization": "create_remove_operation"
+                }
+            ]
+        }
+    ]
+}

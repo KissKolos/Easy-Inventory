@@ -1,0 +1,69 @@
+\block{
+	\section{\mt{Limit}{Limit}}
+
+	\subsection{\mt{Raktár limit}{Limit of storage}}
+
+	\getbox {/warehouses/\param{warehouse}/storages/\param{storage}/limits?\allowbreak q=\param{q}\&offset=\param{offset}\&limit=\param{limit}}
+}
+\params {
+	\storageParam
+
+	\paginatorParam
+}
+\requestHeader{
+    \token
+}
+\listCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{StorageLimit} objektum lista.}{A JSON object where the key is the id of the item and it's value is the limit}
+
+	\lstinputlisting{limits.list.response.json}
+}
+
+\block{
+	\subsection{\mt{Raktár limitjének módosítása}{Modifying the limits of the storage}}
+
+	\putbox {/warehouses/\param{warehouse}/storages/\param{storage}/\param{item}}
+}
+\params {
+	\storageParam
+
+	\itemParam
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{StorageLimitPutRequest} objektum.}{The limit of the item type}
+	
+	\lstinputlisting{limits.put.request.json}
+}
+\putCodes
+
+\block{
+	\subsection{\mt{Raktár kapacitás}{Capacity of storage}}
+
+	\getbox {/warehouses/\param{warehouse}/storages/\param{storage}/capacity?\allowbreak q=\param{q}\&offset=\param{offset}\&limit=\param{limit}}
+}
+\params {
+	\storageParam
+
+	\paginatorParam
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{StorageCapacity} objektum lista.}{A JSON object where the key is the id of the item and it's value is the available space}
+	
+	\lstinputlisting{capacity.response.json}
+}

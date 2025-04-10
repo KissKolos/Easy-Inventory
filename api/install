@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#=========================#
+#linux mint install script#
+#=========================#
+
+sudo apt install mariadb-server php php-mysqli
+sudo sed -i 's/# port = 3306/port = 3306/' /etc/mysql/mariadb.cnf
+
+sudo mysql -u root -e "create user 'user'@'localhost';"
+sudo mysql -u root -e "grant all privileges on *.* to 'user'@'localhost';"
+

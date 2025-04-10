@@ -1,0 +1,184 @@
+
+\usepackage{lipsum}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{pdflscape}
+\usepackage{arydshln}
+\usepackage{setspace}
+\setstretch{1.5}
+
+\usepackage{geometry}
+\usepackage{svg}
+\usepackage{graphicx}
+\graphicspath{{./}} 
+\usepackage{listings}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=15mm,
+	right=20mm,
+	bottom=15mm,
+	top=20mm
+}
+
+\newcolumntype{L}[1]{>{\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage{sectsty}
+
+\renewcommand{\normalsize}{\fontsize{12pt}{12pt}\selectfont}
+\sectionfont{\fontsize{24}{24}\selectfont}
+\subsectionfont{\fontsize{20}{20}\selectfont}
+\subsubsectionfont{\fontsize{16}{16}\selectfont}
+
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[C]{\thepage}
+
+\usepackage{color}
+\definecolor{darkred}{rgb}{0.4,0.0,0.0}
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+\definecolor{darkgray}{rgb}{0.4,0.4,0.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  sensitive=true
+}
+\lstset{
+	language=JavaScript,
+	backgroundcolor=\color{lightgray},
+	extendedchars=true,
+	basicstyle=\setstretch{1.0}\normalsize\ttfamily,
+	showstringspaces=false,
+	showspaces=false,
+	numbers=none,
+	numberstyle=\normalsize,
+	numbersep=9pt,
+	tabsize=2,
+	breaklines=true,
+	showtabs=false,
+	captionpos=b
+}
+
+\newcommand{\cli}[1]{
+	\begin{tcolorbox}[title=,colback=lightgray,colframe=black,left=0pt,right=0pt,top=1pt,bottom=1pt,boxsep=0mm,arc=0mm,boxrule=0pt,nobeforeafter, after={\par\smallskip}]
+		\normalsize\ttfamily{#1}
+	\end{tcolorbox}
+}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\newcommand{\langhu}{1}
+\newcommand{\langen}{2}
+
+\newcommand{\doclang}{\langhu}
+
+\newcommand{\mt}[2]{
+	\ifcase\doclang
+	\or
+	{#1}
+	\or
+	{#2}
+	\else
+		\doclang
+	\fi
+}
+
+\renewcommand*\contentsname{Tartalom}
+\renewcommand{\chaptername}{Fejezet}
+
+
+\newcommand{\sidebar}{
+	{\hspace{-4pt}\color{gray}\vrule width 5pt}
+}
+
+\newcommand{\ssubsection}[1]{
+	{\color{white}\vrule width 30pt}
+	\subsection{#1}
+	{\color{gray}\hrule height 5pt}
+	{\color{white}\vrule width 15pt}
+}
+
+\newcommand{\p}[1]{
+    %\noindent\begin{tcolorbox}[title=,colback=lightgray,left=0pt,right=0pt,top=0pt,bottom=0pt,boxsep=0pt,arc=0mm,boxrule=0pt,nobeforeafter,sharp corners=all]
+	\noindent\sidebar
+	\noindent\begin{minipage}[t]{\dimexpr(\textwidth-15pt)}
+		\vspace{5pt}
+		\fontsize{16pt}{16pt}\selectfont
+		#1
+		\vspace{15pt}
+	\end{minipage}%
+    %\end{tcolorbox}\\
+}
+
+\newcommand{\warning}[1]{
+	{\color{white}\hrule height 15pt}
+	\begin{tcolorbox}[title=\textbf\mt{Fontos!}{},colback=lightgray,colframe=darkred,left=0pt,right=0pt,top=1pt,bottom=1pt,boxsep=5pt,arc=0mm,boxrule=5pt,nobeforeafter,sharp corners=all]
+		\ttfamily\textbf{#1}
+	\end{tcolorbox}
+	{\color{white}\hrule height 15pt}
+}
+
+
+\titleformat{\chapter}[display]
+	{}{}{0pt}{\fontsize{48pt}{48pt}\selectfont\vfil\begin{center}\title\bfseries}[\end{center}\vfil\newpage]
+
+\let\oldsection\section
+\renewcommand{\section}[1]{
+	\begin{center}
+		\item\oldsection{#1}
+	\end{center}
+}
+
+\let\oldsubsection\subsection
+\renewcommand{\subsection}[1]{
+	{\color{white}\hrule height 20pt}
+	\oldsubsection{#1}
+	{\color{gray}\hrule height 5pt}
+}
+
+\let\oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}[1]{
+	{\color{white}\hrule height 5pt}
+	\oldsubsubsection{#1}
+	{\color{white}\hrule height 5pt}
+}
+
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{
+	\oldparagraph{#1}\mbox{}\\
+}
+
+\newcommand{\block}[1]{
+	\noindent\begin{minipage}[t]{\textwidth}
+		#1
+	\end{minipage}
+}
+
+\newcommand{\code}[1]{
+	{\ttfamily #1}
+}
+
+\setlength{\lineskip}{0pt}
+
+\raggedbottom

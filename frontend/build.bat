@@ -1,0 +1,1 @@
+type html\head.html html\loginview_tmpl.html html\tabview_tmpl.html html\warehouses_tmpl.html html\storages_tmpl.html html\profile_tmpl.html html\operations_tmpl.html html\list_tmpl.html html\search_tmpl.html html\users_tmpl.html html\items_tmpl.html html\units_tmpl.html html\statistics_tmpl.html html\tail.html > index.html

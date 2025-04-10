@@ -1,0 +1,20 @@
+.authorization-list {
+    flex-direction: column;
+}
+
+.authorization-list>div {
+    display: flex;
+}
+
+.authorization-name {
+    flex-grow: 1;
+}
+
+.authorization-revoke,.granted .authorization-grant,.authorization-list .spin,
+.loading .authorization-revoke, .loading .authorization-grant {
+    display: none;
+}
+
+.granted:not(.loading) .authorization-revoke,.authorization-list .loading .spin {
+    display: block;
+}

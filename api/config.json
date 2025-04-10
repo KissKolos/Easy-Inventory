@@ -1,0 +1,37 @@
+{
+    "database":{
+        "host":"localhost",
+        "user":"root",
+        "password":"",
+        "database_name":"easyinventory",
+        "port":3306
+    },
+    "token_expiration":120,
+    "test_token":"tester",
+    "logging":{
+        "success":{
+            "request_body":true,
+            "response_body":true,
+            "debug":true,
+            "error":true
+        },
+        "bad":{
+            "request_body":true,
+            "response_body":true,
+            "debug":true,
+            "error":true
+        },
+        "rejected":{
+            "request_body":true,
+            "response_body":true,
+            "debug":true,
+            "error":true
+        },
+        "error":{
+            "request_body":true,
+            "response_body":true,
+            "debug":true,
+            "error":true
+        }
+    }
+}

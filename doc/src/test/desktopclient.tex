@@ -1,0 +1,103 @@
+\lstset{language=Java}
+
+\block{%
+	\section{\mt{Asztali alkalmazás}{}}
+
+	\subsection{\mt{Áttekintés}{}}
+	
+	\p{\mt{%
+		Az asztali alkalmazás a TestNG tesztelési keretrendszert használja.
+	}{}}
+}
+
+\block{%
+	\subsection{\mt{E2E tesztek}{}}
+	
+	\p{\mt{%
+		Az asztali alkalmazás tesztelése olyan E2E teszteket történik, amelyek felhasználói interakciókat szimulálnak és megjelenített szövegeket ellenőriznek. A felhasználói felület elemeinek tesztelhetősége érdekében az elemek CSS
+osztályokkal vannak ellátva. A tesztek egy része képernyőképeket készít a dokumentációhoz.
+	}{}}
+}
+
+\block{%
+	\subsection{\mt{NodeMatcher osztály}{}}
+	
+	\p{\mt{%
+			A \code{NodeMatcher} osztály feladata a felhasználói felület elemeinek kiválasztása és az interakció szimulálása a kiválasztott elemekkel.	
+		}{}
+
+		\lstinputlisting{generated/desktop.nodematcher.java}
+	}
+}
+
+\block{%
+	\subsubsection{allWindowRoots}
+
+	\p{\mt{%
+			Az \code{allWindowRoots} funkció létrehoz egy \code{NodeMatcher} objektumot amiben minden ablak gyökér eleme ki van választva.
+		}{}
+	}
+}
+
+
+\block{%
+	\subsubsection{descendants}
+
+	\p{\mt{%
+			A \code{descendants} metódus létrehoz egy \code{NodeMatcher} objektumot amiben azok az elemek vannak kijelölve amik legalább egy kijelölt elem leszármazottja.
+		}{}
+	}
+}
+
+\block{%
+	\subsubsection{with}
+
+	\p{\mt{%
+			A \code{with} metódus bekér egy lambda függvényt, amellyel egy \code{NodeMatcher} objektumot egy másik \code{NodeMatcher} objektummá alakít át.
+			Erre a folyamatra azért van szükség, hogy a metódus le tudja szűrni a kijelölt elemeket és elérni, hogy csak olyan kiválasztást adjon vissza, amelyben legalább egy elem található.
+			A függvény bemenete minden estben egy olyan kijelölés, amiben megtalálható az az elem, amit éppen szűr.
+			A leszűrés végén a metódus a kijelölést egy új \code{NodeMatcher} objektum formájában kiadja.
+			Ez például arra használható ha csak azokat az elemeket akarjuk amikben van egy bizonyos címke.
+		}{}
+	}
+}
+
+\block{%
+	\subsubsection{withClass}
+
+	\p{\mt{%
+			A \code{withClass} metódus egy olyan \code{NodeMatcher} objektumot hoz létre, amelyben csak azok az elemek vannak kiválasztva, amellyek el vannak látva a megadott CSS stílussal.
+		}{}
+	}
+}
+
+\block{%
+	\subsubsection{click}
+
+	\p{\mt{%
+			A \code{click} metódus kattintást szimulál a kiválasztott gombon.
+			Ha nem gomb van kiválasztva vagy nem egy elem van kiválasztva akkor hibát dob.
+		}{}
+	}
+}
+
+\block{%
+	\subsubsection{replaceText}
+
+	\p{\mt{%
+			A \code{replaceText} metódus szöveg beírását szimulálja a kiválasztott bemenetí mezőn.
+			Ha nem bemeneti mező van kiválasztva vagy nem egy elem van kiválasztva akkor hibát dob.
+		}{}
+	}
+}
+
+\block{%
+	\subsubsection{screenshotWindow}
+
+	\p{\mt{%
+			A \code{screenshotWindow} metódus a kijelölt elem ablakáról készít egy képernyőképet és a megadott névvel elmenti.
+			Ha egy elem van kiválasztva akkor hibát dob.
+		}{}
+	}
+}
+

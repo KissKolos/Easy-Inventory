@@ -1,0 +1,10 @@
+digraph G {
+	rankdir=BT;
+	edge[arrowhead=onormal]
+	BaseListActivity->PaginatedListActivity
+	StorageLimitActivity->PaginatedListActivity
+	StorageListActivity->BaseListActivity
+	UnitListActivity->BaseListActivity
+	UserListActivity->BaseListActivity
+	WarehouseListActivity->BaseListActivity
+}

@@ -1,0 +1,22 @@
+\block{
+	\section{\mt{Keresés}{Search}}
+
+	\subsection{\mt{Keresés}{Search}}
+
+	\getbox {/search?\allowbreak q=\param{q}\&warehouse=\param{qwarehouse}\&storage=\param{qstorage}\&\allowbreak lot=\param{lot}\&serial=\param{serial}}
+}
+\params {
+	\searchParam
+}
+\requestHeader{
+    \token
+}
+\listCodes
+\responseHeader{
+	\contentJson
+}
+\response{
+	\mt{Egy \struct{ItemStack} objektum lista.}{A JSON array which contains the items as objects}
+
+	\lstinputlisting{search.response.json}
+}

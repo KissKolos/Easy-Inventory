@@ -1,0 +1,17 @@
+digraph G {
+	rankdir=BT;
+	edge[arrowhead=onormal]
+	LocalEditableView->EditableView->CardView->BasicView
+	UnitView->EditableView
+	ItemView->EditableView
+	WarehouseView->EditableView
+	UserView->EditableView
+	StorageView->LocalEditableView
+	OperationView->LocalEditableView
+	SelectView->BasicView
+	UnitSelectView->SelectView
+	ItemSelectView->SelectView
+	WarehouseSelectView->SelectView
+	StorageSelectView->SelectView
+	UserSelectView->SelectView
+}

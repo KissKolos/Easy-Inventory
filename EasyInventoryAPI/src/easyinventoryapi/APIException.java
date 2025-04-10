@@ -1,0 +1,21 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package easyinventoryapi;
+
+/**
+ *
+ * @author 3041TAN-06
+ */
+public class APIException extends Exception {
+    
+    public final int code;
+    
+    public APIException(int code) {
+        super("Got unexpected response code: "+code);
+        this.code=code;
+    }
+    
+}

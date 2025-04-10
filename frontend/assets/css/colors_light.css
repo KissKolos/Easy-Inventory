@@ -1,0 +1,264 @@
+:root
+{
+    --base-color : 200;
+    --hover-multiplier: 1.1;
+    --border-bright-multiplier: 1.3;
+    --border-dark-multiplier: 0.85;
+    --blue-value: 5;
+
+    --purple-color: rgb(106,106,168);
+    --darker-background: rgb(212,210,216);
+}
+
+body {
+    color: rgb(17,17,17);
+}
+
+.box {
+    background-color: var(--darker-background);
+    border: 1px solid var(--purple-color);
+}
+
+hr {
+    border: 1px solid var(--purple-color);
+}
+
+.panel {
+    background-color: var(--darker-background);
+}
+
+.background {
+    background-color: rgb(227,225,231);
+}
+
+table, td, th {  
+    border: 1px solid var(--purple-color);
+  }
+
+thead
+{
+  border: 3px solid var(--purple-color);
+}
+
+
+.button:hover {
+    border-color: black;
+}
+
+select,button 
+{
+    color: black;
+    background-color: rgb(
+        calc(var(--base-color)),
+        calc(var(--base-color)),
+        calc(var(--base-color) + var(--blue-value))
+    );
+    border-bottom: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) + var(--blue-value))
+    );
+    border-right: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) + var(--blue-value))
+    );
+    border-left: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) + var(--blue-value))
+    );
+    border-top: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) + var(--blue-value))
+    );
+}
+
+select:hover,button:hover
+{
+    color: black;
+    background-color: rgb(
+        calc(var(--base-color) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-bottom: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-right: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-left: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-top: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+}
+
+select:active,button:active
+{
+    color: black;
+    background-color: rgb(
+        calc(var(--base-color)),
+        calc(var(--base-color)),
+        calc(var(--base-color) + var(--blue-value))
+    );
+    border-top: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) + var(--blue-value))
+    );
+    border-left: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) + var(--blue-value))
+    );
+    border-right: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) + var(--blue-value))
+    );
+    border-bottom: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) + var(--blue-value))
+    );
+}
+
+input{
+    color: black;
+    background-color: rgb(
+        calc(var(--base-color)),
+        calc(var(--base-color)),
+        calc(var(--base-color) + var(--blue-value))
+    );
+    border-top: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) + var(--blue-value))
+    );
+    border-left: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) + var(--blue-value))
+    );
+    border-right: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) + var(--blue-value))
+    );
+    border-bottom: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) + var(--blue-value))
+    );
+}
+input:hover{
+    color: black;
+    background-color: rgb(
+        calc(var(--base-color) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-top: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-left: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-right: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-bottom: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+}
+input:active{
+    color: black;
+    background-color: rgb(
+        calc(var(--base-color) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-top: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-left: 2px solid rgb(
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-dark-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-right: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+    border-bottom: 2px solid rgb(
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier)),
+        calc(var(--base-color) * var(--border-bright-multiplier) * var(--hover-multiplier) + var(--blue-value))
+    );
+}
+
+input:disabled{
+    background-color: rgb(
+        calc(var(--base-color) * 0.8),
+        calc(var(--base-color) * 0.8),
+        calc(var(--base-color) * 0.8 + var(--blue-value))
+    );
+}
+
+input:invalid {
+    background: rgb(255, 121, 121) !important;
+    border-color: #dd0000 !important;
+}
+
+.card-labels>.id,.select-labels>.id {
+    color: gray;
+}
+
+.search-view tr,.search-view td,.search-view th {
+    border: 1px solid black;
+}
+
+.popup-shadow {
+    background-color: #00000055;
+}
+
+.tab-header::-webkit-scrollbar {
+    border: 3px solid var(--darker-background);
+  }
+
+  .graph-inner {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.tab-header::-webkit-scrollbar {
+    background-color: var(--purple-color);
+  }
+
+  .tab-header .selected {
+    border-bottom: 1px solid var(--purple-color);
+    color: var(--purple-color);
+}

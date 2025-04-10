@@ -1,0 +1,110 @@
+.login-view {
+    height: 100%;
+    position: relative;
+}
+
+.login-view>* {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.login-view:not(.failed) .login-fail {
+    display:none;
+}
+
+.login-view:not(.logged-in) {
+    justify-content: center;
+}
+
+.login-view>.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-view>.login-page .login-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.login-view>.login-page .login-form>input {
+    margin: 5px;
+}
+
+.login-view:not(.logged-in)>.logged-in-page, .login-view.logged-in>.login-page {
+    display: none;
+}
+
+.login-view>.logged-in-page {
+    display: flex;
+    flex-direction: column;
+}
+.login-view>.logged-in-page, .login-view>.logged-in-page>.login-content {
+    flex-grow: 1;
+}
+.login-view>.logged-in-page>.login-content {
+    position: relative;
+    min-height: 0;
+}
+
+.login-view>.logged-in-page>.login-content>* {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.login-view>.login-page .login-spinner {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.login-view.loading>.login-page .login-spinner {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.login-view.loading>.login-page .login-form {
+    opacity: 0;
+}
+
+.login-user-info {
+    display: flex;
+    justify-content: end;
+}
+
+.logout-button {
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    filter: invert(.5) sepia(10.5) hue-rotate(310deg) saturate(9.5);
+}
+
+.logout-button:active {
+    opacity: .8;
+}
+
+.login-theme {
+    position: absolute;
+    width: auto;
+    right: 0;
+    top: 0;
+    height: auto;
+    left: auto;
+    bottom: auto;
+}
+
+.login-view.logged-in>.login-theme {
+    display: none;
+}

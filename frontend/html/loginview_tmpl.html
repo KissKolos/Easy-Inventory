@@ -1,0 +1,38 @@
+<template id="login-template">
+    <div class="login-view background">
+        <div class="login-theme">
+            <img class="light-theme1 theme-button" src="assets/sun.svg" tabindex="0">
+            <img class="dark-theme1 theme-button" src="assets/moon.svg" tabindex="0">
+        </div>
+        <div class="login-page fill">
+            <div class="box">
+                <div class="relative">
+                    <div class="login-form">
+                        <span class="localize">login.name</span>
+                        <input class="username" minlength="1" required>
+                        <span class="localize">login.password</span>
+                        <input type="password" class="password">
+                        <span class="localize login-fail">login.fail</span>
+                        <span class="localize">localization.choice</span>
+                        <select class="localization"></select>
+                        <button class="login-button localize">login.button</button>
+                    </div>
+                    <div class="login-spinner fill">
+                        <img class="spin" src="assets/spinner.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logged-in-page fill">
+            <div class="login-user-info panel">
+                <img class="light-theme theme-button" src="assets/sun.svg" tabindex="0">
+                <img class="dark-theme theme-button" src="assets/moon.svg" tabindex="0">
+                <span class="login-name"></span>
+                <img class="logout-button" src="assets/exit.svg" tabindex="0">
+            </div>
+            <div class="login-content">
+
+            </div>
+        </div>
+    </div>
+</template>

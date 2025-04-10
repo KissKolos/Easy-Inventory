@@ -1,0 +1,221 @@
+\newpage
+\block{
+    \section{Adminisztráció}
+
+    \subsection{\mt{Arhivált adatok törlése}{}}
+
+    \warning{\mt{%
+	    Az arhivált adatok törlése visszafordíthatatlan!
+	    Ezek az adatok adják a statisztikákat.
+	    Régi adatok törlésével az akkori statisztika is törlődik.
+    }{}}
+}
+
+\p{\mt{%
+		Az arhivált adatok törlése hasznos lehet ha az adatbázis mérete már túl nagy.
+		Az összes adat törlésére az alábbi parancsot kell futtatni
+	}{}
+	
+	\cli{php archive delete all}
+	
+	\mt{%
+		Általában nem akarjuk az összes arhivált adatot törölni.
+		Ehez meg kell adni hány évnyi,heti vagy napi adatot akarunk megtartani az időegység jelével.
+	}{}
+	\begin{description}
+		\item[d] \mt{nap}{}
+		\item[w] \mt{hét}{}
+		\item[y] \mt{év}{}
+	\end{description}
+	\mt{%
+		Például: ez a parancs kitöli az összes arhivált adatot ami 5 évnél régebben lett törölve.
+	}{}
+
+	\cli{php archive delete 5y}
+}
+
+\block{
+    \subsection{Eseménynapló kezelése}
+
+    \p{\mt{%
+	    Az eseménynapló sok hasznos információt tárol a szerver működéséről.
+	    Ezekhez az információk segíthetnek a hibás beállítások javításán.
+	    Az eseménynaplót a parancssoron keresztül kezelhetjük.
+    }{}}
+}
+
+\block{
+    \subsubsection{\mt{Eseménynapló megtekintése}{}}
+
+    \p{\mt{%
+		    Az eseménynapló megjelenítésére van a \code{log show} parancs.
+			Ha nem adunk meg semmilyen kapcsolót akkor az összes adatot rövid formában írja ki.
+	    }{}
+	    
+	    \cli{php log show}
+    }
+}
+
+\p{\paragraph{-u,--user \mt{kapcsoló}{}}
+	Ezzel megadhatjuk a felhasználói azonosítót amihez tartozó eseményeket akarjuk megtekinteni.
+}
+
+\p{\paragraph{-e, --error \mt{kapcsoló}{}}
+	Szerverhibát okozó kéréseketre szűri le az eseményeket.
+	Ezek lehetnek adatbázis kapcsolódási hibák.
+}
+
+\p{\paragraph{-r, --rejected \mt{kapcsoló}{}}
+	Elutasított kérésekre szűri le az eseményeket.
+}
+
+\p{\paragraph{-b, --bad \mt{kapcsoló}{}}
+	Hibás kérésekre szűri le az eseményeket.
+}
+
+\p{\paragraph{-s, --success \mt{kapcsoló}{}}
+	Sikeres kérésekre szűri le az eseményeket.
+}
+
+\p{\paragraph{-v, --verbose \mt{kapcsoló}{}}
+	Az eredményeket hosszú formában jeleníti meg.
+}
+
+\p{\paragraph{\mt{Pédák}{}}
+	\mt{Megmutatja az összes kérést amit az \code{admin} felhasználó végzett}{}
+	
+	\cli{php log -u admin show}
+	
+	\mt{Megmutatja az összes szerverhibát és elutasított kérést}{}
+	
+	\cli{php log -er show}
+	
+	\mt{Megmutatja az összes szerverhibát részletesen}{}
+	
+	\cli{php log -ev show}
+}
+
+\block{
+    \subsubsection{\mt{Egy esemény megtekintése}{}}
+
+    \p{\mt{%
+			Ha csak egy kérést akarunk megtekinteni akkor a kérés sorszámának megadásával tudjuk.
+			Ehez a kéréshez nincsenek kapcsolók.
+		}{}
+		
+		\cli{php log show 100}
+	}
+}
+
+\block{
+    \subsubsection{\mt{Eseménynapló törlése}{}}
+
+    \p{\mt{%
+		    Ez a parancs törli a teljes eseménynapló tartalmát:
+	    }{}
+	    
+	    \cli{php log clear}
+    }
+}
+
+\p{\mt{%
+		Általában nem akarjuk az összes eseményt törölni.
+		Ehez meg kell adni hány évnyi,heti vagy napi adatot akarunk megtartani az időegység jelével.
+	}{}
+	\begin{description}
+		\item[d] \mt{nap}{}
+		\item[w] \mt{hét}{}
+		\item[y] \mt{év}{}
+	\end{description}
+	\mt{%
+		Például: ez a parancs kitöli az összes eseményt ami 5 napnál régebbi.
+	}{}
+	\cli{php log clear 5d}
+}
+
+\block{
+    \subsection{\mt{Felhasználó kezelés}{}}
+
+    \p{\mt{%
+	    A parancssorról a felhasználóknak új jelszót tudunk adni, felhasználókat tudunk törölni és új adminisztrátorokat létrehozni.
+    }{}}
+}
+
+\block{
+    \subsubsection{\mt{Adminisztrátor létrehozása}{}}
+
+    \p{\mt{%
+		    Új adminisztrátor létrehozásához meg kell adnunk az azonosítóját, a nevét és a jelszavát
+	    }{}
+	    
+	    \cli{php user create admin Admin password123}
+    }
+}
+
+\block{
+    \subsubsection{\mt{Felhasználó törlése}{}}
+
+    \p{\mt{%
+		    Felhasználó törléséhez meg kell adnunk az azonosítóját.
+		    Ez a művelet sikertelen ha az adott felhasználó más felhasználók főnöke.
+	    }{}
+	    
+	    \cli{php user delete admin}
+    }
+}
+
+\block{
+    \subsubsection{\mt{Új jelszó adása}{}}
+
+    \p{\mt{%
+		    Az új jelszó adáshoz meh kell adni a felhasználó azonosítóját és az új jelszót.
+	    }{}
+	    
+	    \cli{php user password admin password123}
+    }
+}
+
+\block{
+    \subsection{\mt{Engedélyek}{}}
+
+    \p{\mt{%
+	    Két féle engedély típus van: a rendszer és a helyi.
+	    A rendszer engedélyek az egész rendszerre vonatkoznak.
+	    Azaz ha egy felhasználó egy ilyen engedélyt kap akkor az minden telephelyen érvényes, de a rendszer engedélyek között rendszer adminisztrációval kapcsolatosak engedélyek is vannak.
+	    A helyi engedélyek telephelyhez vannak kötve.
+	    Azaz ha egy felhasználó egy ilyen engedélyt kap akkor csak az adott telephelyen érvényes.
+    }{}}
+}
+
+\block{%
+	\subsubsection{\mt{Rendszer engedélyek}{}}
+
+	\p{%
+		\begin{itemize}
+			\item \mt{Telephelyek megtekintése}{}
+			\item \mt{Telephelyek hozzáadása}{}
+			\item \mt{Telephelyek módosítása}{}
+			\item \mt{Telephelyek törlése}{}
+			\item \mt{Típusok hozzáadása}{}
+			\item \mt{Típusok módosítása}{}
+			\item \mt{Típusok törlése}{}
+			\item \mt{Felhasználók megtekintése}{}
+			\item \mt{Felhasználók hozzáadása}{}
+			\item \mt{Felhasználók módosítása}{}
+			\item \mt{Felhasználók törlése}{}
+		\end{itemize}
+	}
+}
+
+\block{%
+	\subsubsection{\mt{Helyi engedélyek}{}}
+
+	\p{%
+		\begin{itemize}
+			\item \mt{Raktárak kezelése}{}
+			\item \mt{Hozzáadó művelet létrehozása}{}
+			\item \mt{Eltávolító művelet létrehozása}{}
+			\item \mt{Műveletek visszaigazolása}{}
+		\end{itemize}
+	}
+}

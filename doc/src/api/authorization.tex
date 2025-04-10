@@ -1,0 +1,131 @@
+
+\newcommand{\authorizationParam}{\apiinlineitem{authorization}{\mt{Az engedély azonosítója}{Identifier of the unit}}}
+
+\block{
+	\section{\mt{Jogosultságok}{Authorizations}}
+
+	\subsection{\mt{Rendszer engedélyek lekérése}{Retrieval of authoizations}}
+
+	\getbox {/users/\param{user}/authorizations/system}
+}
+\params {
+	\userParam
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{A megadott rendszer engedélyek azonosítójainak listája.}{A JSON object where the local and system authorizations are separated and put in an array.}
+	
+	\lstinputlisting{authorization.system.response.json}
+}
+
+\block{
+	\subsection{\mt{Helyi engedélyek lekérése}{Retrieval of authoizations}}
+
+	\getbox {/users/\param{user}/authorizations/local/\param{warehouse}}
+}
+\params {
+	\userParam
+
+	\warehouseParam
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{A megadott helyi engedélyek azonosítójainak listája.}{A JSON object where the local and system authorizations are separated and put in an array.}
+	
+	\lstinputlisting{authorization.local.response.json}
+}
+
+\block{
+	\subsection{\mt{Helyi engedély megadása}{Giving a local authorization}}
+
+	\putbox {/users/\param{user}/authorizations/local/\param{warehouse}/\allowbreak \param{authorization}}
+}
+\params {
+	\userParam
+
+	\warehouseParam
+
+	\authorizationParam
+}
+\requestHeader{
+    \token
+}
+\responseCodes{
+    \unauthorized
+
+	\forbidden
+
+	\notFound
+
+	\granted
+}
+
+\block{
+	\subsection{\mt{Helyi engedély törlése}{Delete a local authorization}}
+
+	\deletebox {/users/\param{user}/authorizations/local/\param{warehouse}/\allowbreak \param{authorization}}
+}
+\params {
+	\userParam
+
+	\warehouseParam
+
+	\authorizationParam
+}
+
+\requestHeader{
+    \token
+}
+\deleteCodes
+
+\block{
+	\subsection{\mt{Rendszer engedély megadása}{Giving a system authorization}}
+
+	\putbox {/users/\param{user}/authorizations/system/\param{authorization}}
+}
+\params {
+	\userParam
+
+	\authorizationParam
+}
+\requestHeader{
+    \token
+}
+\responseCodes{
+    \unauthorized
+
+	\forbidden
+
+	\notFound
+
+	\granted
+}
+
+\block{
+	\subsection{\mt{Rendszer engedély törlése}{Delete a system authorization}}
+
+	\deletebox {/users/\param{user}/authorizations/system/\param{authorization}}
+}
+\params {
+	\userParam
+
+	\authorizationParam
+}
+
+\requestHeader{
+    \token
+}
+\deleteCodes
+

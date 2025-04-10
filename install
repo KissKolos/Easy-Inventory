@@ -1,0 +1,26 @@
+#!/bin/sh
+
+#=========================#
+#linux mint install script#
+#=========================#
+
+sudo apt install apache2 libapache2-mod-php mariadb-server php php-mysqli
+sudo sed -i 's/# port = 3306/port = 3306/' /etc/mysql/mariadb.cnf
+
+sudo mysql -u root -e "create user 'user'@'localhost';"
+sudo mysql -u root -e "grant all privileges on *.* to 'user'@'localhost';"
+
+sudo echo "<Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+</Directory>">>/etc/apache2/apache2.conf
+
+sudo a2enmod php8.3
+sudo a2enmod rewrite
+sudo service apache2 reload
+
+sudo cp -r api /var/www/html/
+sudo cp -r frontend/assets /var/www/html/
+sudo cp frontend/index.html /var/www/html/
+sudo chown -R www-data: /var/www/html/

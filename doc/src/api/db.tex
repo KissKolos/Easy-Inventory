@@ -1,0 +1,45 @@
+\block{
+	\section{\mt{Biztonsági mentés}{Units}}
+
+	\subsection{\mt{Mentés készítése}{Retrieval of units}}
+
+	\getbox{/db}
+}
+\requestHeader{
+    \token
+}
+\listCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{DB} objektum.}{A JSON object where the key is the identifier of the unit and it's value is each unit's properties.}
+	
+	\lstinputlisting{db.example.json}
+}
+
+\block{
+	\subsection{\mt{Mentés visszaállítása}{Changing the identifier of the unit}}
+
+	\putbox {/db}
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{DB} objektum.}{Changes the identifier of the unit.}
+
+	\lstinputlisting{db.example.json}
+}
+\responseCodes{
+	\forbidden
+	
+	\unauthorized
+	
+	\badRequest
+	
+	\modified
+}
+

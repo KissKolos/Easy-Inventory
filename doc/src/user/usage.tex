@@ -1,0 +1,337 @@
+
+\newpage
+\section{Használat}
+
+\block{
+	\subsection{Bejelentkezés}
+
+	\p{\mt{%
+		A program indításakor először a bejelentkező felületre fogad minket, ahol meg kell adni a felhasználónevet, a API szerver url -jét, a jelszót és nyelvet a bejelentkezéshez.
+		Miután kitöltöttük az adatokat, a Bejelentkezés vagy Login gombra kattintva, amennyiben a megadott adatok helyesek, továbbjutunk a kezelőfelületre.
+		A lap bal felső sarkában láthatjuk az alkalmazást használó személy nevét, illetve a mellette található gombal ki is jelentkezhetünk a programból. 
+		A lap tetején elhelyezkedő menüelemek segítségével választhatjuk ki, hogy az adatbázis melyik részét szeretnénk megtekinteni vagy módosítani. 
+		}{}
+
+		\ui{login.png}
+	}
+}
+
+\block{
+	\subsection{Felhasználó kezelés}
+
+	\p{\mt{%
+		A Felhasználók menüpont segítségével megtekinthetjük az összes felhasználót, aki hozzáféréssel rendelkezik az alkalmazáshoz.
+		Minden felhasználó mellett két gomb található, amelyek segítségével: 
+		Módosíthatjuk a felhasználó adatait (név, felhasználónév, jogosultságok, jelszó) 
+		Törölhetjük a felhasználót 
+		A lap alján található gombokkal: 
+		Frissíthetjük az oldalt 
+		Új felhasználót regisztrálhatunk.
+		}{}
+
+		\ui{user.list.png}
+	}
+}
+
+\block{
+	\subsubsection{Felhasználó hozzáadás}
+
+	\p{\mt{%
+		Felhasználó hazzáadásához a \add gombra kell kattintani.
+		Ezután megjelenik egy bemeneti ablak, ami kitöltése után a \tick gombra nyomhatunk a mentéshez.
+		}{}
+
+		\ui{user.add.png}
+	}
+}
+
+\block{
+	\subsubsection{Felhasználó módosítás}
+
+	\p{\mt{%
+		A felhasználó adatait a \edit gombra való kattintással módosíthatjuk.
+		Ezután a megjelent adatlap ki lesz töltve a mentett értékekkel.
+		A módosítás után a \tick gombra kattintással lehet menteni.
+		}{}
+
+		\ui{user.edit.png}
+	}
+}
+
+\block{
+	\subsubsection{Felhasználó engedélyek módosítása}
+
+	\p{\mt{%
+			A felhasználó engedélyeit a \authorizations gombra való kattintással módosíthatjuk.
+			Ilyenkor feljön egy ablak amiben az összes engedély ki van listázva.
+			Itt a \cross gombbal vehetünk el és a \tick gombbal adhatunk engedélyt.
+		}{}
+
+		\uib{authorization.system.png}
+	}
+}
+
+\block{
+	\subsubsection{Felhasználó törlés}
+
+	\p{\mt{%
+			A felhasználót a \delete gombra való kattintással törölhetjük.
+		}{}
+
+		\ui{user.delete.png}
+	}
+}
+
+\block{
+	\subsection{Egység kezelés}
+
+	\p{\mt{%
+			Az Egységek menüpont segítségével megtekinthetjük, módosíthatjuk, illetve törölhetjük a nyilvántartásban szereplő, mérésre szolgáló egységeket. 
+			A lap alján itt is megtalálhatóak a frissítés és a hozzáadás gombok, amelyekkel frissíthetjük az oldalt, illetve a megfelelő adatok megadásával újabb egységgel bővíthetjük az adatbázist.
+		}{}
+
+		\ui{unit.list.png}
+	}
+}
+
+\block{
+	\subsubsection{Egység hozzáadás}
+
+	\p{\mt{%
+			Egy egységet a \add gombra való kattintással adhatunk hozzá a rendszerhez.
+			Ekkor megjelenik egy bemeneti ablak amit kitöltve \tick gombra kattintással menthetünk.
+		}{}
+
+		\ui{unit.add.png}
+	}
+}
+
+\block{
+	\subsubsection{Egység módosítás}
+
+	\p{\mt{%
+			Egységeket a \edit gombra való kattintással módosíthatunk.
+			Ekkor megjelennek az adatok egy felugró ablak és módosítás után a \tick gombra kattintással menthetünk.
+		}{}
+
+		\ui{unit.edit.png}
+	}
+}
+
+\block{
+	\subsubsection{Egység törlés}
+
+	\p{\mt{%
+			Egységeket a \delete gombra való kattintással törölhetünk.
+			Fontos megjegyezni, hogy egy egységet nem törölhetünk ha legalább egy cikk azt használja.
+		}{}
+
+		\ui{unit.delete.png}
+	}
+}
+
+\block{
+	\subsection{Árucikkek kezelése}
+
+	\p{\mt{%
+			Az árucikkek menüpont segítségével megtekinthetjük, módosíthatjuk, illetve törölhetjük a nyilvántartásban szereplő, árucikkeket. 
+			A lap alján itt is megtalálhatóak a frissítés és a hozzáadás gombok, amelyekkel frissíthetjük az oldalt, illetve a megfelelő adatok megadásával újabb cikkekel bővíthetjük a rendszert.
+		}{}
+
+		\ui{item.list.png}
+	}
+}
+
+\block{
+	\subsubsection{Árucikk hozzáadás}
+
+	\p{\mt{%
+			Egy árucikkek a \add gombbal adhatunk hozzá a rendszerhez.
+			Ekkor megjelenik egy bemeneti ablak amit kitöltva \tick gombra kattintással menthetünk.
+		}{}
+
+		\ui{item.add.png}
+	}
+}
+
+\block{
+	\subsubsection{Árucikk módosítás}
+
+	\p{\mt{%
+			Árucikkeket a \edit gombra való kattintással módosíthatunk.
+			Ekkor megjelennek az adatok egy felugró ablak és módosítás után a \tick gombra kattintással menthetünk.
+		}{}
+
+		\ui{item.edit.png}
+	}
+}
+
+\block{
+	\subsubsection{Árucikk törlés}
+
+	\p{\mt{%
+			Árucikkeket a \delete gombra való kattintással törölhetünk.
+			Fontos megjegyezni, hogy egy árucikket nem törölhetünk ha van valahol ilyen tárolva a rendszerben.
+		}{}
+
+		\ui{item.delete.png}
+	}
+}
+
+\block{
+	\subsection{Telephely kezelés}
+
+	\p{\mt{%
+			Az telephelyek menüpont segítségével megtekinthetjük, módosíthatjuk, illetve törölhetjük a nyilvántartásban szereplő, telephelyeket. 
+			A lap alján itt is megtalálhatóak a frissítés és a hozzáadás gombok, amelyekkel frissíthetjük az oldalt, illetve a megfelelő adatok megadásával újabb telephellyel bővíthetjük a rendszert.
+		}{}
+
+		\ui{warehouse.list.png}
+	}
+}
+
+\block{
+	\subsubsection{Telephely hozzáadás}
+
+	\p{\mt{%
+			Egy telephelyet a \add gombbal adhatunk hozzá a rendszerhez.
+			Ekkor megjelenik egy bemeneti ablak amit kitöltva \tick gombra kattintással menthetünk.
+		}{}
+
+		\ui{warehouse.add.png}
+	}
+}
+
+\block{
+	\subsubsection{Telephely módosítás}
+
+	\p{\mt{%
+			Egy telephelyet a \edit gombra való kattintással módosíthatunk.
+			Ekkor megjelennek az adatok egy felugró ablak és módosítás után a \tick gombra kattintással menthetünk.
+		}{}
+
+		\ui{warehouse.edit.png}
+	}
+}
+
+\block{
+	\subsubsection{Telephely törlés}
+
+	\p{\mt{%
+			Telephelyet a \delete gombra való kattintással törölhetünk.
+			Fontos megjegyezni, hogy egy telephelyet nem törölhetünk ha van raktár benne.
+			Azaz elöször a raktárakat kell törölni.
+		}{}
+
+		\ui{warehouse.delete.png}
+	}
+}
+
+\block{
+	\subsection{Raktár kezelés}
+
+	\p{\mt{%
+			A Raktárok menüpontra kattintva a program megmutatja számunkra a raktárokat telephelyenként szétválogatva.
+			A menüsor alatt található lenyíló listával tudjuk kiválasztani, hogy melyik telephelyhez tartozó raktárokat szeretnénk megtekinteni, majd a raktárok neve mellett található gombokkal módosíthatjuk és törölhetjük azokat.
+			A lap alján elhelyezkedő, hozzáadás gombbal pedig új raktárt adhatunk hozzá a kiválasztott telephelyhez. 
+		}{}
+
+		\ui{storage.list.png}
+	}
+}
+
+\block{
+	\subsubsection{Raktár hozzáadás}
+
+	\p{\mt{%
+			Egy telephelyet a \add gombbal adhatunk hozzá a rendszerhez.
+			Ekkor megjelenik egy bemeneti ablak amit kitöltva \tick gombra kattintással menthetünk.
+		}{}
+
+		\ui{storage.add.png}
+	}
+}
+
+\block{
+	\subsubsection{Raktár módosítás}
+
+	\p{\mt{%
+			Egy raktárt a \edit gombra való kattintással módosíthatunk.
+			Ekkor megjelennek az adatok egy felugró ablak és módosítás után a \tick gombra kattintással menthetünk.
+		}{}
+
+		\ui{storage.edit.png}
+	}
+}
+
+\block{
+	\subsubsection{Raktár törlés}
+
+	\p{\mt{%
+			Raktárakat a \delete gombra való kattintással törölhetünk.
+			Fontos megjegyezni, hogy egy raktárt nem törölhetünk ha van benne áru.
+			Azaz elöször ki kell üríteni a raktárt.
+		}{}
+
+		\ui{storage.delete.png}
+	}
+}
+
+\block{
+	\subsubsection{Raktár limitek}
+
+	\p{\mt{%
+			Raktár limiteket a \limit gombra való kattintással szerkeszthetünk.
+		}{}
+
+		\uib{storage.limit.png}
+	}
+}
+
+\block{
+	\subsection{Műveletek}
+
+	\subsubsection{Művelet hozzáadás}
+
+	\p{\mt{%
+			Egy műveletet a \add gombbal adhatunk hozzá a rendszerhez.
+			Ekkor megjelenik egy bemeneti ablak amit kitöltva \tick gombra kattintással menthetünk.
+		}{}
+
+		\uib{operation.add.png}
+	}
+}
+
+\block{
+	\subsubsection{Művelet törlés}
+
+	\p{\mt{%
+			Műveleteket a \delete gombra való kattintással törölhetünk.
+		}{}
+
+		\ui{operation.cancel.png}
+	}
+}
+
+\block{
+	\subsubsection{Művelet visszaigazolás}
+
+	\p{\mt{%
+			Műveleteket a \tick gombra való kattintással igazolhatunk vissza.
+		}{}
+
+		\ui{operation.commit.png}
+	}
+}
+
+\block{
+	\subsection{Keresés}
+
+	\p{\mt{%
+		A Keresés használatával egyszerűen rá tudunk keresni bármilyen termékre, a program pedig visszaadja, hogy melyik telephelynek melyik raktárában található meg az adott termék, illetve további információkat találunk, mint például a rendelkezésre álló mennyiség vagy a termék sorozatszáma. 
+		}{}
+
+		\ui{search.png}
+	}
+}
+

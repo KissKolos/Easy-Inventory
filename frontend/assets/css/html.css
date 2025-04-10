@@ -1,0 +1,21 @@
+html,body {
+    min-height: 100vh;
+    margin: 0;
+    font-size: 120%;
+}
+
+header {
+    display: flex;
+    justify-content: safe center;
+    align-items: safe center;
+}
+
+header span {
+    padding: 5px;
+    cursor: pointer;
+}
+
+main {
+    flex-grow: 1;
+}
+  

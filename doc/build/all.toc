@@ -1,0 +1,514 @@
+\contentsline {chapter}{\numberline {1}Konzultációs lap}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2} {Munka} }{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1} {Munkamegosztás} }{16}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Pék Gergő}{16}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Kiss Kolos}{16}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Garai Nándor}{16}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Munka folyamata}{16}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Használt fejlesztői eszközök}{17}{section.2.3}%
+\contentsline {chapter}{\numberline {3} {API Dokumentáció} }{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1} {API Típusok} }{20}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Unit}{20}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}UnitPutRequest}{20}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Item}{20}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}ItemPutRequest}{20}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Warehouse}{20}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}WarehousePutRequest}{21}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Storage}{21}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}StoragePutRequest}{21}{subsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.1.9}User}{21}{subsection.3.1.9}%
+\contentsline {subsection}{\numberline {3.1.10}UserPutRequest}{21}{subsection.3.1.10}%
+\contentsline {subsection}{\numberline {3.1.11}OperationItem}{22}{subsection.3.1.11}%
+\contentsline {subsection}{\numberline {3.1.12}Operation}{22}{subsection.3.1.12}%
+\contentsline {subsection}{\numberline {3.1.13}OperationItemRequest}{22}{subsection.3.1.13}%
+\contentsline {subsection}{\numberline {3.1.14}OperationRequest}{23}{subsection.3.1.14}%
+\contentsline {subsection}{\numberline {3.1.15}OperationCommit}{23}{subsection.3.1.15}%
+\contentsline {subsection}{\numberline {3.1.16}MoveRequest}{23}{subsection.3.1.16}%
+\contentsline {subsection}{\numberline {3.1.17}LoginRequest}{23}{subsection.3.1.17}%
+\contentsline {subsection}{\numberline {3.1.18}LoginResponse}{23}{subsection.3.1.18}%
+\contentsline {subsection}{\numberline {3.1.19}RenewResponse}{23}{subsection.3.1.19}%
+\contentsline {subsection}{\numberline {3.1.20}UserinfoResponse}{24}{subsection.3.1.20}%
+\contentsline {subsection}{\numberline {3.1.21}StorageLimit}{24}{subsection.3.1.21}%
+\contentsline {subsection}{\numberline {3.1.22}StorageLimitPutRequest}{24}{subsection.3.1.22}%
+\contentsline {subsection}{\numberline {3.1.23}StorageCapacity}{24}{subsection.3.1.23}%
+\contentsline {subsection}{\numberline {3.1.24}ItemStack}{24}{subsection.3.1.24}%
+\contentsline {subsection}{\numberline {3.1.25}ItemDB}{25}{subsection.3.1.25}%
+\contentsline {subsection}{\numberline {3.1.26}ItemStackDB}{25}{subsection.3.1.26}%
+\contentsline {subsection}{\numberline {3.1.27}StorageLimitDB}{25}{subsection.3.1.27}%
+\contentsline {subsection}{\numberline {3.1.28}WarehouseDB}{25}{subsection.3.1.28}%
+\contentsline {subsection}{\numberline {3.1.29}StorageDB}{26}{subsection.3.1.29}%
+\contentsline {subsection}{\numberline {3.1.30}LocalAuthorizationDB}{26}{subsection.3.1.30}%
+\contentsline {subsection}{\numberline {3.1.31}UserDB}{26}{subsection.3.1.31}%
+\contentsline {subsection}{\numberline {3.1.32}DB}{26}{subsection.3.1.32}%
+\contentsline {section}{\numberline {3.2} {Hitelesítés} }{27}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1} {Felhasználó bejelentkeztetése} }{27}{subsection.3.2.1}%
+\contentsline {subsubsection}{ {Paraméterek} }{27}{section*.2}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{27}{section*.3}%
+\contentsline {subsubsection}{ {Kérés} }{27}{section*.4}%
+\contentsline {subsubsection}{ {Válasz kódok} }{27}{section*.5}%
+\contentsline {subsubsection}{ {Válasz} }{27}{section*.6}%
+\contentsline {subsection}{\numberline {3.2.2} {Token megújítása} }{28}{subsection.3.2.2}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{28}{section*.7}%
+\contentsline {subsubsection}{ {Válasz kódok} }{28}{section*.8}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{28}{section*.9}%
+\contentsline {subsubsection}{ {Válasz} }{28}{section*.10}%
+\contentsline {subsection}{\numberline {3.2.3} {Token törlése} }{28}{subsection.3.2.3}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{28}{section*.11}%
+\contentsline {subsubsection}{ {Válasz kódok} }{29}{section*.12}%
+\contentsline {subsection}{\numberline {3.2.4} {A bejelentkezett felhasználó információinak lekérése} }{29}{subsection.3.2.4}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{29}{section*.13}%
+\contentsline {subsubsection}{ {Válasz kódok} }{29}{section*.14}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{29}{section*.15}%
+\contentsline {subsubsection}{ {Válasz} }{29}{section*.16}%
+\contentsline {section}{\numberline {3.3} {Jogosultságok} }{30}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1} {Rendszer engedélyek lekérése} }{30}{subsection.3.3.1}%
+\contentsline {subsubsection}{ {Paraméterek} }{30}{section*.17}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{30}{section*.18}%
+\contentsline {subsubsection}{ {Válasz kódok} }{30}{section*.19}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{30}{section*.20}%
+\contentsline {subsubsection}{ {Válasz} }{30}{section*.21}%
+\contentsline {subsection}{\numberline {3.3.2} {Helyi engedélyek lekérése} }{31}{subsection.3.3.2}%
+\contentsline {subsubsection}{ {Paraméterek} }{31}{section*.22}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{31}{section*.23}%
+\contentsline {subsubsection}{ {Válasz kódok} }{31}{section*.24}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{31}{section*.25}%
+\contentsline {subsubsection}{ {Válasz} }{31}{section*.26}%
+\contentsline {subsection}{\numberline {3.3.3} {Helyi engedély megadása} }{32}{subsection.3.3.3}%
+\contentsline {subsubsection}{ {Paraméterek} }{32}{section*.27}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{32}{section*.28}%
+\contentsline {subsubsection}{ {Válasz kódok} }{32}{section*.29}%
+\contentsline {subsection}{\numberline {3.3.4} {Helyi engedély törlése} }{32}{subsection.3.3.4}%
+\contentsline {subsubsection}{ {Paraméterek} }{32}{section*.30}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{33}{section*.31}%
+\contentsline {subsubsection}{ {Válasz kódok} }{33}{section*.32}%
+\contentsline {subsection}{\numberline {3.3.5} {Rendszer engedély megadása} }{33}{subsection.3.3.5}%
+\contentsline {subsubsection}{ {Paraméterek} }{33}{section*.33}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{33}{section*.34}%
+\contentsline {subsubsection}{ {Válasz kódok} }{33}{section*.35}%
+\contentsline {subsection}{\numberline {3.3.6} {Rendszer engedély törlése} }{34}{subsection.3.3.6}%
+\contentsline {subsubsection}{ {Paraméterek} }{34}{section*.36}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{34}{section*.37}%
+\contentsline {subsubsection}{ {Válasz kódok} }{34}{section*.38}%
+\contentsline {section}{\numberline {3.4} {Cikkek} }{34}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1} {Cikkek lekérése} }{34}{subsection.3.4.1}%
+\contentsline {subsubsection}{ {Paraméterek} }{35}{section*.39}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{35}{section*.40}%
+\contentsline {subsubsection}{ {Válasz kódok} }{35}{section*.41}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{35}{section*.42}%
+\contentsline {subsubsection}{ {Válasz} }{35}{section*.43}%
+\contentsline {subsection}{\numberline {3.4.2} {Tárgy azonosítójának változtatása} }{35}{subsection.3.4.2}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{36}{section*.44}%
+\contentsline {subsubsection}{ {Kérés} }{36}{section*.45}%
+\contentsline {subsubsection}{ {Válasz kódok} }{36}{section*.46}%
+\contentsline {subsection}{\numberline {3.4.3} {Cikk lekérése} }{36}{subsection.3.4.3}%
+\contentsline {subsubsection}{ {Paraméterek} }{36}{section*.47}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{36}{section*.48}%
+\contentsline {subsubsection}{ {Válasz kódok} }{37}{section*.49}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{37}{section*.50}%
+\contentsline {subsubsection}{ {Válasz} }{37}{section*.51}%
+\contentsline {subsection}{\numberline {3.4.4} {Cikk módosítása, létrehozása} }{37}{subsection.3.4.4}%
+\contentsline {subsubsection}{ {Paraméterek} }{37}{section*.52}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{38}{section*.53}%
+\contentsline {subsubsection}{ {Kérés} }{38}{section*.54}%
+\contentsline {subsubsection}{ {Válasz kódok} }{38}{section*.55}%
+\contentsline {subsection}{\numberline {3.4.5} {Cikk törlése} }{38}{subsection.3.4.5}%
+\contentsline {subsubsection}{ {Paraméterek} }{38}{section*.56}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{38}{section*.57}%
+\contentsline {subsubsection}{ {Válasz kódok} }{39}{section*.58}%
+\contentsline {section}{\numberline {3.5} {Limit} }{39}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1} {Raktár limit} }{39}{subsection.3.5.1}%
+\contentsline {subsubsection}{ {Paraméterek} }{39}{section*.59}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{39}{section*.60}%
+\contentsline {subsubsection}{ {Válasz kódok} }{39}{section*.61}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{40}{section*.62}%
+\contentsline {subsubsection}{ {Válasz} }{40}{section*.63}%
+\contentsline {subsection}{\numberline {3.5.2} {Raktár limitjének módosítása} }{40}{subsection.3.5.2}%
+\contentsline {subsubsection}{ {Paraméterek} }{40}{section*.64}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{40}{section*.65}%
+\contentsline {subsubsection}{ {Kérés} }{41}{section*.66}%
+\contentsline {subsubsection}{ {Válasz kódok} }{41}{section*.67}%
+\contentsline {subsection}{\numberline {3.5.3} {Raktár kapacitás} }{41}{subsection.3.5.3}%
+\contentsline {subsubsection}{ {Paraméterek} }{41}{section*.68}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{41}{section*.69}%
+\contentsline {subsubsection}{ {Válasz kódok} }{42}{section*.70}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{42}{section*.71}%
+\contentsline {subsubsection}{ {Válasz} }{42}{section*.72}%
+\contentsline {section}{\numberline {3.6} {Műveletek} }{42}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1} {Műveletek lekérése} }{42}{subsection.3.6.1}%
+\contentsline {subsubsection}{ {Paraméterek} }{43}{section*.73}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{43}{section*.74}%
+\contentsline {subsubsection}{ {Válasz kódok} }{43}{section*.75}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{43}{section*.76}%
+\contentsline {subsubsection}{ {Válasz} }{43}{section*.77}%
+\contentsline {subsection}{\numberline {3.6.2} {Művelet azonosítójának változtatása} }{44}{subsection.3.6.2}%
+\contentsline {subsubsection}{ {Paraméterek} }{44}{section*.78}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{44}{section*.79}%
+\contentsline {subsubsection}{ {Kérés} }{44}{section*.80}%
+\contentsline {subsubsection}{ {Válasz kódok} }{44}{section*.81}%
+\contentsline {subsection}{\numberline {3.6.3} {Művelet lekérése} }{45}{subsection.3.6.3}%
+\contentsline {subsubsection}{ {Paraméterek} }{45}{section*.82}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{45}{section*.83}%
+\contentsline {subsubsection}{ {Válasz kódok} }{45}{section*.84}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{45}{section*.85}%
+\contentsline {subsubsection}{ {Válasz} }{46}{section*.86}%
+\contentsline {subsection}{\numberline {3.6.4} {Művelet létrehozása} }{46}{subsection.3.6.4}%
+\contentsline {subsubsection}{ {Paraméterek} }{46}{section*.87}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{47}{section*.88}%
+\contentsline {subsubsection}{ {Kérés} }{47}{section*.89}%
+\contentsline {subsubsection}{ {Válasz kódok} }{47}{section*.90}%
+\contentsline {subsection}{\numberline {3.6.5} {Művelet visszaigazolása és törlése} }{47}{subsection.3.6.5}%
+\contentsline {subsubsection}{ {Paraméterek} }{47}{section*.91}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{47}{section*.92}%
+\contentsline {subsubsection}{ {Kérés} }{48}{section*.93}%
+\contentsline {subsubsection}{ {Válasz kódok} }{48}{section*.94}%
+\contentsline {section}{\numberline {3.7} {Keresés} }{48}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1} {Keresés} }{48}{subsection.3.7.1}%
+\contentsline {subsubsection}{ {Paraméterek} }{48}{section*.95}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{48}{section*.96}%
+\contentsline {subsubsection}{ {Válasz kódok} }{49}{section*.97}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{49}{section*.98}%
+\contentsline {subsubsection}{ {Válasz} }{49}{section*.99}%
+\contentsline {section}{\numberline {3.8} {Raktárak} }{49}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1} {Raktárak lekérése} }{49}{subsection.3.8.1}%
+\contentsline {subsubsection}{ {Paraméterek} }{50}{section*.100}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{50}{section*.101}%
+\contentsline {subsubsection}{ {Válasz kódok} }{50}{section*.102}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{50}{section*.103}%
+\contentsline {subsubsection}{ {Válasz} }{50}{section*.104}%
+\contentsline {subsection}{\numberline {3.8.2} {Raktár azonosítójának változtatása} }{51}{subsection.3.8.2}%
+\contentsline {subsubsection}{ {Paraméterek} }{51}{section*.105}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{51}{section*.106}%
+\contentsline {subsubsection}{ {Kérés} }{51}{section*.107}%
+\contentsline {subsubsection}{ {Válasz kódok} }{51}{section*.108}%
+\contentsline {subsection}{\numberline {3.8.3} {Raktár lekérése} }{52}{subsection.3.8.3}%
+\contentsline {subsubsection}{ {Paraméterek} }{52}{section*.109}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{52}{section*.110}%
+\contentsline {subsubsection}{ {Válasz kódok} }{52}{section*.111}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{52}{section*.112}%
+\contentsline {subsubsection}{ {Válasz} }{52}{section*.113}%
+\contentsline {subsection}{\numberline {3.8.4} {Raktárak módosítása, létrehozása} }{53}{subsection.3.8.4}%
+\contentsline {subsubsection}{ {Paraméterek} }{53}{section*.114}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{53}{section*.115}%
+\contentsline {subsubsection}{ {Kérés} }{53}{section*.116}%
+\contentsline {subsubsection}{ {Válasz kódok} }{53}{section*.117}%
+\contentsline {subsection}{\numberline {3.8.5} {Raktár törlése} }{54}{subsection.3.8.5}%
+\contentsline {subsubsection}{ {Paraméterek} }{54}{section*.118}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{54}{section*.119}%
+\contentsline {subsubsection}{ {Válasz kódok} }{54}{section*.120}%
+\contentsline {subsection}{\numberline {3.8.6} {Keresés a raktárban} }{54}{subsection.3.8.6}%
+\contentsline {subsubsection}{ {Paraméterek} }{55}{section*.121}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{55}{section*.122}%
+\contentsline {subsubsection}{ {Válasz kódok} }{55}{section*.123}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{55}{section*.124}%
+\contentsline {subsubsection}{ {Válasz} }{55}{section*.125}%
+\contentsline {section}{\numberline {3.9} {Egységek} }{56}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1} {Egységek lekérése} }{56}{subsection.3.9.1}%
+\contentsline {subsubsection}{ {Paraméterek} }{56}{section*.126}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{56}{section*.127}%
+\contentsline {subsubsection}{ {Válasz kódok} }{56}{section*.128}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{56}{section*.129}%
+\contentsline {subsubsection}{ {Válasz} }{57}{section*.130}%
+\contentsline {subsection}{\numberline {3.9.2} {Egység azonosítójának változtatása} }{57}{subsection.3.9.2}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{57}{section*.131}%
+\contentsline {subsubsection}{ {Kérés} }{57}{section*.132}%
+\contentsline {subsubsection}{ {Válasz kódok} }{57}{section*.133}%
+\contentsline {subsection}{\numberline {3.9.3} {Egység lekérése} }{58}{subsection.3.9.3}%
+\contentsline {subsubsection}{ {Paraméterek} }{58}{section*.134}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{58}{section*.135}%
+\contentsline {subsubsection}{ {Válasz kódok} }{58}{section*.136}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{58}{section*.137}%
+\contentsline {subsubsection}{ {Válasz} }{58}{section*.138}%
+\contentsline {subsection}{\numberline {3.9.4} {Egységek módosítása, létrehozása} }{59}{subsection.3.9.4}%
+\contentsline {subsubsection}{ {Paraméterek} }{59}{section*.139}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{59}{section*.140}%
+\contentsline {subsubsection}{ {Kérés} }{59}{section*.141}%
+\contentsline {subsubsection}{ {Válasz kódok} }{59}{section*.142}%
+\contentsline {subsection}{\numberline {3.9.5} {Egység törlése.} }{60}{subsection.3.9.5}%
+\contentsline {subsubsection}{ {Paraméterek} }{60}{section*.143}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{60}{section*.144}%
+\contentsline {subsubsection}{ {Válasz kódok} }{60}{section*.145}%
+\contentsline {section}{\numberline {3.10} {Felhasználók} }{60}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1} {Felhasználók lekérése} }{60}{subsection.3.10.1}%
+\contentsline {subsubsection}{ {Paraméterek} }{61}{section*.146}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{61}{section*.147}%
+\contentsline {subsubsection}{ {Válasz kódok} }{61}{section*.148}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{61}{section*.149}%
+\contentsline {subsubsection}{ {Válasz} }{61}{section*.150}%
+\contentsline {subsection}{\numberline {3.10.2} {Felhasználó azonosítójának változtatása} }{62}{subsection.3.10.2}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{62}{section*.151}%
+\contentsline {subsubsection}{ {Kérés} }{62}{section*.152}%
+\contentsline {subsubsection}{ {Válasz kódok} }{62}{section*.153}%
+\contentsline {subsection}{\numberline {3.10.3} {Felhasználó lekérése} }{62}{subsection.3.10.3}%
+\contentsline {subsubsection}{ {Paraméterek} }{63}{section*.154}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{63}{section*.155}%
+\contentsline {subsubsection}{ {Válasz kódok} }{63}{section*.156}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{63}{section*.157}%
+\contentsline {subsubsection}{ {Válasz} }{63}{section*.158}%
+\contentsline {subsection}{\numberline {3.10.4} {Felhasználók módosítása, létrehozása} }{63}{subsection.3.10.4}%
+\contentsline {subsubsection}{ {Paraméterek} }{63}{section*.159}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{64}{section*.160}%
+\contentsline {subsubsection}{ {Kérés} }{64}{section*.161}%
+\contentsline {subsubsection}{ {Válasz kódok} }{64}{section*.162}%
+\contentsline {subsection}{\numberline {3.10.5} {Felhasználó törlése} }{64}{subsection.3.10.5}%
+\contentsline {subsubsection}{ {Paraméterek} }{64}{section*.163}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{64}{section*.164}%
+\contentsline {subsubsection}{ {Válasz kódok} }{65}{section*.165}%
+\contentsline {section}{\numberline {3.11} {Telephelyek} }{65}{section.3.11}%
+\contentsline {subsection}{\numberline {3.11.1} {Telephelyek lekérése} }{65}{subsection.3.11.1}%
+\contentsline {subsubsection}{ {Paraméterek} }{65}{section*.166}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{65}{section*.167}%
+\contentsline {subsubsection}{ {Válasz kódok} }{65}{section*.168}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{66}{section*.169}%
+\contentsline {subsubsection}{ {Válasz} }{66}{section*.170}%
+\contentsline {subsection}{\numberline {3.11.2} {Telephely azonosítójának változtatása} }{66}{subsection.3.11.2}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{66}{section*.171}%
+\contentsline {subsubsection}{ {Kérés} }{66}{section*.172}%
+\contentsline {subsubsection}{ {Válasz kódok} }{67}{section*.173}%
+\contentsline {subsection}{\numberline {3.11.3} {Telephely lekérése} }{67}{subsection.3.11.3}%
+\contentsline {subsubsection}{ {Paraméterek} }{67}{section*.174}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{67}{section*.175}%
+\contentsline {subsubsection}{ {Válasz kódok} }{67}{section*.176}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{67}{section*.177}%
+\contentsline {subsubsection}{ {Válasz} }{68}{section*.178}%
+\contentsline {subsection}{\numberline {3.11.4} {Telephely módosítása, létrehozása} }{68}{subsection.3.11.4}%
+\contentsline {subsubsection}{ {Paraméterek} }{68}{section*.179}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{68}{section*.180}%
+\contentsline {subsubsection}{ {Kérés} }{68}{section*.181}%
+\contentsline {subsubsection}{ {Válasz kódok} }{69}{section*.182}%
+\contentsline {subsection}{\numberline {3.11.5} {Telephely törlése} }{69}{subsection.3.11.5}%
+\contentsline {subsubsection}{ {Paraméterek} }{69}{section*.183}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{69}{section*.184}%
+\contentsline {subsubsection}{ {Válasz kódok} }{69}{section*.185}%
+\contentsline {subsection}{\numberline {3.11.6} {Keresés a telephelyen} }{70}{subsection.3.11.6}%
+\contentsline {subsubsection}{ {Paraméterek} }{70}{section*.186}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{70}{section*.187}%
+\contentsline {subsubsection}{ {Válasz kódok} }{70}{section*.188}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{70}{section*.189}%
+\contentsline {subsubsection}{ {Válasz} }{71}{section*.190}%
+\contentsline {section}{\numberline {3.12} {Biztonsági mentés} }{71}{section.3.12}%
+\contentsline {subsection}{\numberline {3.12.1} {Mentés készítése} }{71}{subsection.3.12.1}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{71}{section*.191}%
+\contentsline {subsubsection}{ {Válasz kódok} }{71}{section*.192}%
+\contentsline {subsubsection}{ {Válasz fejléce} }{71}{section*.193}%
+\contentsline {subsubsection}{ {Válasz} }{72}{section*.194}%
+\contentsline {subsection}{\numberline {3.12.2} {Mentés visszaállítása} }{72}{subsection.3.12.2}%
+\contentsline {subsubsection}{ {Kérés fejléce} }{72}{section*.195}%
+\contentsline {subsubsection}{ {Kérés} }{72}{section*.196}%
+\contentsline {subsubsection}{ {Válasz kódok} }{72}{section*.197}%
+\contentsline {chapter}{\numberline {4} {API Könyvtár Dokumentáció} }{73}{chapter.4}%
+\contentsline {section}{\numberline {4.1} {Kapcsolat kezelés} }{74}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1} {Kapcsolódás a szerverhez} }{74}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2} {Kijelentkezés} }{74}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2} {Egységek kezelése} }{75}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1} {Egység osztály} }{75}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2} {Egységek kezelése} }{75}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3} {Felhasználók kezelése} }{76}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1} {Felhasználó osztály} }{76}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2} {Felhasználók kezelése} }{76}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3} {Felhasználók engedélyeinek kezelése} }{77}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4} {Telephelyek kezelése} }{77}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1} {Telephely osztály} }{77}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2} {Telephelyek kezelése} }{78}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5} {Raktárak kezelése} }{78}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1} {Raktár osztály} }{78}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2} {Raktárak kezelése} }{79}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6} {Cikkek kezelése} }{79}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1} {Cikk osztály} }{79}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2} {Cikkek kezelése} }{80}{subsection.4.6.2}%
+\contentsline {section}{\numberline {4.7} {Műveletek kezelése} }{80}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1} {Művelet osztály} }{80}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2} {Műveletek kezelése} }{81}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.8} {Keresés} }{81}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1} { {\ttfamily ItemStack} osztály} }{81}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2} {Keresés} }{82}{subsection.4.8.2}%
+\contentsline {chapter}{\numberline {5} {Kód Dokumentáció} }{83}{chapter.5}%
+\contentsline {section}{\numberline {5.1} {Felépítés} }{84}{section.5.1}%
+\contentsline {section}{\numberline {5.2} {Adatbázis} }{85}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1} {Áttekintés} }{85}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}untis}{87}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}item\_types}{87}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}warehouses}{87}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}storages}{88}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}item\_stacks}{88}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}storage\_limits}{89}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}operations}{89}{subsection.5.2.8}%
+\contentsline {subsection}{\numberline {5.2.9}operation\_items}{90}{subsection.5.2.9}%
+\contentsline {subsection}{\numberline {5.2.10}users}{90}{subsection.5.2.10}%
+\contentsline {subsection}{\numberline {5.2.11}authorization}{91}{subsection.5.2.11}%
+\contentsline {subsection}{\numberline {5.2.12}global\_authorization}{91}{subsection.5.2.12}%
+\contentsline {subsection}{\numberline {5.2.13}authentication\_token}{92}{subsection.5.2.13}%
+\contentsline {subsection}{\numberline {5.2.14}users\_view}{92}{subsection.5.2.14}%
+\contentsline {subsection}{\numberline {5.2.15}authorization\_view}{92}{subsection.5.2.15}%
+\contentsline {subsection}{\numberline {5.2.16}authentication\_token\_view}{93}{subsection.5.2.16}%
+\contentsline {subsection}{\numberline {5.2.17}warehouses\_view}{93}{subsection.5.2.17}%
+\contentsline {subsection}{\numberline {5.2.18}storages\_view}{93}{subsection.5.2.18}%
+\contentsline {subsection}{\numberline {5.2.19}item\_types\_view}{93}{subsection.5.2.19}%
+\contentsline {subsection}{\numberline {5.2.20}units\_view}{94}{subsection.5.2.20}%
+\contentsline {subsection}{\numberline {5.2.21}operations\_view}{94}{subsection.5.2.21}%
+\contentsline {subsection}{\numberline {5.2.22}operation\_items\_view}{95}{subsection.5.2.22}%
+\contentsline {subsection}{\numberline {5.2.23}item\_stacks\_view}{96}{subsection.5.2.23}%
+\contentsline {section}{\numberline {5.3} {Api szerver} }{97}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1} {Felépítés} }{97}{subsection.5.3.1}%
+\contentsline {subsubsection}{ {Átirányítási réteg} }{97}{section*.198}%
+\contentsline {subsubsection}{ {API kezelő réteg} }{97}{section*.199}%
+\contentsline {subsubsection}{ {Adatbázis kapcsolat réteg} }{97}{section*.200}%
+\contentsline {subsection}{\numberline {5.3.2}ApiRouter.php}{98}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}APIUtils.php}{99}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4} {DB.php} }{102}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5} {BaseTrait.php} }{102}{subsection.5.3.5}%
+\contentsline {subsection}{\numberline {5.3.6} {Logger.php} }{102}{subsection.5.3.6}%
+\contentsline {subsection}{\numberline {5.3.7} {Settings.php} }{103}{subsection.5.3.7}%
+\contentsline {subsection}{\numberline {5.3.8} {Authentication.php} }{103}{subsection.5.3.8}%
+\contentsline {section}{\numberline {5.4}Web frontend}{104}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1} {Áttekintés} }{104}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Építés}{104}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3} {Template osztály} }{104}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4} {View osztály} }{106}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5} {ListView osztály} }{106}{subsection.5.4.5}%
+\contentsline {subsection}{\numberline {5.4.6} {ListEditView osztály} }{107}{subsection.5.4.6}%
+\contentsline {subsection}{\numberline {5.4.7} {SelectView osztály} }{107}{subsection.5.4.7}%
+\contentsline {subsection}{\numberline {5.4.8} {DialogView osztály} }{108}{subsection.5.4.8}%
+\contentsline {subsection}{\numberline {5.4.9} {EditDialog osztály} }{108}{subsection.5.4.9}%
+\contentsline {section}{\numberline {5.5}API könyvtár}{109}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1} {Áttekintés} }{109}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2} {HTTPConnector osztály} }{109}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6} {Asztali kliens} }{110}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1} {Bevezetés} }{110}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2} {Worker osztály} }{110}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3} {EasyInventoryDesktop osztály} }{110}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.4} {BasicView osztály} }{112}{subsection.5.6.4}%
+\contentsline {subsection}{\numberline {5.6.5} {SelectView osztály} }{112}{subsection.5.6.5}%
+\contentsline {subsection}{\numberline {5.6.6} {CardView osztály} }{112}{subsection.5.6.6}%
+\contentsline {subsection}{\numberline {5.6.7} {EditableView osztály} }{113}{subsection.5.6.7}%
+\contentsline {subsection}{\numberline {5.6.8} {LocalEditableView osztály} }{113}{subsection.5.6.8}%
+\contentsline {subsection}{\numberline {5.6.9} {FormDialog osztály} }{115}{subsection.5.6.9}%
+\contentsline {subsection}{\numberline {5.6.10} {EditDialog osztály} }{115}{subsection.5.6.10}%
+\contentsline {section}{\numberline {5.7}Mobil kliens}{116}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1} {Áttekintés} }{116}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2} {MainActivity osztály} }{116}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}LoggedInActivity {osztály} }{116}{subsection.5.7.3}%
+\contentsline {subsection}{\numberline {5.7.4}Worker {osztály} }{117}{subsection.5.7.4}%
+\contentsline {subsection}{\numberline {5.7.5}BaseEditActivity {osztály} }{119}{subsection.5.7.5}%
+\contentsline {subsection}{\numberline {5.7.6}LocalEditActivity {osztály} }{119}{subsection.5.7.6}%
+\contentsline {subsection}{\numberline {5.7.7}PaginatedListActivity {osztály} }{121}{subsection.5.7.7}%
+\contentsline {subsection}{\numberline {5.7.8}BaseListActivity {osztály} }{121}{subsection.5.7.8}%
+\contentsline {subsection}{\numberline {5.7.9}BaseListFragment {osztály} }{123}{subsection.5.7.9}%
+\contentsline {subsection}{\numberline {5.7.10}LocalListFragment {osztály} }{123}{subsection.5.7.10}%
+\contentsline {subsection}{\numberline {5.7.11}SelectableArrayAdapter {osztály} }{125}{subsection.5.7.11}%
+\contentsline {section}{\numberline {5.8} {Dokumentáció} }{126}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1} {Áttekintés} }{126}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2} {Felhasználói dokumentáció} }{126}{subsection.5.8.2}%
+\contentsline {subsection}{\numberline {5.8.3} {Kód dokumentáció} }{126}{subsection.5.8.3}%
+\contentsline {subsection}{\numberline {5.8.4} {Teszt dokumentáció} }{126}{subsection.5.8.4}%
+\contentsline {subsection}{\numberline {5.8.5} {Kód beillesztő} }{127}{subsection.5.8.5}%
+\contentsline {subsection}{\numberline {5.8.6} {Építés} }{127}{subsection.5.8.6}%
+\contentsline {chapter}{\numberline {6} {Teszt Dokumentáció} }{129}{chapter.6}%
+\contentsline {section}{\numberline {6.1} {API szerver} }{130}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1} {Áttekintés} }{130}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2} {E2E tesztek} }{130}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2} {Web frontend} }{131}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1} {Áttekintés} }{131}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2} {E2E tesztek} }{131}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3} {Asztali alkalmazás} }{132}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1} {Áttekintés} }{132}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2} {E2E tesztek} }{132}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3} {NodeMatcher osztály} }{133}{subsection.6.3.3}%
+\contentsline {subsubsection}{allWindowRoots}{133}{section*.201}%
+\contentsline {subsubsection}{descendants}{133}{section*.202}%
+\contentsline {subsubsection}{with}{134}{section*.203}%
+\contentsline {subsubsection}{withClass}{134}{section*.204}%
+\contentsline {subsubsection}{click}{134}{section*.205}%
+\contentsline {subsubsection}{replaceText}{134}{section*.206}%
+\contentsline {subsubsection}{screenshotWindow}{134}{section*.207}%
+\contentsline {section}{\numberline {6.4} {Mobil alkalmazás} }{135}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1} {Áttekintés} }{135}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2} {E2E tesztek} }{135}{subsection.6.4.2}%
+\contentsline {chapter}{\numberline {7} {Felhasználói Dokumentáció} }{137}{chapter.7}%
+\contentsline {section}{\numberline {7.1} {Bevezetés} }{138}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1} {Fogalmak} }{138}{subsection.7.1.1}%
+\contentsline {subsubsection}{Telephelyek}{138}{section*.208}%
+\contentsline {subsubsection}{Raktárak}{138}{section*.209}%
+\contentsline {subsubsection}{Műveletek}{139}{section*.210}%
+\contentsline {paragraph}{ {Hozzáadási művelet} }{139}{section*.211}%
+\contentsline {paragraph}{ {Eltávolítási művelet} }{139}{section*.212}%
+\contentsline {subsubsection}{Lot számok}{139}{section*.213}%
+\contentsline {subsubsection}{Globális sorozat szám}{139}{section*.214}%
+\contentsline {subsubsection}{Gyártói sorozat szám}{139}{section*.215}%
+\contentsline {section}{\numberline {7.2}Telepítés}{140}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Server telepítés}{140}{subsection.7.2.1}%
+\contentsline {subsubsection}{ {Linux mint} }{140}{section*.216}%
+\contentsline {subsubsection}{ {Más linux alapú rendszerek} }{140}{section*.217}%
+\contentsline {subsubsection}{Windows}{141}{section*.218}%
+\contentsline {subsection}{\numberline {7.2.2}Asztali kliens telepítés}{141}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Mobil kliens telepítés}{141}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Adminisztráció}{142}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1} {Arhivált adatok törlése} }{142}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Eseménynapló kezelése}{142}{subsection.7.3.2}%
+\contentsline {subsubsection}{ {Eseménynapló megtekintése} }{143}{section*.219}%
+\contentsline {paragraph}{-u,--user {kapcsoló} }{143}{section*.220}%
+\contentsline {paragraph}{-e, --error {kapcsoló} }{143}{section*.221}%
+\contentsline {paragraph}{-r, --rejected {kapcsoló} }{143}{section*.222}%
+\contentsline {paragraph}{-b, --bad {kapcsoló} }{143}{section*.223}%
+\contentsline {paragraph}{-s, --success {kapcsoló} }{143}{section*.224}%
+\contentsline {paragraph}{-v, --verbose {kapcsoló} }{143}{section*.225}%
+\contentsline {paragraph}{ {Pédák} }{143}{section*.226}%
+\contentsline {subsubsection}{ {Egy esemény megtekintése} }{144}{section*.227}%
+\contentsline {subsubsection}{ {Eseménynapló törlése} }{144}{section*.228}%
+\contentsline {subsection}{\numberline {7.3.3} {Felhasználó kezelés} }{144}{subsection.7.3.3}%
+\contentsline {subsubsection}{ {Adminisztrátor létrehozása} }{144}{section*.229}%
+\contentsline {subsubsection}{ {Felhasználó törlése} }{145}{section*.230}%
+\contentsline {subsubsection}{ {Új jelszó adása} }{145}{section*.231}%
+\contentsline {subsection}{\numberline {7.3.4} {Engedélyek} }{145}{subsection.7.3.4}%
+\contentsline {subsubsection}{ {Rendszer engedélyek} }{146}{section*.232}%
+\contentsline {subsubsection}{ {Helyi engedélyek} }{146}{section*.233}%
+\contentsline {section}{\numberline {7.4}Használat}{147}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Bejelentkezés}{147}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Felhasználó kezelés}{148}{subsection.7.4.2}%
+\contentsline {subsubsection}{Felhasználó hozzáadás}{148}{section*.234}%
+\contentsline {subsubsection}{Felhasználó módosítás}{149}{section*.235}%
+\contentsline {subsubsection}{Felhasználó engedélyek módosítása}{149}{section*.236}%
+\contentsline {subsubsection}{Felhasználó törlés}{149}{section*.237}%
+\contentsline {subsection}{\numberline {7.4.3}Egység kezelés}{150}{subsection.7.4.3}%
+\contentsline {subsubsection}{Egység hozzáadás}{150}{section*.238}%
+\contentsline {subsubsection}{Egység módosítás}{151}{section*.239}%
+\contentsline {subsubsection}{Egység törlés}{151}{section*.240}%
+\contentsline {subsection}{\numberline {7.4.4}Árucikkek kezelése}{151}{subsection.7.4.4}%
+\contentsline {subsubsection}{Árucikk hozzáadás}{152}{section*.241}%
+\contentsline {subsubsection}{Árucikk módosítás}{152}{section*.242}%
+\contentsline {subsubsection}{Árucikk törlés}{152}{section*.243}%
+\contentsline {subsection}{\numberline {7.4.5}Telephely kezelés}{153}{subsection.7.4.5}%
+\contentsline {subsubsection}{Telephely hozzáadás}{153}{section*.244}%
+\contentsline {subsubsection}{Telephely módosítás}{153}{section*.245}%
+\contentsline {subsubsection}{Telephely törlés}{154}{section*.246}%
+\contentsline {subsection}{\numberline {7.4.6}Raktár kezelés}{154}{subsection.7.4.6}%
+\contentsline {subsubsection}{Raktár hozzáadás}{155}{section*.247}%
+\contentsline {subsubsection}{Raktár módosítás}{155}{section*.248}%
+\contentsline {subsubsection}{Raktár törlés}{155}{section*.249}%
+\contentsline {subsubsection}{Raktár limitek}{156}{section*.250}%
+\contentsline {subsection}{\numberline {7.4.7}Műveletek}{156}{subsection.7.4.7}%
+\contentsline {subsubsection}{Művelet hozzáadás}{156}{section*.251}%
+\contentsline {subsubsection}{Művelet törlés}{156}{section*.252}%
+\contentsline {subsubsection}{Művelet visszaigazolás}{157}{section*.253}%
+\contentsline {subsection}{\numberline {7.4.8}Keresés}{157}{subsection.7.4.8}%
+\contentsline {section}{\numberline {7.5}Használati példák}{158}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Fatelep}{158}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Bevásárló központ}{159}{subsection.7.5.2}%
+\contentsline {chapter}{\numberline {8} {Továbbfejlesztési lehetőségek} }{161}{chapter.8}%
+\contentsline {section}{\numberline {8.1} {Adminisztráció} }{162}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1} {Integráció monitorozó rendszerekkel} }{162}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2} {Központi beléptető rendszer} }{162}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3} {Webhook-ok} }{162}{subsection.8.1.3}%
+\contentsline {section}{\numberline {8.2} {Statisztika} }{162}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1} {Kördiagram telephely/raktár tartalmáról} }{162}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2} {Különböző raktárak/telephelyek összehasonlítása} }{162}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.3} {Használat} }{163}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1} {Térkép a raktárról és benne a tárgyakról} }{163}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2} {Rendszeres művelet order} }{163}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3} {Mértékegység átváltás} }{163}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4} {Raktártípusok} }{163}{subsection.8.3.4}%
+\contentsline {subsection}{\numberline {8.3.5} {Riasztás beállítás} }{163}{subsection.8.3.5}%
+\contentsline {subsection}{\numberline {8.3.6} {QR kód olvasó} }{164}{subsection.8.3.6}%
+\contentsline {chapter}{\numberline {9} {Felhasznált irodalom} }{165}{chapter.9}%
+\contentsline {chapter}{\numberline {10} {Mellékletek} }{167}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Felhasznált könyvtárak}{168}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Online elérhetőség}{168}{section.10.2}%

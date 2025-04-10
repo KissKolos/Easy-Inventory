@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EasyInventory</title>
+    <link id="theme" rel="stylesheet" href="assets/css/colors_dark.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/html.css">
+    <link rel="stylesheet" href="assets/css/list.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/popup.css">
+    <link rel="stylesheet" href="assets/css/tabview.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+    <link rel="stylesheet" href="assets/css/authorizations.css">
+    <link rel="stylesheet" href="assets/css/statistics.css">
+</head>
+<body class="fill">
+<template id="error-template">
+    <div>
+        <span class="error-msg"></span>
+        <img class="error-cancel button" src="assets/cross.svg">
+    </div>
+</template>
+<template id="task-template">
+    <div>
+        <span class="task-msg"></span>
+    </div>
+</template>
+<template id="popup-template">
+    <div class="popup-shadow fill">
+        <div class="popup box">
+            <div>
+                <div class="popup-body">
+                    <div class="content"></div>
+                    <div class="popup-options">
+                        <img class="cancel button" src="assets/cross.svg">
+                        <img class="ok hidden button" src="assets/tick.svg">
+                    </div>
+                </div>
+                <div class="popup-spinner">
+                    <img class="spin" src="assets/spinner.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template id="empty-template">
+    <div>
+        <div class="content"></div>
+    </div>
+</template>
+<template id="message-popup">
+    <div>
+        <span class="message"></span>
+    </div>
+</template>
+<template id="login-template">
+    <div class="login-view background">
+        <div class="login-theme">
+            <img class="light-theme1 theme-button" src="assets/sun.svg" tabindex="0">
+            <img class="dark-theme1 theme-button" src="assets/moon.svg" tabindex="0">
+        </div>
+        <div class="login-page fill">
+            <div class="box">
+                <div class="relative">
+                    <div class="login-form">
+                        <span class="localize">login.name</span>
+                        <input class="username" minlength="1" required>
+                        <span class="localize">login.password</span>
+                        <input type="password" class="password">
+                        <span class="localize login-fail">login.fail</span>
+                        <span class="localize">localization.choice</span>
+                        <select class="localization"></select>
+                        <button class="login-button localize">login.button</button>
+                    </div>
+                    <div class="login-spinner fill">
+                        <img class="spin" src="assets/spinner.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logged-in-page fill">
+            <div class="login-user-info panel">
+                <img class="light-theme theme-button" src="assets/sun.svg" tabindex="0">
+                <img class="dark-theme theme-button" src="assets/moon.svg" tabindex="0">
+                <span class="login-name"></span>
+                <img class="logout-button" src="assets/exit.svg" tabindex="0">
+            </div>
+            <div class="login-content">
+
+            </div>
+        </div>
+    </div>
+</template>
+<template id="tabview-template">
+    <div class="tabview">
+        <header class="tab-header panel">
+
+        </header>
+        <main class="tab-content">
+
+        </main>
+    </div>
+</template>
+<template id="tabview-header-template">
+    <div>
+        <span class="text" tabindex="0"></span>
+    </div>
+</template>
+<template id="warehouse-template">
+    <div class="list-item-content">
+        <div  class="card-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+            <span class="address"></span>
+        </div>
+        <hr>
+        <div class="list-item-actions">
+            <img src="assets/edit.svg" class="edit-btn button" tabindex="0">
+            <img src="assets/delete.svg" class="delete-btn button" tabindex="0">
+        </div>
+        <span class="archived hidden"></span>
+    </div>
+</template>
+<template id="warehouse-select-template">
+    <div class="list-item-content">
+        <div class="select-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+    </div>
+</template>
+<template id="warehouse-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">warehouse.id</span>
+            <input class="id localize" placeholder="default.id">
+        </div>
+        <div>
+            <span class="localize">warehouse.name</span>
+            <input class="name localize" placeholder="default.name">
+        </div>
+        <div>
+            <span class="localize">warehouse.address</span>
+            <input class="address">
+        </div>
+    </div>
+</template>
+<template id="storage-template">
+    <div class="list-item-content">
+        <div  class="card-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+        <hr>
+        <div class="list-item-actions">
+            <img class="limits button" src="assets/limit.svg">
+            <img class="capacity button" src="assets/capacity.svg">
+            <img src="assets/edit.svg" class="edit-btn button" tabindex="0">
+            <img src="assets/delete.svg" class="delete-btn button" tabindex="0">
+        </div>
+        <span class="archived hidden"></span>
+    </div>
+</template>
+<template id="storage-select-template">
+    <div class="list-item-content">
+        <div class="select-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+    </div>
+</template>
+<template id="storage-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">storage.id</span>
+            <input class="id localize" placeholder="default.id">
+        </div>
+        <div>
+            <span class="localize">storage.name</span>
+            <input class="name localize" placeholder="default.name">
+        </div>
+    </div>
+</template>
+<template id="storage-limit-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">storage.limit.item</span>
+            <input class="amount" type="number" min="0">
+        </div>
+    </div>
+</template>
+<template id="storage-limit-row">
+    <div class="storage-limit-row">
+        <span class="name"></span>
+        <span class="stat"></span>
+        <img src="assets/edit.svg" class="edit-btn button">
+    </div>
+</template>
+<template id="storage-capacity-row">
+    <div class="storage-capacity-row">
+        <span class="name"></span>
+        <span class="stat"></span>
+    </div>
+</template>
+<template id="profile-template">
+    <div class="profile">
+        <button class="localize password-change">profile.password.change</button>
+    </div>
+</template>
+<template id="password-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">profile.password.new</span>
+            <input class="new_password">
+        </div>
+        <div>
+            <span class="localize">profile.password.new.again</span>
+            <input class="new_password_again">
+        </div>
+        <div>
+            <span class="localize">profile.password.old</span>
+            <input class="old_password">
+        </div>
+    </div>
+</template>
+<template id="operation-template">
+    <div class="list-item-content">
+        <div class="card-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+            <span class="is-add"></span>
+        </div>
+        <hr>
+        <div class="list-item-actions">
+            <img src="assets/view.svg" class="view-btn button" tabindex="0">
+            <img src="assets/tick.svg" class="accept-btn button" tabindex="0">
+            <img src="assets/delete.svg" class="cancel-btn button" tabindex="0">
+        </div>
+        <span class="archived hidden"></span>
+    </div>
+</template>
+<template id="operation-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">operation.id</span>
+            <input class="id localize" placeholder="default.id">
+        </div>
+        <div>
+            <span class="localize">operation.name</span>
+            <input class="name localize" placeholder="default.name">
+        </div>
+        <div>
+            <span class="localize">operation.is_add</span>
+            <input type="checkbox" class="is-add"></input>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="localize">
+                        operation.item.storage
+                    </th>
+                    <th class="localize">
+                        operation.item.type
+                    </th>
+                    <th class="localize">
+                        operation.item.lot
+                    </th>
+                    <th class="localize">
+                        operation.item.serial
+                    </th>
+                    <th class="localize">
+                        operation.item.manufacturer_serial
+                    </th>
+                    <th class="localize">
+                        operation.item.amount
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="content"></tbody>
+        </table>
+        <image class="add-btn button" src="assets/add.svg"></image>
+    </div>
+</template>
+<template id="operation-item-row">
+    <tr>
+        <td class="storage"></td>
+        <td class="type"></td>
+        <td class="lot"></td>
+        <td class="manufacturer_serial"></td>
+        <td class="global_serial"></td>
+        <td class="amount"></td>
+        <td><img class="remove-btn button" src="assets/delete.svg" tabindex="0"></td>
+    </tr>
+</template>
+<template id="operation-item-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">operation.item.storage</span>
+            <button class="storage"></button>
+        </div>
+        <div>
+            <span class="localize">operation.item.lot</span>
+            <input class="lot"></input>
+        </div>
+        <div>
+            <span class="localize">operation.item.serial.enable</span>
+            <input type="checkbox" class="serial_enable"></input>
+        </div>
+        <div>
+            <span class="localize">operation.item.manufacturer_serial</span>
+            <input class="manufacturer_serial">
+        </div>
+        <div>
+            <span class="localize">operation.item.serial</span>
+            <input class="global_serial localize" type="number" min="1" placeholder="default.serial">
+        </div>
+        <div>
+            <span class="localize">operation.item.amount</span>
+            <div>
+                <input class="amount" type="number" min="1" value="1"></input>
+                <span class="amount-unit"></span>
+            </div>
+        </div>
+    </div>
+</template>
+<template id="operation-view-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">operation.id</span>
+            <span class="id">
+        </div>
+        <div>
+            <span class="localize">operation.name</span>
+            <span class="name">
+        </div>
+        <div>
+            <span class="localize">operation.is_add</span>
+            <input type="checkbox" class="is-add" disabled></input>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="localize">
+                        operation.item.storage
+                    </th>
+                    <th class="localize">
+                        operation.item.type
+                    </th>
+                    <th class="localize">
+                        operation.item.lot
+                    </th>
+                    <th class="localize">
+                        operation.item.serial
+                    </th>
+                    <th class="localize">
+                        operation.item.manufacturer_serial
+                    </th>
+                    <th class="localize">
+                        operation.item.amount
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="content"></tbody>
+        </table>
+    </div>
+</template>
+<template id="operation-view-item-row">
+    <tr>
+        <td class="storage"></td>
+        <td class="type"></td>
+        <td class="lot"></td>
+        <td class="manufacturer_serial"></td>
+        <td class="global_serial"></td>
+        <td class="amount"></td>
+    </tr>
+</template>
+<template id="list-template">
+    <div class="list">
+        <div class="list-filter hidden panel">
+            <button class="list-warehouse"></button>
+        </div>
+        <div class="list-content background">
+            <img src="assets/spinner.svg" class="spin spinner">
+            <div class="list-content-inner">
+
+            </div>
+        </div>
+        <div class="panel">
+            <img src="assets/add.svg" class="add-btn hidden button" tabindex="0">
+            <img src="assets/reload.svg" class="reload-btn button" tabindex="0">
+            <input type="text" class="list-query">
+            <label class="list-archived-outer">
+                <span class="localize">list.archived</span>
+                <input type="checkbox" class="list-archived">
+            </label>
+            <img src="assets/prev.svg" class="prev-btn button" tabindex="0">
+            <img src="assets/next.svg" class="next-btn button" tabindex="0">
+        </div>
+    </div>
+</template>
+<template id="list-item-template">
+    <div class="list-item box">
+        <div class="content">
+            
+        </div>
+    </div>
+</template>
+<template id="select-item-template">
+    <div class="select-item">
+        <div class="content">
+            
+        </div>
+    </div>
+</template>
+<template id="search-template">
+    <div class="search-view fill background">
+        <div class="panel">
+            <div class="search-scope">
+                <button class="warehouse"></button>
+                <button class="storage"></button>
+            </div>
+            <input type="text" class="search">
+            <div class="search-options">
+		        <label class="localize">search.warehouse</label>
+		        <input type="checkbox" class="search-warehouse">
+		        <label class="localize">search.storage</label>
+                <input type="checkbox" class="search-storage">
+		        <label class="localize">search.lot</label>
+                <input type="checkbox" class="search-lot">
+		        <label class="localize">search.serial</label>
+                <input type="checkbox" class="search-serial">
+                <img src="assets/search.svg" class="search-btn button" tabindex="0">
+            </div>
+        </div>
+        <div>
+        <table class="box">
+            <thead>
+                <tr>
+                    <th class="warehouse-header localize">
+	                    itemstack.warehouse
+                    </th>
+                    <th class="storage-header localize">
+                        itemstack.storage
+                    </th>
+                    <th class="localize">
+                        itemstack.type
+                    </th>
+                    <th class="lot-header localize">
+                        itemstack.lot
+                    </th>
+                    <th class="gserial-header localize">
+                        itemstack.serial
+                    </th>
+                    <th class="mserial-header localize">
+                        itemstack.manufacturer_serial
+                    </th>
+                    <th class="localize">
+                        itemstack.amount
+                    </th>
+                    <th class="localize">
+                        itemstack.available
+                    </th>
+                </tr>
+                <tr class="loading hidden">
+                    <td colspan="8">
+                        <img class="spin" src="assets/spinner.svg">
+                    </td>
+                </tr>
+            </thead>
+            <tbody class="results">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <img src="assets/prev.svg" class="prev-btn button" tabindex="0">
+                        <img src="assets/next.svg" class="next-btn button" tabindex="0">
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+    </div>
+</template>
+<template id="search-result-template">
+    <tr>
+        <th class="warehouse warehouse-col">
+        </th>
+        <th class="storage storage-col">
+        </th>
+        <th class="type">
+        </th>
+        <th class="lot lot-col">
+        </th>
+        <th class="global-serial gserial-col">
+        </th>
+        <th class="manufacturer-serial mserial-col">
+        </th>
+        <th class="amount">
+        </th>
+        <th class="available-amount">
+        </th>
+    </tr>
+</template>
+<template id="user-template">
+    <div class="list-item-content">
+        <div  class="card-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+            <span class="manager"></span>
+        </div>
+        <hr>
+        <div class="list-item-actions">
+            <img class="authorizations button" src="assets/authorizations.svg" tabindex="0">
+            <img class="local-authorizations button" src="assets/local_authorizations.svg" tabindex="0">
+            <img src="assets/edit.svg" class="edit-btn button" tabindex="0">
+            <img src="assets/delete.svg" class="delete-btn button" tabindex="0">
+        </div>
+    </div>
+</template>
+<template id="user-select-template">
+    <div class="list-item-content">
+        <div class="select-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+    </div>
+</template>
+<template id="user-authorization-popup">
+    <div>
+        <div class="authorization-list content">
+        </div>
+    </div>
+</template>
+<template id="authorization-template">
+    <div>
+        <span class="authorization-name"></span>
+        <img class="authorization-revoke button" src="assets/cross.svg" tabindex="0">
+        <img class="authorization-grant button" src="assets/tick.svg" tabindex="0">
+        <img class="spin" src="assets/spinner.svg">
+    </div>
+</template>
+<template id="authorization-separator-template">
+    <div class="divider">
+        <span class="warehouse-id"></span>
+    </div>
+</template>
+<template id="user-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">user.id</span>
+            <input class="id localize" placeholder="default.id">
+        </div>
+        <div>
+            <span class="localize">user.name</span>
+            <input class="name localize" placeholder="default.name">
+        </div>
+        <div>
+            <span class="localize">user.manager</span>
+            <button class="manager"></button>
+        </div>
+        <div>
+            <span class="localize">user.password</span>
+            <div>
+                <input type="checkbox" class="password-set">
+                <input type="password" class="password">
+            </div>
+        </div>
+    </div>
+</template>
+<template id="item-template">
+    <div class="list-item-content">
+        <div  class="card-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+            <span class="unit"></span>
+        </div>
+        <hr>
+        <div class="list-item-actions">
+            <img src="assets/edit.svg" class="edit-btn button" tabindex="0">
+            <img src="assets/delete.svg" class="delete-btn button" tabindex="0">
+        </div>
+        <span class="archived hidden"></span>
+    </div>
+</template>
+<template id="item-select-template">
+    <div class="list-item-content">
+        <div class="select-labels">
+            <span class="name"></span>
+            <span class="id"></spayn>
+        </div>
+    </div>
+</template>
+<template id="item-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">item.id</span>
+            <input class="id localize" placeholder="default.id">
+        </div>
+        <div>
+            <span class="localize">item.name</span>
+            <input class="name localize" placeholder="default.name">
+        </div>
+        <div>
+            <span class="localize">item.unit</span>
+            <button class="unit"></button>
+        </div>
+    </div>
+</template>
+<template id="unit-template">
+    <div class="list-item-content">
+        <div  class="card-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+        <hr>
+        <div class="list-item-actions">
+            <img src="assets/edit.svg" class="edit-btn button" tabindex="0">
+            <img src="assets/delete.svg" class="delete-btn button" tabindex="0">
+        </div>
+        <span class="archived hidden"></span>
+    </div>
+</template>
+<template id="unit-select-template">
+    <div class="list-item-content">
+        <div class="select-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+    </div>
+</template>
+<template id="unit-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">unit.id</span>
+            <input class="id localize" placeholder="default.id">
+        </div>
+        <div>
+            <span class="localize">unit.name</span>
+            <input class="name localize" placeholder="default.name">
+        </div>
+    </div>
+</template>
+<template id="stats-template">
+    <div class="statistics fill">
+        <div class="panel">
+			<div class="statistics-config"></div>
+			<div class="statistics-range">
+				<label>
+					<span class="localize">statistics.from</span>
+					<input type="date" class="from">
+				</label>
+				<label>
+					<span class="localize">statistics.to</span>
+					<input type="date" class="to">
+				</label>
+			</div>
+			<button class="statistics-update localize">statistics.show</button>
+		</div>
+		<div class="graph">
+			<div class="graph-yaxis">
+				<span class="max-y"></span>
+				<span class="min-y"></span>
+			</div>
+            <svg class="graph-inner" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+				<defs>
+					<linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
+						<stop offset="0%" stop-color="#0000aa" />
+						<stop offset="100%" stop-color="black" stop-opacity="0" />
+					</linearGradient>
+				  </defs>
+				  <g class="graph-content"></g>
+			</svg>
+            <div></div>
+			<div class="graph-xaxis">
+				<span class="min-x"></span>
+				<span class="max-x"></span>
+			</div>
+		</div>
+    </div>
+</template>
+<template id="stats-items-template">
+	<div>
+		<button class="item"></button>
+		<select class="option">
+			<option value="start_amount" class="localize">statistics.items.start_amount</option>
+			<option value="added" class="localize">statistics.items.added</option>
+			<option value="removed" class="localize">statistics.items.removed</option>
+			<option value="moved" class="localize">statistics.items.moved</option>
+		</select>
+        <label>
+			<span class="localize">statistics.items.warehouse</span>
+			<input type="text" class="warehouse-search">
+		</label>
+        <label>
+			<span class="localize">statistics.items.storage</span>
+			<input type="text" class="storage-search">
+		</label>
+		<label>
+			<span class="localize">statistics.items.operation</span>
+			<input type="text" class="operation-search">
+		</label>
+	</div>
+</template>
+<template id="stats-operations-template">
+	<div>
+        <label>
+			<span class="localize">statistics.items.warehouse</span>
+			<input type="text" class="warehouse-search">
+		</label>
+		<label>
+			<span class="localize">statistics.items.operation</span>
+			<input type="text" class="operation-search">
+		</label>
+	</div>
+</template>
+
+<div id="content" class="fill"></div>
+
+<div id="popup-container"></div>
+
+<script src="assets/js/localization.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/view.js"></script>
+<script src="assets/js/tabbed_view.js"></script>
+<script src="assets/js/dialog.js"></script>
+<script src="assets/js/request.js"></script>
+<script src="assets/js/units.js"></script>
+<script src="assets/js/items.js"></script>
+<script src="assets/js/users.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/operations.js"></script>
+<script src="assets/js/storages.js"></script>
+<script src="assets/js/warehouses.js"></script>
+<script src="assets/js/login_view.js"></script>
+<script src="assets/js/statistics.js"></script>
+<script src="assets/js/profile.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

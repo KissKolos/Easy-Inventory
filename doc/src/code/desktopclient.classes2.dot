@@ -1,0 +1,14 @@
+digraph G {
+	rankdir=BT;
+	edge[arrowhead=onormal]
+	EditDialog->FormDialog
+	UnitEditDialog->EditDialog
+	ItemEditDialog->EditDialog
+	WarehouseEditDialog->EditDialog
+	StorageEditDialog->EditDialog
+	UserEditDialog->EditDialog
+	StorageLimitDialog->EditDialog
+	UserAuthorizationDialog->EditDialog
+	PasswordChangeDialog->EditDialog
+	OperationItemDialog->FormDialog
+}

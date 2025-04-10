@@ -1,0 +1,15 @@
+[
+	{
+		"name":"János",
+		"manager":{
+			"id":"admin",
+			"name":"Admin",
+			"manager":null
+		}
+	},
+	{
+			"id":"admin",
+			"name":"Admin",
+			"manager":null
+	}
+]

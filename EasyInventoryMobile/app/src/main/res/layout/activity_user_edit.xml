@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?app_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/edit_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg_start"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/editId"
+                android:text="@string/user_id"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <EditText
+                android:id="@+id/editId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:ems="10"
+                android:hint="@string/default_id"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="LabelFor"
+                tools:layout_editor_absoluteX="234dp"
+                tools:layout_editor_absoluteY="58dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/editName"
+                android:text="@string/user_name"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:ems="10"
+                android:hint="@string/default_name"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="LabelFor"
+                tools:layout_editor_absoluteX="234dp"
+                tools:layout_editor_absoluteY="58dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/editPassword"
+                android:text="@string/user_password"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <CheckBox
+                android:id="@+id/editPasswordCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                tools:layout_editor_absoluteX="234dp"
+                tools:layout_editor_absoluteY="58dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?card_bg_end"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:labelFor="@id/editManager"
+                android:text="@string/user_manager"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <TextView
+                android:id="@+id/manager"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="33dp" />
+
+            <ImageButton
+                android:id="@+id/editManager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/tab_users"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                app:tint="?white_black"
+                android:src="@drawable/edit" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+%% Creator: Inkscape 1.2.2 (b0a8486541, 2022-12-01), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'apiserver.classes_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1838.84003731bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.10223837)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.48233669,0.00995193){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}DB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.05271802,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AuthenticationDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.16093842,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AuthorizationDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.24903744,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}ExportDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.320278,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}ImportDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.38879946,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}ItemsDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.45133889,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}UnitDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.51387832,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}UsersDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.59327616,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}OperationsDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.68572575,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}WarehouseDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.77056184,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}StorageDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.86355525,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}StorageLimitsDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.96035541,0.04910705){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}StatisticsDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{apiserver.classes_svg-tex.pdf}}%
+    \put(0.48233669,0.08826217){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}BaseDB\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{apiserver.classes_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,74 @@
+\newpage
+\block{
+	\section{Telepítés}
+
+	\subsection{Server telepítés}
+
+	\subsubsection{\mt{Linux mint}{}}
+
+	\p{\mt{%
+			A szerver telepítéséhez a futtatni kell a telepítő programot.
+		}{}
+		
+		\cli{chmod +x install.sh \&\& ./install.sh}
+		
+		\mt{%
+			Ez a parancs telepíti szükséges csomagokat és bemásolja a frontendet és a szervert a \code{/var/www/html/} mappába.
+			Ezután ott be tudjuk állítani a szervert az \code{api/config.json} fájlban.
+		}{}
+	}
+}
+
+\block{
+	\subsubsection{\mt{Más linux alapú rendszerek}{}}
+
+	\p{\mt{%
+			A szerver működéséhez a következő programok szükségesek:
+		}{}
+	}
+}
+
+\p{%
+	\begin{itemize}
+		\item php
+		\item php-mysqli
+		\item apache
+		\item libapache2-mod-php
+		\item mariadb-server
+	\end{itemize}
+}
+
+\p{%
+	\mt{%
+		A szerver telepítéséhez az \code{api} és a \code{frontend/assets} mappát és a \code{frontend/index.html} fájlt át kell másolni az apache web mappába.
+		A mysql szerveren létre kell hozni egy felhasználót és be kell állítani.
+		Az apache szerveren engedélyezni kell a \code{.htaccess} fájlokat és be kell kapcsolni a \code{rewrite} és a \code{PHP} modulokat.
+	}{}
+}
+
+\block{
+	\subsubsection{Windows}
+
+	\p{\mt{%
+		A szerver Windowsra való telepítéséhez először a XAMPP-ot kell telepítenünk.
+		Utána az \code{api} és a \code{frontend/assets} mappát és a \code{frontend/index.html} fájlt át kell másolni a htdocs mappába.
+	}{}}
+}
+
+\block{
+	\subsection{Asztali kliens telepítés}
+
+	\p{\mt{%
+		Az asztali kliens fájljai a \code{EasyInventoryDesktop/\allowbreak dist/\allowbreak boundles/\allowbreak EasyInventoryDesktop} mappában találhatóak.
+		Ezt a mappát akárhova lehet másolni és nem igényel telepítőt, mert mined szükséges dll benne van a mappában.
+		A futtatáshoz a benne található exe fájlt lehet futtatni.
+	}{}}
+}
+
+\block{
+	\subsection{Mobil kliens telepítés}
+
+	\p{\mt{%
+		A mobil alkalmazás telepítéséhez Android 14 szükséges.
+	}{}}
+}

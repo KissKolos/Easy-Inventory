@@ -1,0 +1,12 @@
+[
+	{
+		"id":"carrot_box",
+		"name":"Répa",
+		"unit":{
+			"id":"small_box",
+			"name":"Kis Doboz",
+			"deleted":null
+		},
+		"deleted":null
+	}
+]

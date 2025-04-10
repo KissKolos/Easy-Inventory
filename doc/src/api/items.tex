@@ -1,0 +1,86 @@
+
+\section{\mt{Cikkek}{Items}}
+
+\subsection{\mt{Cikkek lekérése}{Retrieval of items}}
+
+\getbox{/items?\allowbreak q=\param{q}\&archived=\param{archived}\&offset=\param{offset}\allowbreak \&limit=\param{limit}}
+\params {
+	\paginatorParamA
+}
+\requestHeader{
+    \token
+}
+\listCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{Item} lista.}{A JSON object where the key is the identifier of the item and it's value is each item's properties.}
+	
+	\lstinputlisting{items.list.response.json}
+}
+
+\subsection{\mt{Tárgy azonosítójának változtatása}{Changing the identifier of the item}}
+
+\postbox {/items}
+\requestHeader{
+    \token
+    
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{MoveRequest} objektum.}{Changes the identifier of the item.}
+
+	\lstinputlisting{items.move.request.json}
+}
+\moveCodes
+
+\subsection{\mt{Cikk lekérése}{Retrieval of an item}}
+
+\getbox {/items/\param{item}}
+\params {
+	\itemParam
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{Item} objektum.}{The properties of the item in JSON format.}
+
+	\lstinputlisting{items.get.response.json}
+}
+
+\subsection{\mt{Cikk módosítása, létrehozása}{Creating, modifying items}}
+
+\putbox {/items/\param{item}?update=\param{update}\&create=\param{create}}
+\params {
+	\itemParam
+
+	\putParam
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{ItemPutRequest} objektum.}{The properties of the item in JSON format.}
+
+	\lstinputlisting{items.put.request.json}
+}
+\putCodes
+
+\subsection{\mt{Cikk törlése}{Delete an item}}
+
+\deletebox {/items/\param{items}}
+\params {
+	\itemParam
+}
+\requestHeader{
+    \token
+}
+\deleteCodes

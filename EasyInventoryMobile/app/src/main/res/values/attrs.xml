@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="white_black" type="color"/>
+
+    <attr name="app_text_color" type="color"/>
+
+    <attr name="card_selection_background" type="color"/>
+    <attr name="app_background" type="color"/>
+    <attr name="card_background" type="color"/>
+    <attr name="card_border" type="color"/>
+    <attr name="card_selected_border" type="color"/>
+
+    <attr name="card_bg" type="drawable"/>
+    <attr name="card_bg_start" type="drawable"/>
+    <attr name="card_bg_end" type="drawable"/>
+    <attr name="card_bg_start_end" type="drawable"/>
+
+    <attr name="card_bg_selected" type="drawable"/>
+    <attr name="card_bg_selected_start" type="drawable"/>
+    <attr name="card_bg_selected_end" type="drawable"/>
+    <attr name="card_bg_selected_start_end" type="drawable"/>
+</resources>

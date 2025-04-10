@@ -1,0 +1,53 @@
+digraph G {
+	rankdir=BT;
+	edge[arrowhead=onormal]
+	LocalListEditView->ListEditView->ListView->View
+	SelectView->ListView
+	
+	UnitView->ListEditView
+	UnitSelectView->SelectView
+	ItemView->ListEditView
+	ItemSelectView->SelectView
+	WarehouseView->ListEditView
+	WarehouseSelectView->SelectView
+	StorageView->LocalListEditView
+	StorageSelectView->SelectView
+	OperationView->LocalListEditView
+	OperationSelectView->SelectView
+	StorageLimitView->ListView
+	StorageCapacityView->ListView
+
+	TabbedView->View
+	ProfileView->View
+	SearchView->View
+	StatsView->View
+	LoginView->View
+	EditDialog->DialogView->View
+	SelectDialog->DialogView
+	ConfirmDialog->MessageDialog->DialogView
+	ViewDialog->DialogView
+
+	UserDialog->EditDialog
+	UserAuthorizationDialog->DialogView
+	UnitDialog->EditDialog
+	ItemDialog->EditDialog
+	WarehouseDialog->EditDialog
+	StorageDialog->EditDialog
+	OperationDialog->EditDialog
+	StorageLimitEditDialog->EditDialog
+	PasswordDialog->EditDialog
+	OperationItemDialog->EditDialog
+	OperationDialog->EditDialog
+	OperationViewDialog->DialogView
+
+	{
+		edge[style=invis]
+		ListView->StorageLimitEditDialog
+		ListView->UserDialog
+		ListView->UnitDialog
+		ListView->ItemDialog
+		ListView->WarehouseDialog
+		ListView->StorageDialog
+		ListView->OperationDialog
+	}
+}

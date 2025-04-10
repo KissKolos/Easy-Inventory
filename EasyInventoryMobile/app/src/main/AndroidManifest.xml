@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:targetSandboxVersion="1">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!--uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29"/-->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EasyInventoryClient"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31" >
+
+
+        <activity
+            android:name=".ui.users.UserAuthorizationsActivity"
+            android:exported="false"
+            android:label="@string/user_system_authorizations"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar"/>
+        <activity
+            android:name=".ui.users.UserEditActivity"
+            android:exported="false"
+            android:label="@string/user_edit"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.users.UserListActivity"
+            android:exported="false"
+            android:label="@string/tab_users"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.warehouses.WarehouseListActivity"
+            android:exported="false"
+            android:label="@string/tab_warehouses"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.warehouses.WarehouseEditActivity"
+            android:exported="false"
+            android:label="@string/warehouse_edit"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.storages.StorageEditActivity"
+            android:exported="false"
+            android:label="@string/storage_edit"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.units.UnitEditActivity"
+            android:exported="false"
+            android:label="@string/unit_edit"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.units.UnitListActivity"
+            android:exported="false"
+            android:label="@string/tab_units"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.items.ItemEditActivity"
+            android:exported="false"
+            android:label="@string/item_edit"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.items.ItemListActivity"
+            android:exported="false"
+            android:label="@string/tab_items"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:exported="false"
+            android:label="@string/tab_search"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.storages.StorageLimitActivity"
+            android:exported="false"
+            android:label="@string/storage_limit"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.storages.StorageListActivity"
+            android:exported="false"
+            android:label="@string/tab_storages"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.operations.OperationEditActivity"
+            android:exported="false"
+            android:label="@string/operation_edit"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".ui.operations.OperationItemActivity"
+            android:exported="false"
+            android:label="@string/operation_item"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+
+        <activity
+            android:name=".LoggedInActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EasyInventoryClient.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.easyinventory.client.ui.profile.PasswordChangeActivity" />
+        <activity android:name="com.easyinventory.client.ui.storages.StorageLimitEditActivity" />
+        <activity android:name="com.easyinventory.client.ui.operations.OperationViewActivity" />
+    </application>
+
+</manifest>

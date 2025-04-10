@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#5500aa</color>
+
+    <color name="text_color">#111</color>
+    <color name="popup_shadow">#55000000</color>
+    <color name="selection">#88FFFF</color>
+    <color name="background">#ccc</color>
+    <color name="card_background">#eee</color>
+    <color name="card_border">#B1BCBE</color>
+    <color name="card_selected_border">#B1BCBE</color>
+
+    <color name="dark_text_color">#ddd</color>
+    <color name="dark_selection">#229999</color>
+    <color name="dark_background">#222</color>
+    <color name="dark_card_background">#334</color>
+    <color name="dark_card_border">#2b2b30</color>
+    <color name="dark_card_selected_border">#2b2b30</color>
+
+
+    <color name="button_text">#fff</color>
+    <color name="button_text_simple">#8855ee</color>
+</resources>

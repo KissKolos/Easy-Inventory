@@ -1,0 +1,132 @@
+
+\newcommand{\operationParam}{\apiinlineitem{operation}{\mt{Tárgy azonosítója}{Identifier of the item}}}
+
+\block{
+	\section{\mt{Műveletek}{Operations}}
+
+	\subsection{\mt{Műveletek lekérése}{Retrieval of operations}}
+
+	\getbox {/warehouses/\param{warehouse}/operations?\allowbreak q=\param{q}\&\allowbreak archived=\param{archived}\&\allowbreak offset=\param{offset}\&\allowbreak limit=\param{limit}}
+}
+\params {
+	\warehouseParam
+
+	\paginatorParamA
+}
+\requestHeader{
+    \token
+}
+\listCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{Operation} objektum lista.}{A JSON object where the key is the identifier of the operation and it's value is the properties of the operation.}
+	
+	\lstinputlisting{operations.list.response.json}
+}
+
+\block{
+	\subsection{\mt{Művelet azonosítójának változtatása}{Changing the unit's identifier}}
+
+	\postbox {/warehouses/\param{warehouse}/operations}
+}
+\params {
+	\warehouseParam
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{MoveRequest} objektum.}{Changes the identifier of the given operation.}
+
+	\lstinputlisting{operations.move.request.json}
+}
+\moveCodes
+
+\block{
+	\subsection{\mt{Művelet lekérése}{}}
+
+	\getbox {/warehouses/\param{warehouse}/operations/\param{operation}}
+}
+\params {
+	\warehouseParam
+
+	\operationParam
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{Operation} objektum.}{The properties of the operation in JSON format.}
+
+	\lstinputlisting{operations.get.response.json}
+}
+
+\block{
+	\subsection{\mt{Művelet létrehozása}{Creating operations}}
+
+	\putbox {/warehouses/\param{warehouse}/operations/\param{operation}}
+}
+\params {
+	\warehouseParam
+
+	\operationParam
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{OperationRequest} objektum.}{The properties of the operation in JSON format.}
+
+	\lstinputlisting{operations.put.request.json}
+}
+\responseCodes{
+	\forbidden
+	
+	\unauthorized
+	
+	\badRequest
+	
+	\notFound
+
+	\apiinlineitem{409}{\mt{A cél azonosító már létezik, vagy nem lehet végrehajtani a műveletet.}{The target id already exists or the operation cannot be performed.}}
+	
+	\created
+}
+
+\block{
+	\subsection{\mt{Művelet visszaigazolása és törlése}{Commit or cancel an operation}}
+
+	\deletebox {/warehouses/\param{warehouse}/operations/\param{operation}}
+}
+\params {
+	\warehouseParam
+
+	\operationParam
+}
+\requestHeader{
+    \token
+}
+\request{
+	\mt{Egy \struct{OperationCommit} objektum.}{}
+
+	\lstinputlisting{operations.delete.request.json}
+}
+\responseCodes{
+	\forbidden
+	
+	\unauthorized
+	
+	\notFound
+	
+	\apiinlineitem{204}{\mt{Törölve vagy visszaigazolva}{}}
+}

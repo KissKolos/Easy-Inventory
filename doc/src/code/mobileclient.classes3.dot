@@ -1,0 +1,10 @@
+digraph G {
+	rankdir=BT;
+	edge[arrowhead=onormal]
+	LocalListFragment->BaseListFragment
+	OperationsFragment->LocalListFragment
+	StoragesFragment->LocalListFragment
+	UnitsFragment->BaseListFragment
+	UsersFragment->BaseListFragment
+	WarehousesFragment->BaseListFragment
+}

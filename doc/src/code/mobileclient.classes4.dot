@@ -1,0 +1,11 @@
+digraph G {
+	rankdir=BT;
+	edge[arrowhead=onormal]
+	OperationAdapter->SelectableArrayAdapter
+	StorageAdapter->SelectableArrayAdapter
+	UnitAdapter->SelectableArrayAdapter
+	UsersAdapter->SelectableArrayAdapter
+	WarehouseAdapter->SelectableArrayAdapter
+	StorageLimitAdapter->SelectableArrayAdapter
+	OperationItemAdapter->SelectableArrayAdapter
+}

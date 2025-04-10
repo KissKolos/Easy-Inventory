@@ -1,0 +1,60 @@
+\block{%
+	\section{\mt{Dokumentáció}{}}
+
+	\subsection{\mt{Áttekintés}{}}
+	
+	\p{\mt{%
+		A projekt dokumentációja \LaTeX dokumentum leíró nyelvet használja.
+		A forrás fájlok a \code{doc/src} mappában találhatók.
+		A legtöbb stílus elem és a csomagok importálása a \code{shared.tex} fájllban van beállítva.
+	}{}}
+}
+
+\block{%
+	\subsection{\mt{Felhasználói dokumentáció}{}}
+	
+	\p{\mt{%
+		A felhasználói dokumentáció a \code{user} mappában található.
+		A dokumentum által használt ikonok a \code{user/resources/icon} mappában találhatóak.
+		Az ikonok megváltoztatása esetén az itt található ikonokat is frissíteni kell.
+		A \code{user/resources/web} , \code{user/resources/mobile} és \code{user/resources/desktop} mappákban található képeket a programok E2E tesztjei készítik.
+		A programok kinézetének változtatásakor az itteni képeket érdemes frissíteni.
+	}{}}
+}
+
+\block{%
+	\subsection{\mt{Kód dokumentáció}{}}
+	
+	\p{\mt{%
+		A kód dokumentáció a \code{code} mappában találhatóak.
+		Az dokumentum által használt kód részek a \code{code/generated} mappában találhatóak.
+		Ezeket a kód részeket az építő program autómatikusan generálja.
+	}{}}
+}
+
+\block{%
+	\subsection{\mt{Teszt dokumentáció}{}}
+	
+	\p{\mt{%
+		A teszt dokumentáció a \code{test} mappában, a dokumentum által használt kód részletek pedig a \code{test/generated} mappában találhatóak.
+		Ezeket a kód részleteket az építő program autómatikusan generálja.
+	}{}}
+}
+
+\block{%
+	\subsection{\mt{Kód beillesztő}{}}
+	
+	\p{\mt{%
+		A kód beillesztő program a \code{codeextractor.py} python program.
+	}{}}
+}
+
+\block{%
+	\subsection{\mt{Építés}{}}
+	
+	\p{\mt{%
+		A dokumentáció építéséhez a \code{compile} fájlt kell futtatni.
+		Ez generált pdf fájlokat az \code{out} mappába helyezi.
+	}{}}
+}
+

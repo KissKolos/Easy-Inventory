@@ -1,0 +1,118 @@
+\block{
+	\section{\mt{Telephelyek}{Warehouses}}
+
+	\subsection{\mt{Telephelyek lekérése}{Retrieval of warehouses}}
+
+	\getbox{/warehouses?\allowbreak q=\param{q}\&archived=\param{archived}\&offset=\param{offset}\&\allowbreak limit=\param{limit}}
+}
+\params {
+	\paginatorParamA
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{Warehouse} objektum lista.}{A JSON object where the key is the id of the warehouse and it's values are the properties of the warehouse}
+	
+	\lstinputlisting{warehouses.list.response.json}
+}
+
+\block{
+	\subsection{\mt{Telephely azonosítójának változtatása}{Changing the identifier of the warehouse}}
+
+	\postbox {/warehouses}
+}
+\requestHeader{
+    \token
+    
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{MoveRequest} objektum.}{Changes the identifier of the given warehouse}
+
+	\lstinputlisting{warehouses.move.request.json}
+}
+\moveCodes
+
+\block{
+	\subsection{\mt{Telephely lekérése}{Retrieval of warehouse}}
+
+	\getbox {/units/\param{warehouse}}
+}
+\params {
+	\apiinlineitem{warehouse}{\mt{Telephely azonosítója}{Identifier of the warehouse}}
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{Warehouse} objektum.}{The properties of the warehouse in JSON format.}
+	
+	\lstinputlisting{warehouses.get.response.json}
+}
+
+\block{
+	\subsection{\mt{Telephely módosítása, létrehozása}{Creating, modifying warehouses}}
+
+	\putbox {/warehouses/\param{warehouse}?update=\param{update}\&create=\param{create}}
+}
+\params {
+	\warehouseParam
+
+	\putParam
+}
+\requestHeader{
+    \token
+    
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{WarehousePutRequest} objektum.}{The properties of the warehouse in JSON format.}
+	
+	\lstinputlisting{warehouses.put.request.json}
+}
+\putCodes
+
+\block{
+	\subsection{\mt{Telephely törlése}{Delete a warehouse}}
+
+	\deletebox {/warehouses/\param{warehouse}}
+}
+\params {
+	\warehouseParam
+}
+\requestHeader{
+    \token
+}
+\deleteCodes
+
+\block{
+	\subsection{\mt{Keresés a telephelyen}{Search in the warehouse}}
+
+	\getbox {/warehouses/\param{warehouse}/search?\allowbreak q=\param{q}\&warehouse=\param{qwarehouse}\&storage=\param{qstorage}\&\allowbreak lot=\param{lot}\&serial=\param{serial}}
+}
+\params {
+	\warehouseParam
+
+	\searchParam
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+	\contentJson
+}
+\response{
+	\mt{Egy \struct{ItemStack} objektum lista.}{A JSON array which contains the items as objects}
+
+	\lstinputlisting{warehouses.search.response.json}
+}

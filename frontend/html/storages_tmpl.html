@@ -1,0 +1,57 @@
+<template id="storage-template">
+    <div class="list-item-content">
+        <div  class="card-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+        <hr>
+        <div class="list-item-actions">
+            <img class="limits button" src="assets/limit.svg">
+            <img class="capacity button" src="assets/capacity.svg">
+            <img src="assets/edit.svg" class="edit-btn button" tabindex="0">
+            <img src="assets/delete.svg" class="delete-btn button" tabindex="0">
+        </div>
+        <span class="archived hidden"></span>
+    </div>
+</template>
+<template id="storage-select-template">
+    <div class="list-item-content">
+        <div class="select-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+    </div>
+</template>
+<template id="storage-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">storage.id</span>
+            <input class="id localize" placeholder="default.id">
+        </div>
+        <div>
+            <span class="localize">storage.name</span>
+            <input class="name localize" placeholder="default.name">
+        </div>
+    </div>
+</template>
+<template id="storage-limit-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">storage.limit.item</span>
+            <input class="amount" type="number" min="0">
+        </div>
+    </div>
+</template>
+<template id="storage-limit-row">
+    <div class="storage-limit-row">
+        <span class="name"></span>
+        <span class="stat"></span>
+        <img src="assets/edit.svg" class="edit-btn button">
+    </div>
+</template>
+<template id="storage-capacity-row">
+    <div class="storage-capacity-row">
+        <span class="name"></span>
+        <span class="stat"></span>
+    </div>
+</template>

@@ -1,0 +1,35 @@
+{
+	"id":"OP0001",
+	"is_add":false,
+	"name":"Test Operation",
+	"created":1234567,
+	"commited":null
+	"items":[
+		{
+			"item":{
+				"id":"carrot_box",
+				"name":"Répa",
+				"unit":{
+					"id":"small_box",
+					"name":"Kis Doboz",
+					"deleted":null
+				},
+				"deleted":null
+			},
+			"amount":20,
+			"storage":{
+				"id":"ST1",
+				"name":"Storage 1",
+				"warehouse":{
+					"id":"WH1",
+					"name":"Warehouse 1",
+					"deleted":null
+				},
+				"deleted":null
+			},
+			"global_serial":null,
+			"manufacturer_serial":null,
+			"lot":"L00001"
+		}
+	]
+}

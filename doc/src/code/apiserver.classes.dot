@@ -1,0 +1,16 @@
+digraph G {
+	rankdir=BT;
+	edge[arrowhead=onormal]
+	DB->AuthenticationDB->BaseDB
+	DB->AuthorizationDB->BaseDB
+	DB->ExportDB->BaseDB
+	DB->ImportDB->BaseDB
+	DB->ItemsDB->BaseDB
+	DB->UnitDB->BaseDB
+	DB->UsersDB->BaseDB
+	DB->OperationsDB->BaseDB
+	DB->WarehouseDB->BaseDB
+	DB->StorageDB->BaseDB
+	DB->StorageLimitsDB->BaseDB
+	DB->StatisticsDB->BaseDB
+}

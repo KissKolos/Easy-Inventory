@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EasyInventory</title>
+    <link id="theme" rel="stylesheet" href="assets/css/colors_dark.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/html.css">
+    <link rel="stylesheet" href="assets/css/list.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/popup.css">
+    <link rel="stylesheet" href="assets/css/tabview.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+    <link rel="stylesheet" href="assets/css/authorizations.css">
+    <link rel="stylesheet" href="assets/css/statistics.css">
+</head>
+<body class="fill">
+<template id="error-template">
+    <div>
+        <span class="error-msg"></span>
+        <img class="error-cancel button" src="assets/cross.svg">
+    </div>
+</template>
+<template id="task-template">
+    <div>
+        <span class="task-msg"></span>
+    </div>
+</template>
+<template id="popup-template">
+    <div class="popup-shadow fill">
+        <div class="popup box">
+            <div>
+                <div class="popup-body">
+                    <div class="content"></div>
+                    <div class="popup-options">
+                        <img class="cancel button" src="assets/cross.svg">
+                        <img class="ok hidden button" src="assets/tick.svg">
+                    </div>
+                </div>
+                <div class="popup-spinner">
+                    <img class="spin" src="assets/spinner.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template id="empty-template">
+    <div>
+        <div class="content"></div>
+    </div>
+</template>
+<template id="message-popup">
+    <div>
+        <span class="message"></span>
+    </div>
+</template>

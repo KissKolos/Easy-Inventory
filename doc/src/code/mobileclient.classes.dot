@@ -1,0 +1,12 @@
+digraph G {
+	rankdir=BT;
+	edge[arrowhead=onormal]
+	LocalEditActivity->BaseEditActivity
+	OperationEditActivity->LocalEditActivity
+	PasswordChangeActivity->BaseEditActivity
+	StorageEditActivity->LocalEditActivity
+	StorageLimitEditActivity->BaseEditActivity
+	UnitEditActivity->BaseEditActivity
+	UserEditActivity->BaseEditActivity
+	WarehouseEditActivity->BaseEditActivity
+}

@@ -1,0 +1,225 @@
+\contentsline {chapter}{\numberline {1}Konzultációs lap}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2} {Munka} }{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1} {Munkamegosztás} }{14}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Pék Gergő}{14}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Kiss Kolos}{14}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Garai Nándor}{14}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Munka folyamata}{14}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Használt fejlesztői eszközök}{15}{section.2.3}%
+\contentsline {chapter}{\numberline {3} {API Könyvtár Dokumentáció} }{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1} {Kapcsolat kezelés} }{18}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1} {Kapcsolódás a szerverhez} }{18}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2} {Kijelentkezés} }{18}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2} {Egységek kezelése} }{19}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1} {Egység osztály} }{19}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2} {Egységek kezelése} }{19}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3} {Felhasználók kezelése} }{20}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1} {Felhasználó osztály} }{20}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2} {Felhasználók kezelése} }{20}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3} {Felhasználók engedélyeinek kezelése} }{21}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4} {Telephelyek kezelése} }{21}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1} {Telephely osztály} }{21}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2} {Telephelyek kezelése} }{22}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5} {Raktárak kezelése} }{22}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1} {Raktár osztály} }{22}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2} {Raktárak kezelése} }{23}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6} {Cikkek kezelése} }{24}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1} {Cikk osztály} }{24}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2} {Cikkek kezelése} }{24}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7} {Műveletek kezelése} }{25}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1} {Művelet osztály} }{25}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2} {Műveletek kezelése} }{25}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8} {Keresés} }{26}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1} { {\ttfamily ItemStack} osztály} }{26}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2} {Keresés} }{26}{subsection.3.8.2}%
+\contentsline {chapter}{\numberline {4} {Kód Dokumentáció} }{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1} {Felépítés} }{28}{section.4.1}%
+\contentsline {section}{\numberline {4.2} {Adatbázis} }{29}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1} {Áttekintés} }{29}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}untis}{31}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}item\_types}{31}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}warehouses}{31}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}storages}{32}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}item\_stacks}{32}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}storage\_limits}{33}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}operations}{33}{subsection.4.2.8}%
+\contentsline {subsection}{\numberline {4.2.9}operation\_items}{34}{subsection.4.2.9}%
+\contentsline {subsection}{\numberline {4.2.10}users}{34}{subsection.4.2.10}%
+\contentsline {subsection}{\numberline {4.2.11}authorization}{35}{subsection.4.2.11}%
+\contentsline {subsection}{\numberline {4.2.12}global\_authorization}{35}{subsection.4.2.12}%
+\contentsline {subsection}{\numberline {4.2.13}authentication\_token}{36}{subsection.4.2.13}%
+\contentsline {subsection}{\numberline {4.2.14}users\_view}{36}{subsection.4.2.14}%
+\contentsline {subsection}{\numberline {4.2.15}authorization\_view}{36}{subsection.4.2.15}%
+\contentsline {subsection}{\numberline {4.2.16}authentication\_token\_view}{37}{subsection.4.2.16}%
+\contentsline {subsection}{\numberline {4.2.17}warehouses\_view}{37}{subsection.4.2.17}%
+\contentsline {subsection}{\numberline {4.2.18}storages\_view}{37}{subsection.4.2.18}%
+\contentsline {subsection}{\numberline {4.2.19}item\_types\_view}{37}{subsection.4.2.19}%
+\contentsline {subsection}{\numberline {4.2.20}units\_view}{38}{subsection.4.2.20}%
+\contentsline {subsection}{\numberline {4.2.21}operations\_view}{38}{subsection.4.2.21}%
+\contentsline {subsection}{\numberline {4.2.22}operation\_items\_view}{39}{subsection.4.2.22}%
+\contentsline {subsection}{\numberline {4.2.23}item\_stacks\_view}{40}{subsection.4.2.23}%
+\contentsline {section}{\numberline {4.3} {Api szerver} }{41}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1} {Felépítés} }{41}{subsection.4.3.1}%
+\contentsline {subsubsection}{ {Átirányítási réteg} }{41}{section*.2}%
+\contentsline {subsubsection}{ {API kezelő réteg} }{41}{section*.3}%
+\contentsline {subsubsection}{ {Adatbázis kapcsolat réteg} }{41}{section*.4}%
+\contentsline {subsection}{\numberline {4.3.2}ApiRouter.php}{42}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}APIUtils.php}{43}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4} {DB.php} }{46}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5} {BaseTrait.php} }{46}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6} {Logger.php} }{46}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.7} {Settings.php} }{47}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8} {Authentication.php} }{47}{subsection.4.3.8}%
+\contentsline {section}{\numberline {4.4}Web frontend}{48}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1} {Áttekintés} }{48}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Építés}{48}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3} {Template osztály} }{48}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4} {View osztály} }{50}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5} {ListView osztály} }{50}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6} {ListEditView osztály} }{51}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.7} {SelectView osztály} }{51}{subsection.4.4.7}%
+\contentsline {subsection}{\numberline {4.4.8} {DialogView osztály} }{52}{subsection.4.4.8}%
+\contentsline {subsection}{\numberline {4.4.9} {EditDialog osztály} }{52}{subsection.4.4.9}%
+\contentsline {section}{\numberline {4.5}API könyvtár}{53}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1} {Áttekintés} }{53}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2} {HTTPConnector osztály} }{53}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6} {Asztali kliens} }{54}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1} {Bevezetés} }{54}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2} {Worker osztály} }{54}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3} {EasyInventoryDesktop osztály} }{54}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4} {BasicView osztály} }{56}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5} {SelectView osztály} }{56}{subsection.4.6.5}%
+\contentsline {subsection}{\numberline {4.6.6} {CardView osztály} }{56}{subsection.4.6.6}%
+\contentsline {subsection}{\numberline {4.6.7} {EditableView osztály} }{57}{subsection.4.6.7}%
+\contentsline {subsection}{\numberline {4.6.8} {LocalEditableView osztály} }{57}{subsection.4.6.8}%
+\contentsline {subsection}{\numberline {4.6.9} {FormDialog osztály} }{59}{subsection.4.6.9}%
+\contentsline {subsection}{\numberline {4.6.10} {EditDialog osztály} }{59}{subsection.4.6.10}%
+\contentsline {section}{\numberline {4.7}Mobil kliens}{60}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1} {Áttekintés} }{60}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2} {MainActivity osztály} }{60}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}LoggedInActivity {osztály} }{60}{subsection.4.7.3}%
+\contentsline {subsection}{\numberline {4.7.4}Worker {osztály} }{61}{subsection.4.7.4}%
+\contentsline {subsection}{\numberline {4.7.5}BaseEditActivity {osztály} }{63}{subsection.4.7.5}%
+\contentsline {subsection}{\numberline {4.7.6}LocalEditActivity {osztály} }{63}{subsection.4.7.6}%
+\contentsline {subsection}{\numberline {4.7.7}PaginatedListActivity {osztály} }{65}{subsection.4.7.7}%
+\contentsline {subsection}{\numberline {4.7.8}BaseListActivity {osztály} }{65}{subsection.4.7.8}%
+\contentsline {subsection}{\numberline {4.7.9}BaseListFragment {osztály} }{67}{subsection.4.7.9}%
+\contentsline {subsection}{\numberline {4.7.10}LocalListFragment {osztály} }{68}{subsection.4.7.10}%
+\contentsline {subsection}{\numberline {4.7.11}SelectableArrayAdapter {osztály} }{70}{subsection.4.7.11}%
+\contentsline {section}{\numberline {4.8} {Dokumentáció} }{71}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1} {Áttekintés} }{71}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2} {Felhasználói dokumentáció} }{71}{subsection.4.8.2}%
+\contentsline {subsection}{\numberline {4.8.3} {Kód dokumentáció} }{71}{subsection.4.8.3}%
+\contentsline {subsection}{\numberline {4.8.4} {Teszt dokumentáció} }{71}{subsection.4.8.4}%
+\contentsline {subsection}{\numberline {4.8.5} {Kód beillesztő} }{72}{subsection.4.8.5}%
+\contentsline {subsection}{\numberline {4.8.6} {Építés} }{72}{subsection.4.8.6}%
+\contentsline {chapter}{\numberline {5} {Teszt Dokumentáció} }{73}{chapter.5}%
+\contentsline {section}{\numberline {5.1} {API szerver} }{74}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1} {Áttekintés} }{74}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2} {E2E tesztek} }{74}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2} {Web frontend} }{75}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1} {Áttekintés} }{75}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2} {E2E tesztek} }{75}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3} {Asztali alkalmazás} }{76}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1} {Áttekintés} }{76}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2} {E2E tesztek} }{76}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3} {NodeMatcher osztály} }{77}{subsection.5.3.3}%
+\contentsline {subsubsection}{allWindowRoots}{77}{section*.5}%
+\contentsline {subsubsection}{descendants}{77}{section*.6}%
+\contentsline {subsubsection}{with}{78}{section*.7}%
+\contentsline {subsubsection}{withClass}{78}{section*.8}%
+\contentsline {subsubsection}{click}{78}{section*.9}%
+\contentsline {subsubsection}{replaceText}{78}{section*.10}%
+\contentsline {subsubsection}{screenshotWindow}{79}{section*.11}%
+\contentsline {section}{\numberline {5.4} {Mobil alkalmazás} }{80}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1} {Áttekintés} }{80}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2} {E2E tesztek} }{80}{subsection.5.4.2}%
+\contentsline {chapter}{\numberline {6} {Felhasználói Dokumentáció} }{81}{chapter.6}%
+\contentsline {section}{\numberline {6.1} {Bevezetés} }{82}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1} {Fogalmak} }{82}{subsection.6.1.1}%
+\contentsline {subsubsection}{Telephelyek}{82}{section*.12}%
+\contentsline {subsubsection}{Raktárak}{82}{section*.13}%
+\contentsline {subsubsection}{Műveletek}{83}{section*.14}%
+\contentsline {paragraph}{ {Hozzáadási művelet} }{83}{section*.15}%
+\contentsline {paragraph}{ {Eltávolítási művelet} }{83}{section*.16}%
+\contentsline {subsubsection}{Lot számok}{83}{section*.17}%
+\contentsline {subsubsection}{Globális sorozat szám}{83}{section*.18}%
+\contentsline {subsubsection}{Gyártói sorozat szám}{84}{section*.19}%
+\contentsline {section}{\numberline {6.2}Telepítés}{85}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Server telepítés}{85}{subsection.6.2.1}%
+\contentsline {subsubsection}{ {Linux mint} }{85}{section*.20}%
+\contentsline {subsubsection}{ {Más linux alapú rendszerek} }{85}{section*.21}%
+\contentsline {subsubsection}{Windows}{86}{section*.22}%
+\contentsline {subsection}{\numberline {6.2.2}Asztali kliens telepítés}{86}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Mobil kliens telepítés}{86}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Adminisztráció}{87}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1} {Arhivált adatok törlése} }{87}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Eseménynapló kezelése}{87}{subsection.6.3.2}%
+\contentsline {subsubsection}{ {Eseménynapló megtekintése} }{88}{section*.23}%
+\contentsline {paragraph}{-u,--user {kapcsoló} }{88}{section*.24}%
+\contentsline {paragraph}{-e, --error {kapcsoló} }{88}{section*.25}%
+\contentsline {paragraph}{-r, --rejected {kapcsoló} }{88}{section*.26}%
+\contentsline {paragraph}{-b, --bad {kapcsoló} }{88}{section*.27}%
+\contentsline {paragraph}{-s, --success {kapcsoló} }{88}{section*.28}%
+\contentsline {paragraph}{-v, --verbose {kapcsoló} }{88}{section*.29}%
+\contentsline {paragraph}{ {Pédák} }{88}{section*.30}%
+\contentsline {subsubsection}{ {Egy esemény megtekintése} }{89}{section*.31}%
+\contentsline {subsubsection}{ {Eseménynapló törlése} }{89}{section*.32}%
+\contentsline {subsection}{\numberline {6.3.3} {Felhasználó kezelés} }{89}{subsection.6.3.3}%
+\contentsline {subsubsection}{ {Adminisztrátor létrehozása} }{89}{section*.33}%
+\contentsline {subsubsection}{ {Felhasználó törlése} }{90}{section*.34}%
+\contentsline {subsubsection}{ {Új jelszó adása} }{90}{section*.35}%
+\contentsline {subsection}{\numberline {6.3.4} {Engedélyek} }{90}{subsection.6.3.4}%
+\contentsline {subsubsection}{ {Rendszer engedélyek} }{91}{section*.36}%
+\contentsline {subsubsection}{ {Helyi engedélyek} }{91}{section*.37}%
+\contentsline {section}{\numberline {6.4}Használat}{92}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Bejelentkezés}{92}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Felhasználó kezelés}{93}{subsection.6.4.2}%
+\contentsline {subsubsection}{Felhasználó hozzáadás}{93}{section*.38}%
+\contentsline {subsubsection}{Felhasználó módosítás}{94}{section*.39}%
+\contentsline {subsubsection}{Felhasználó engedélyek módosítása}{94}{section*.40}%
+\contentsline {subsubsection}{Felhasználó törlés}{94}{section*.41}%
+\contentsline {subsection}{\numberline {6.4.3}Egység kezelés}{95}{subsection.6.4.3}%
+\contentsline {subsubsection}{Egység hozzáadás}{95}{section*.42}%
+\contentsline {subsubsection}{Egység módosítás}{96}{section*.43}%
+\contentsline {subsubsection}{Egység törlés}{96}{section*.44}%
+\contentsline {subsection}{\numberline {6.4.4}Árucikkek kezelése}{97}{subsection.6.4.4}%
+\contentsline {subsubsection}{Árucikk hozzáadás}{97}{section*.45}%
+\contentsline {subsubsection}{Árucikk módosítás}{98}{section*.46}%
+\contentsline {subsubsection}{Árucikk törlés}{98}{section*.47}%
+\contentsline {subsection}{\numberline {6.4.5}Telephely kezelés}{99}{subsection.6.4.5}%
+\contentsline {subsubsection}{Telephely hozzáadás}{99}{section*.48}%
+\contentsline {subsubsection}{Telephely módosítás}{100}{section*.49}%
+\contentsline {subsubsection}{Telephely törlés}{100}{section*.50}%
+\contentsline {subsection}{\numberline {6.4.6}Raktár kezelés}{101}{subsection.6.4.6}%
+\contentsline {subsubsection}{Raktár hozzáadás}{101}{section*.51}%
+\contentsline {subsubsection}{Raktár módosítás}{102}{section*.52}%
+\contentsline {subsubsection}{Raktár törlés}{102}{section*.53}%
+\contentsline {subsubsection}{Raktár limitek}{102}{section*.54}%
+\contentsline {subsection}{\numberline {6.4.7}Műveletek}{103}{subsection.6.4.7}%
+\contentsline {subsubsection}{Művelet hozzáadás}{103}{section*.55}%
+\contentsline {subsubsection}{Művelet törlés}{103}{section*.56}%
+\contentsline {subsubsection}{Művelet visszaigazolás}{103}{section*.57}%
+\contentsline {subsection}{\numberline {6.4.8}Keresés}{104}{subsection.6.4.8}%
+\contentsline {section}{\numberline {6.5}Használati példák}{105}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Fatelep}{105}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Bevásárló központ}{106}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7} {Továbbfejlesztési lehetőségek} }{107}{chapter.7}%
+\contentsline {section}{\numberline {7.1} {Adminisztráció} }{108}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1} {Integráció monitorozó rendszerekkel} }{108}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2} {Központi beléptető rendszer} }{108}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3} {Webhook-ok} }{108}{subsection.7.1.3}%
+\contentsline {section}{\numberline {7.2} {Statisztika} }{108}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1} {Kördiagram telephely/raktár tartalmáról} }{108}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2} {Különböző raktárak/telephelyek összehasonlítása} }{109}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3} {Használat} }{109}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1} {Térkép a raktárról és benne a tárgyakról} }{109}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2} {Rendszeres művelet order} }{109}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3} {Mértékegység átváltás} }{109}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4} {Raktártípusok} }{110}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {7.3.5} {Riasztás beállítás} }{110}{subsection.7.3.5}%
+\contentsline {subsection}{\numberline {7.3.6} {QR kód olvasó} }{110}{subsection.7.3.6}%
+\contentsline {chapter}{\numberline {8} {Felhasznált irodalom} }{111}{chapter.8}%
+\contentsline {chapter}{\numberline {9} {Mellékletek} }{113}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Felhasznált könyvtárak}{114}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Online elérhetőség}{114}{section.9.2}%

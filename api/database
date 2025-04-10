@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+<?php
+include './vendor/autoload.php';
+
+use \EI\Routing\CLIRouter;
+
+CLIRouter::handleDB($argv);

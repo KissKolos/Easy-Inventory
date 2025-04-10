@@ -1,0 +1,12 @@
+#!/bin/sh
+
+rm -r build
+rm api.jar
+
+mkdir build
+javac -cp json.jar src/easyinventoryapi/*.java -d build
+
+cd build
+jar cvf api.jar easyinventoryapi/*
+cd ..
+mv build/api.jar .

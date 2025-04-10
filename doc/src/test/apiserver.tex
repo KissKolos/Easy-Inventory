@@ -1,0 +1,22 @@
+\block{%
+\section{\mt{API szerver}{}}
+
+\subsection{\mt{Áttekintés}{}}
+
+\p{\mt{%
+	Az API szerver teszteléséért az \code{apitest} mappában található python fájlok felelősek.
+	A tesztek lefuttatása elött fel kell állítani a teszt API szervert.
+	Első lépésként az API szerver konfigurációs fájljában (\code{config.json}) kell beállítani a teszt tokent, majd ugyan ezt el kell végezni a teszt konfigurációs fájlban is.
+	A sikeres beállítás után a \code{main.py} futtatásával indíthatók el a tesztek.
+}{}}
+}
+
+\block{%
+	\subsection{\mt{E2E tesztek}{}}
+
+	\p{\mt{%
+		Az E2E tesztek az API-t hívják és ellenőrzik a válasz kódot és adatot.
+		A tesztelés megkezdése elött az rendszer visszatölt egy megadott biztonsági mentést, ami tartalmazza a tesztadatokat.
+	}{}}
+}
+

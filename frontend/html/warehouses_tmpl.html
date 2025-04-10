@@ -1,0 +1,39 @@
+<template id="warehouse-template">
+    <div class="list-item-content">
+        <div  class="card-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+            <span class="address"></span>
+        </div>
+        <hr>
+        <div class="list-item-actions">
+            <img src="assets/edit.svg" class="edit-btn button" tabindex="0">
+            <img src="assets/delete.svg" class="delete-btn button" tabindex="0">
+        </div>
+        <span class="archived hidden"></span>
+    </div>
+</template>
+<template id="warehouse-select-template">
+    <div class="list-item-content">
+        <div class="select-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+    </div>
+</template>
+<template id="warehouse-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">warehouse.id</span>
+            <input class="id localize" placeholder="default.id">
+        </div>
+        <div>
+            <span class="localize">warehouse.name</span>
+            <input class="name localize" placeholder="default.name">
+        </div>
+        <div>
+            <span class="localize">warehouse.address</span>
+            <input class="address">
+        </div>
+    </div>
+</template>

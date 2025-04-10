@@ -1,0 +1,17 @@
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:inset="8dp">
+    <vector
+        android:width="32dp"
+        android:height="32dp"
+        android:viewportWidth="16"
+        android:viewportHeight="16">
+      <path
+          android:pathData="M0,6.072h9.855v4.144h-9.855z"
+          android:strokeWidth="0.0292285"
+          android:fillColor="#000000"/>
+      <path
+          android:pathData="m9.471,12.318 l0.02,-4.159 0.02,-4.159 3.244,2.099 3.244,2.099 -3.265,2.06z"
+          android:strokeWidth="0.033"
+          android:fillColor="#000000"/>
+    </vector>
+</inset>

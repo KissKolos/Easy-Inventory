@@ -1,0 +1,73 @@
+<template id="stats-template">
+    <div class="statistics fill">
+        <div class="panel">
+			<div class="statistics-config"></div>
+			<div class="statistics-range">
+				<label>
+					<span class="localize">statistics.from</span>
+					<input type="date" class="from">
+				</label>
+				<label>
+					<span class="localize">statistics.to</span>
+					<input type="date" class="to">
+				</label>
+			</div>
+			<button class="statistics-update localize">statistics.show</button>
+		</div>
+		<div class="graph">
+			<div class="graph-yaxis">
+				<span class="max-y"></span>
+				<span class="min-y"></span>
+			</div>
+            <svg class="graph-inner" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+				<defs>
+					<linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
+						<stop offset="0%" stop-color="#0000aa" />
+						<stop offset="100%" stop-color="black" stop-opacity="0" />
+					</linearGradient>
+				  </defs>
+				  <g class="graph-content"></g>
+			</svg>
+            <div></div>
+			<div class="graph-xaxis">
+				<span class="min-x"></span>
+				<span class="max-x"></span>
+			</div>
+		</div>
+    </div>
+</template>
+<template id="stats-items-template">
+	<div>
+		<button class="item"></button>
+		<select class="option">
+			<option value="start_amount" class="localize">statistics.items.start_amount</option>
+			<option value="added" class="localize">statistics.items.added</option>
+			<option value="removed" class="localize">statistics.items.removed</option>
+			<option value="moved" class="localize">statistics.items.moved</option>
+		</select>
+        <label>
+			<span class="localize">statistics.items.warehouse</span>
+			<input type="text" class="warehouse-search">
+		</label>
+        <label>
+			<span class="localize">statistics.items.storage</span>
+			<input type="text" class="storage-search">
+		</label>
+		<label>
+			<span class="localize">statistics.items.operation</span>
+			<input type="text" class="operation-search">
+		</label>
+	</div>
+</template>
+<template id="stats-operations-template">
+	<div>
+        <label>
+			<span class="localize">statistics.operations.warehouse</span>
+			<input type="text" class="warehouse-search">
+		</label>
+		<label>
+			<span class="localize">statistics.operations.operation</span>
+			<input type="text" class="operation-search">
+		</label>
+	</div>
+</template>

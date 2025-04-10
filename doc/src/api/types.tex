@@ -1,0 +1,288 @@
+
+\newcommand{\structTable}[2]{
+	\block{
+		\hypertarget{#1}{}
+
+		\subsection{#1}
+
+		\begin{center}
+			\begin{tabular}{| m{5cm} | m{3cm} | m{6cm} |}
+				\hline
+				\textbf{Kulcs} & \textbf{Típus} & \textbf{Tartalom} \\
+				\hline
+				#2
+				\hline
+			\end{tabular}
+		\end{center}
+	}
+}
+
+\newcommand{\slist}[1]{\mt{\struct{#1} lista}{}}
+
+\newcommand{\plist}[1]{\mt{#1 list}{}}
+
+\section{\mt{API Típusok}{}}
+
+\structTable{Unit}{%
+	id & string & \mt{Az egység azonosítója}{} \\
+	\hline
+	name & string & \mt{Az egység neve}{} \\
+	\hline
+	deleted & int / null & \mt{A törlés ideje UNIX másodpercben}{} \\
+}
+
+\structTable{UnitPutRequest}{%
+	name & string & \mt{Az egység neve}{} \\
+}
+
+\structTable{Item}{%
+	id & string & \mt{A cikk azonosítója}{} \\
+	\hline
+	name & string & \mt{A cikk neve}{} \\
+	\hline
+	unit & \struct{Unit} & \mt{A cikk mértékegysége}{} \\
+	\hline
+	deleted & int / null & \mt{A törlés ideje UNIX másodpercben}{} \\
+}
+
+\structTable{ItemPutRequest}{%
+	name & string & \mt{A cikk neve}{} \\
+	\hline
+	unit & string & \mt{A cikk mértékegységének az azonosítója}{} \\
+}
+
+\structTable{Warehouse}{%
+	id & string & \mt{A telephely azonosítója}{} \\
+	\hline
+	name & string & \mt{A telephely neve}{} \\
+	\hline
+	address & string & \mt{A telephely címe}{} \\
+	\hline
+	deleted & int / null & \mt{A törlés ideje UNIX másodpercben}{} \\
+}
+
+\structTable{WarehousePutRequest}{%
+	name & string & \mt{A telephely neve}{} \\
+	\hline
+	address & string & \mt{A telephely címe}{} \\
+}
+
+\structTable{Storage}{%
+	id & string & \mt{A raktár azonosítója}{} \\
+	\hline
+	name & string & \mt{A raktár neve}{} \\
+	\hline
+	warehouse & \struct{Warehouse} & \mt{A telephely amiben van a raktár}{} \\
+	\hline
+	deleted & int / null & \mt{A törlés ideje UNIX másodpercben}{} \\
+}
+
+\structTable{StoragePutRequest}{%
+	id & string & \mt{A raktár azonosítója}{} \\
+	\hline
+	name & string & \mt{A raktár neve}{} \\
+}
+
+\structTable{User}{%
+	id & string & \mt{A felhasználó azonosítója}{} \\
+	\hline
+	name & string & \mt{A felhasználó neve}{} \\
+	\hline
+	manager & \struct{User} / null & \mt{A felhasználó főnöke}{} \\
+}
+
+\structTable{UserPutRequest}{%
+	name & string & \mt{A felhasználó neve}{} \\
+	\hline
+	password & string / null & \mt{Az új jelszó}{} \\
+	\hline
+	manager & string / null & \mt{A felhasználó főnökének az azonosítója}{} \\
+}
+
+\structTable{OperationItem}{%
+	type & \struct{Item} & \mt{Cél cikk}{} \\
+	\hline
+	storage & \struct{Storage} & \mt{Cél raktár}{} \\
+	\hline
+	global\_serial & int & \mt{A cél cikk sorozatszáma (0 ha nincs)}{} \\
+	\hline
+	manufacturer\_serial & string / null & \mt{A cél cikk gyártó sorozatszáma}{} \\
+	\hline
+	amount & int & \mt{Mennyiség}{} \\
+}
+
+\structTable{Operation}{%
+	id & string & \mt{A művelet azonosítója}{} \\
+	\hline
+	name & string & \mt{A művelet neve}{} \\
+	\hline
+	is\_add & boolean & \mt{Igaz ha ez a művelet hozzáad, hamis ha elvesz}{} \\
+	\hline
+	items & \slist{OperationItem} & \mt{A művelet részei}{} \\
+	\hline
+	created & int & \mt{A létrehozás ideje UNIX másodpercben}{} \\
+	\hline
+	commited & int / null & \mt{A visszaigazolás ideje UNIX másodpercben}{} \\
+}
+
+\structTable{OperationItemRequest}{%
+	type & \struct{Item} & \mt{Cél cikk}{} \\
+	\hline
+	storage & \struct{Storage} / null & \mt{Cél raktár}{} \\
+	\hline
+	global\_serial & int & \mt{A cél cikk sorozatszáma (0 ha nincs)}{} \\
+	\hline
+	manufacturer\_serial & string / null & \mt{A cél cikk gyártó sorozatszáma}{} \\
+	\hline
+	amount & int & \mt{Mennyiség}{} \\
+}
+
+\structTable{OperationRequest}{%
+	name & string & \mt{A művelet neve}{} \\
+	\hline
+	is\_add & boolean & \mt{Igaz ha ez a művelet hozzáad, hamis ha elvesz}{} \\
+	\hline
+	items & \slist{OperationItemRequest} & \mt{A művelet részei}{} \\
+}
+
+\structTable{OperationCommit}{%
+	cancel & boolean & \mt{Igaz ha töröl, hamis ha visszaigazol}{} \\
+}
+
+\structTable{MoveRequest}{%
+	from & string & \mt{Az erőforrás azonosítója}{} \\
+	\hline
+	to & string & \mt{Az erőforrás új azonosítója}{} \\
+}
+
+\structTable{LoginRequest}{%
+	password & string & \mt{A jelszó bejelentkezéshez}{} \\
+}
+
+\structTable{LoginResponse}{%
+	token & string & \mt{A token}{} \\
+}
+
+\structTable{RenewResponse}{%
+	expiration & int & \mt{A token lejárásának időpontja Unix másodpercekben}{} \\
+}
+
+\structTable{UserinfoResponse}{%
+	user & string & \mt{A bejelentkezet felhasználó azonosítója}{} \\
+	\hline
+	username & string & \mt{A bejelentkezet felhasználó neve}{} \\
+}
+
+\structTable{StorageLimit}{%
+	item & Item & \mt{A cikk}{} \\
+	\hline
+	amount & int & \mt{A limit}{} \\
+}
+
+\structTable{StorageLimitPutRequest}{%
+	amount & int & \mt{A limit}{} \\
+}
+
+\structTable{StorageCapacity}{%
+	item & Item & \mt{A cikk}{} \\
+	\hline
+	limit & int & \mt{A limit}{} \\
+	\hline
+	stored\_amount & int & \mt{A tárolt mennyiség}{} \\
+}
+
+\structTable{ItemStack}{%
+	item & Item & \mt{A cikk}{} \\
+	\hline
+	amount & int & \mt{A tárolt mennyiség}{} \\
+	\hline
+	available\_amount & int & \mt{Az elérhető mennyiség}{} \\
+	\hline
+	global\_serial & int & \mt{A sorozatszám}{} \\
+	\hline
+	manufacturer\_serial & string / null & \mt{A gyártói sorozatszám}{} \\
+	\hline
+	lot & string / null & \mt{A lot szám}{} \\
+}
+
+\structTable{ItemDB}{%
+	id & string & \mt{A cikk azonosítója}{} \\
+	\hline
+	name & string & \mt{A cikk neve}{} \\
+	\hline
+	unit & string & \mt{A cikk mértékegységének azonosítója}{} \\
+	\hline
+	deleted & int / null & \mt{A törlés ideje UNIX másodpercben}{} \\
+}
+
+\structTable{ItemStackDB}{%
+	item & string & \mt{A cikk azonosítója}{} \\
+	\hline
+	amount & int & \mt{A tárolt mennyiség}{} \\
+	\hline
+	global\_serial & int & \mt{A sorozatszám}{} \\
+	\hline
+	manufacturer\_serial & string / null & \mt{A gyártói sorozatszám}{} \\
+	\hline
+	lot & string / null & \mt{A lot szám}{} \\
+}
+
+\structTable{StorageLimitDB}{%
+	item & string & \mt{A cikk azonosítója}{} \\
+	\hline
+	amount & int & \mt{A limit}{} \\
+}
+
+\structTable{WarehouseDB}{%
+	id & string & \mt{A telephely azonosítója}{} \\
+	\hline
+	name & string & \mt{A telephely neve}{} \\
+	\hline
+	address & string & \mt{A telephely címe}{} \\
+	\hline
+	deleted & int / null & \mt{A törlés ideje UNIX másodpercben}{} \\
+	\hline
+	storages & \slist{StorageDB} & \mt{A telephely raktárai}{} \\
+	\hline
+	operations & \slist{Operation} & \mt{A műveletek}{} \\
+}
+
+\structTable{StorageDB}{%
+	id & string & \mt{A raktár azonosítója}{} \\
+	\hline
+	name & string & \mt{A raktár neve}{} \\
+	\hline
+	deleted & int / null & \mt{A törlés ideje UNIX másodpercben}{} \\
+	\hline
+	limits & \slist{StorageLimitDB} & \mt{A raktár limitjei}{} \\
+	\hline
+	item\_stacks & \slist{ItemStackDB} & \mt{A tárolt cikkkek}{} \\
+}
+
+\structTable{LocalAuthorizationDB}{%
+	warehouse & string & \mt{A telephely azonosítója}{} \\
+	\hline
+	authorizations & \plist{string} & \mt{A megadott helyi engedélyek}{} \\
+}
+
+\structTable{UserDB}{%
+	id & string & \mt{A felhasználó azonosítója}{} \\
+	\hline
+	name & string & \mt{A felhasználó neve}{} \\
+	\hline
+	manager & string & \mt{A felhasználó főnökének az azonosítója}{} \\
+	\hline
+	system\_authorizations & \plist{string} & \mt{A felhasználó rendszer szintű engedélyei}{} \\
+	\hline
+	local\_authorizations & \slist{LocalAuthorizationDB} & \mt{A felhasználó rendszer szintű engedélyei}{} \\
+}
+
+\structTable{DB}{%
+	units & \slist{Unit} & \mt{Az egységek}{} \\
+	\hline
+	items & \slist{ItemDB} & \mt{A árucikk fajták}{} \\
+	\hline
+	warehouses & \slist{WarehouseDB} & \mt{A telephelyek}{} \\
+	\hline
+	user & \slist{UserDB} & \mt{A felhasználók}{} \\
+}

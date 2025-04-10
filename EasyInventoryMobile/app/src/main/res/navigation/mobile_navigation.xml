@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_users">
+
+    <fragment
+        android:id="@+id/nav_users"
+        android:name="com.easyinventory.client.ui.users.UsersFragment"
+        android:label="@string/tab_users"
+        tools:layout="@layout/fragment_users" />
+
+    <fragment
+        android:id="@+id/nav_warehouses"
+        android:name="com.easyinventory.client.ui.warehouses.WarehousesFragment"
+        android:label="@string/tab_warehouses"
+        tools:layout="@layout/fragment_warehouses" />
+
+    <fragment
+        android:id="@+id/nav_storages"
+        android:name="com.easyinventory.client.ui.storages.StoragesFragment"
+        android:label="@string/tab_storages"
+        tools:layout="@layout/fragment_storages" />
+
+    <fragment
+        android:id="@+id/nav_items"
+        android:name="com.easyinventory.client.ui.items.ItemsFragment"
+        android:label="@string/tab_items" />
+
+    <fragment
+        android:id="@+id/nav_units"
+        android:name="com.easyinventory.client.ui.units.UnitsFragment"
+        android:label="@string/tab_units" />
+
+    <fragment
+        android:id="@+id/nav_operations"
+        android:name="com.easyinventory.client.ui.operations.OperationsFragment"
+        android:label="@string/tab_operations"
+        tools:layout="@layout/fragment_operations" />
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.easyinventory.client.ui.search.SearchFragment"
+        android:label="@string/tab_search" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.easyinventory.client.ui.profile.ProfileFragment"
+        android:label="@string/tab_profile" />
+</navigation>

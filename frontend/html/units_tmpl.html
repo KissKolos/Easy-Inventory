@@ -1,0 +1,34 @@
+<template id="unit-template">
+    <div class="list-item-content">
+        <div  class="card-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+        <hr>
+        <div class="list-item-actions">
+            <img src="assets/edit.svg" class="edit-btn button" tabindex="0">
+            <img src="assets/delete.svg" class="delete-btn button" tabindex="0">
+        </div>
+        <span class="archived hidden"></span>
+    </div>
+</template>
+<template id="unit-select-template">
+    <div class="list-item-content">
+        <div class="select-labels">
+            <span class="name"></span>
+            <span class="id"></span>
+        </div>
+    </div>
+</template>
+<template id="unit-popup">
+    <div class="popup-form">
+        <div>
+            <span class="localize">unit.id</span>
+            <input class="id localize" placeholder="default.id">
+        </div>
+        <div>
+            <span class="localize">unit.name</span>
+            <input class="name localize" placeholder="default.name">
+        </div>
+    </div>
+</template>

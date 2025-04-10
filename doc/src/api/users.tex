@@ -1,0 +1,95 @@
+\block{
+	\section{\mt{Felhasználók}{Users}}
+
+	\subsection{\mt{Felhasználók lekérése}{Retrieval of users}}
+
+	\getbox{/users?q=\param{q}\&offset=\param{offset}\&limit=\param{limit}}
+}
+\params {
+	\paginatorParam
+}
+\requestHeader{
+    \token
+}
+\listCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{User} objektum lista.}{A JSON object where the key is the identifier of the users and it's value is each users' properties.}
+	
+	\lstinputlisting{users.list.response.json}
+
+}
+
+\block{
+	\subsection{\mt{Felhasználó azonosítójának változtatása}{Changing the user's identifier}}
+
+	\postbox {/users}
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{MoveRequest} objektum.}{Changes the user's identifier.}
+	
+	\lstinputlisting{users.move.request.json}
+}
+\moveCodes
+
+\block{
+	\subsection{\mt{Felhasználó lekérése}{Retrieval of user}}
+
+	\getbox {/users/\param{user}}
+}
+\params {
+	\userParam
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{User} objektum.}{The user's properties in JSON format.}
+	
+	\lstinputlisting{users.get.response.json}
+}
+
+\block{
+	\subsection{\mt{Felhasználók módosítása, létrehozása}{Creating, modifying users}}
+
+	\putbox {/users/\param{user}}
+}
+\params {
+	\userParam
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{UserPutRequest} objektum.}{The user's properties in JSON format.}
+
+	\lstinputlisting{users.put.request.json}
+}
+\putCodes
+
+\block{
+	\subsection{\mt{Felhasználó törlése}{Delete an user}}
+
+	\deletebox {/users/\param{user}}
+}
+\params {
+	\userParam
+}
+
+\requestHeader{
+    \token
+}
+\deleteCodes

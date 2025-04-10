@@ -1,0 +1,26 @@
+
+\section{\mt{Kapcsolat kezelés}{}}
+
+\block{
+    \subsection{\mt{Kapcsolódás a szerverhez}{}}
+
+    \p{\mt{%
+			Az API szerverhez való kapcsolódást a \code{connect} funkció hajtja végre.
+			A funkció egy \code{API} objektumot ad vissza, aminek a segítségével kommunikálhatunk a szerverrel.
+	    }{}
+	    
+	    \lstinputlisting{generated/connection.connect.java}
+    }
+}
+
+\block{
+    \subsection{\mt{Kijelentkezés}{}}
+
+    \p{\mt{%
+			A kijelentkezéshez a \code{logout} metódust kell meghívni.
+			Ezt követően nem lehetséges az \code{API} objektum további használata.
+	    }{}
+	    
+	    \lstinputlisting{generated/connection.logout.java}
+    }
+}

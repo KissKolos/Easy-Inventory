@@ -1,0 +1,98 @@
+
+\newcommand{\unitParam}{\apiinlineitem{unit}{\mt{Egység azonosítója}{Identifier of the unit}}}
+
+\block{
+	\section{\mt{Egységek}{Units}}
+
+	\subsection{\mt{Egységek lekérése}{Retrieval of units}}
+
+	\getbox{/units?\allowbreak q=\param{q}\&archived=\param{archived}\&offset=\param{offset}\&\allowbreak limit=\param{limit}}
+}
+\params {
+	\paginatorParamA
+}
+\requestHeader{
+    \token
+}
+\listCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{Unit} objektum.}{A JSON object where the key is the identifier of the unit and it's value is each unit's properties.}
+	
+	\lstinputlisting{units.list.response.json}
+}
+
+\block{
+	\subsection{\mt{Egység azonosítójának változtatása}{Changing the identifier of the unit}}
+
+	\postbox {/units}
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{MoveRequest} objektum.}{Changes the identifier of the unit.}
+
+	\lstinputlisting{units.move.request.json}
+}
+\moveCodes
+
+\block{
+	\subsection{\mt{Egység lekérése}{Retrieval of unit}}
+
+	\getbox {/units/\param{unit}}
+}
+\params {
+	\unitParam
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{Unit} objektum.}{The properties of the unit in JSON format.}
+
+	\lstinputlisting{units.get.response.json}
+}
+
+\block{
+	\subsection{\mt{Egységek módosítása, létrehozása}{Creating, modifying units}}
+
+	\putbox {/units/\param{unit}?update=\param{update}\&create=\param{create}}
+}
+\params {
+	\unitParam
+
+	\putParam
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{UnitPutRequest} objektum.}{The properties of the unit in JSON format.}
+
+	\lstinputlisting{units.put.request.json}
+}
+\putCodes
+
+\block{
+	\subsection{\mt{Egység törlése.}{Delete a unit.}}
+
+	\deletebox {/units/\param{unit}}
+}
+\params {
+	\unitParam
+}
+\requestHeader{
+    \token
+}
+\deleteCodes

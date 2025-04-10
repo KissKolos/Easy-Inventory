@@ -1,0 +1,57 @@
+
+\graphicspath{{./src/user/resources/}} 
+
+\newcommand{\icon}[1]{\includesvg[width=0.5\baselineskip]{#1} }
+
+\newcommand{\delete}{\icon{icon/delete.svg}}
+
+\newcommand{\cross}{\icon{icon/cross.svg}}
+
+\newcommand{\tick}{\icon{icon/tick.svg}}
+
+\newcommand{\edit}{\icon{icon/edit.svg}}
+
+\newcommand{\authorizations}{\icon{icon/authorizations.svg}}
+
+%\newcommand{\localauthorizations}{\icon{icon/localauthorizations.svg}}
+
+\newcommand{\add}{\icon{icon/add.svg}}
+
+\newcommand{\limit}{\icon{icon/limit.svg}}
+
+%\newcommand{\ui}[1]{
+%	\vspace*{\fill}
+%	
+%	\makebox[\textwidth][c]{%
+%		\begin{minipage}{0.7\textwidth}
+%			\includegraphics[width=0.65\textwidth]{web/#1}
+%			\includegraphics[width=0.32\textwidth]{mobile/placeholder.png}
+%			
+%			\includegraphics[width=\textwidth]{desktop/#1}
+%		\end{minipage}
+%	}
+%	
+%	\newpage
+%}
+
+\newcommand{\ui}[1]{
+    \includegraphics[width=0.4\textwidth]{web/#1}
+	\includegraphics[width=0.1\textwidth]{mobile/#1}		
+	\includegraphics[width=0.45\textwidth]{desktop/#1}
+}
+
+\newcommand{\uib}[1]{
+    \includegraphics[width=0.5\textwidth]{web/#1}
+	\includegraphics[width=0.15\textwidth]{mobile/#1}		
+	\includegraphics[width=0.3\textwidth]{desktop/#1}
+}
+
+\newcommand{\text}{}
+
+
+\subimport{}{intro}
+\subimport{}{install}
+\subimport{}{admin}
+\subimport{}{usage}
+\subimport{}{examples}
+

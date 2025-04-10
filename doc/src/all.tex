@@ -1,0 +1,43 @@
+\documentclass{book}
+
+\usepackage{import}
+\import{src}{shared}
+
+%\title{\mt{Project Dokumentáció}{}}
+
+\begin{document}
+
+\import{src}{cover}
+\import{src}{nyilatkozat}
+\import{src}{konzultacio}
+
+\tableofcontents
+\newpage
+
+\import{src}{work}
+
+\chapter{\mt{API Dokumentáció}{}}
+
+\import{src/api}{apidoc}
+
+\chapter{\mt{API Könyvtár Dokumentáció}{}}
+
+\import{src/apilib}{apilibdoc}
+
+\chapter{\mt{Kód Dokumentáció}{}}
+
+\import{src/code}{codedoc}
+
+\chapter{\mt{Teszt Dokumentáció}{}}
+
+\import{src/test}{testdoc}
+
+\chapter{\mt{Felhasználói Dokumentáció}{}}
+
+\import{src/user}{userdoc}
+
+\import{src}{future}
+
+\import{src}{used}
+
+\end{document}

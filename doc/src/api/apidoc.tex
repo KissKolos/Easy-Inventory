@@ -1,0 +1,241 @@
+
+\definecolor{darkgreen}{rgb}{0.0,0.4,0.0}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.4}
+\definecolor{lightblue}{rgb}{0.3,0.3,0.7}
+
+\newcommand{\getbox}[1]{
+	{\color{white}\hrule height 15pt}
+	\begin{tcolorbox}[title=\textbf\mt{Erőforrás}{},colback=lightgray,colframe=darkgreen,left=0pt,right=0pt,top=1pt,bottom=1pt,boxsep=5pt,arc=0mm,boxrule=5pt,nobeforeafter,sharp corners=all]
+		\ttfamily\textbf{GET #1}
+	\end{tcolorbox}
+	{\color{white}\hrule height 15pt}
+}
+
+\newcommand{\postbox}[1]{
+	{\color{white}\hrule height 15pt}
+	\begin{tcolorbox}[title=\textbf\mt{Erőforrás}{},colback=lightgray,colframe=darkblue,left=0pt,right=0pt,top=1pt,bottom=1pt,boxsep=5pt,arc=0mm,boxrule=5pt,nobeforeafter,sharp corners=all]
+		\ttfamily\textbf{POST #1}
+	\end{tcolorbox}
+	{\color{white}\hrule height 15pt}
+}
+
+\newcommand{\putbox}[1]{
+	{\color{white}\hrule height 15pt}
+	\begin{tcolorbox}[title=\textbf\mt{Erőforrás}{},colback=lightgray,colframe=lightblue,left=0pt,right=0pt,top=1pt,bottom=1pt,boxsep=5pt,arc=0mm,boxrule=5pt,nobeforeafter,sharp corners=all]
+		\ttfamily\textbf{PUT #1}
+	\end{tcolorbox}
+	{\color{white}\hrule height 15pt}
+}
+
+\newcommand{\deletebox}[1]{
+	{\color{white}\hrule height 15pt}
+	\begin{tcolorbox}[title=\textbf\mt{Erőforrás}{},colback=lightgray,colframe=darkred,left=0pt,right=0pt,top=1pt,bottom=1pt,boxsep=5pt,arc=0mm,boxrule=5pt,nobeforeafter,sharp corners=all]
+		\ttfamily\textbf{DELETE #1}
+	\end{tcolorbox}
+	{\color{white}\hrule height 15pt}
+}
+
+\newcommand{\apiinlineitem}[2]{{\textbf{#1}} #2}
+
+\newcommand{\apiitem}[2]{
+	\block{
+		\subsubsection{#1}
+		
+		\p{#2}
+	}\\
+}
+
+\newcommand{\param}[1]{{\color{gray}\textbf{\textit{{#1}}}}}
+
+\newcommand{\bearer}{
+	\apiitem{\mt{Fejléc}{Header}}{
+		\begin{description}
+			\item[Authorization] Bearer token
+		\end{description}
+	}
+}
+
+\newcommand{\requestHeader}[1]{\apiitem{\mt{Kérés fejléce}{Request header}}{#1}}
+
+\newcommand{\responseHeader}[1]{\apiitem{\mt{Válasz fejléce}{Response header}}{#1}}
+
+\newcommand{\token}{\apiinlineitem{Authorization}{Bearer token}}
+
+\newcommand{\contentJson}{\apiinlineitem{Content-Type}{application/json}}
+
+\newcommand{\request}[1]{\apiitem{\mt{Kérés}{Request}}{#1}}
+
+O\newcommand{\responseCodes}[1]{\apiitem{\mt{Válasz kódok}{Response codes}}{#1}}
+
+\newcommand{\response}[1]{\apiitem{\mt{Válasz}{Response}}{#1}}
+
+\newcommand{\method}[1]{\apiinlineitem{\mt{Metódus}{Method}}{#1}}
+
+\newcommand{\apiurl}[1]{\apiinlineitem{\mt{Url}{Url}}{#1}}
+
+\newcommand{\params}[1]{\apiitem{\mt{Paraméterek}{Parameters}}{#1}}
+
+
+%response codes
+
+\newcommand{\ok}{\apiinlineitem{200}{OK}}
+
+\newcommand{\forbidden}{\apiinlineitem{403}{\mt{Nincs megfelelő engedély}{Forbidden}}}
+
+\newcommand{\unauthorized}{\apiinlineitem{401}{\mt{Nincs bejelentkezve}{Unauthorized}}}
+
+\newcommand{\badRequest}{\apiinlineitem{400}{\mt{Hibás kérés}{Bad request}}}
+
+\newcommand{\notFound}{\apiinlineitem{404}{\mt{Nem létezik}{Not found}}}
+
+\newcommand{\created}{\apiinlineitem{201}{\mt{Létrehozva}{Created}}}
+
+\newcommand{\deleted}{\apiinlineitem{204}{\mt{Törölve}{Deleted}}}
+
+\newcommand{\modified}{\apiinlineitem{204}{\mt{Módosítva}{Modified}}}
+
+\newcommand{\renamed}{\apiinlineitem{204}{\mt{Átnevezve}{Renamed}}}
+
+\newcommand{\granted}{\apiinlineitem{204}{\mt{Engedély megadva}{Authorization granted}}}
+
+\newcommand{\idConflict}{\apiinlineitem{409}{\mt{A cél azonosító már létezik.}{The target id already exists.}}}
+
+\newcommand{\listCodes}{
+	\responseCodes{
+		\forbidden
+		
+		\unauthorized
+		
+		\ok
+	}
+}
+
+\newcommand{\getCodes}{
+	\responseCodes{
+		\forbidden
+		
+		\unauthorized
+		
+		\notFound
+		
+		\ok
+	}
+}
+
+\newcommand{\putCodes}{
+	\responseCodes{
+		\forbidden
+		
+		\unauthorized
+		
+		\badRequest
+		
+		\notFound
+		
+		\modified
+		
+		\created
+	}
+}
+
+\newcommand{\moveCodes}{
+	\responseCodes{
+		\forbidden
+		
+		\unauthorized
+		
+		\badRequest
+		
+		\notFound
+		
+		\idConflict
+		
+		\renamed
+	}
+}
+
+\newcommand{\deleteCodes}{
+	\responseCodes{
+		\forbidden
+		
+		\unauthorized
+		
+		\notFound
+		
+		\deleted
+	}
+}
+
+%common parameters
+
+\newcommand{\itemParam}{\apiinlineitem{item}{\mt{A cikk azonosítója}{Identifier of the item}}}
+\newcommand{\userParam}{\apiinlineitem{user}{\mt{Felhasználó azonosítója}{User's identifier}}}
+\newcommand{\warehouseParam}{\apiinlineitem{warehouse}{\mt{Telephely azonosítója}{Identifier of the warehouse}}}
+\newcommand{\storageParam}{
+	\warehouseParam
+	
+	\apiinlineitem{storage}{\mt{Raktár azonosítója}{Identifier of the storage}}
+}
+\newcommand{\paginatorParam}{
+	\apiinlineitem{q}{\mt{Keresési szöveg}{}}
+	
+	\apiinlineitem{offset}{\mt{Visszaadott elemek kezdő pozíciója, 0 ha hiányzik}{}}
+	
+	\apiinlineitem{limit}{\mt{Maximum visszaadott elemek száma, 20 ha hiányzik}{}}
+}
+\newcommand{\paginatorParamA}{
+	\apiinlineitem{q}{\mt{Keresési szöveg}{}}
+	
+	\apiinlineitem{archived}{\mt{Ha \code{true} akkor arhivált értékeket is visszaad}{}}
+	
+	\apiinlineitem{offset}{\mt{Visszaadott elemek kezdő pozíciója, 0 ha hiányzik}{}}
+	
+	\apiinlineitem{limit}{\mt{Maximum visszaadott elemek száma, 20 ha hiányzik}{}}
+}
+\newcommand{\putParam}{
+	\apiinlineitem{update}{\mt{Ha \code{true} akkor meglévő erőforrást frisíthet}{Update}}
+	
+	\apiinlineitem{create}{\mt{Ha \code{true} akkor új erőforrást létrehozhat}{create}}
+}
+\newcommand{\searchParam}{
+	\apiinlineitem{q}{\mt{Keresési szöveg}{}}
+	
+	\apiinlineitem{qwarehouse}{\mt{Ha \code{true} akkor telephely szerint is csoportosít}{}}
+	
+	\apiinlineitem{qstorage}{\mt{Ha \code{true} akkor raktár szerint is csoportosít}{}}
+	
+	\apiinlineitem{lot}{\mt{Ha \code{true} akkor lot szám szerint is csoportosít}{}}
+	
+	\apiinlineitem{serial}{\mt{Ha \code{true} akkor sorozatszám szerint is csoportosít}{}}
+	
+	\apiinlineitem{offset}{\mt{Visszaadott elemek kezdő pozíciója, 0 ha hiányzik}{}}
+	
+	\apiinlineitem{limit}{\mt{Maximum visszaadott elemek száma, 20 ha hiányzik}{}}
+}
+
+\newcommand*\wrapletters[1]{\wr@pletters#1\@nil}
+\def\wr@pletters#1#2\@nil{#1\allowbreak\if&#2&\else\wr@pletters#2\@nil\fi}
+
+\newcommand{\struct}[1]{\hyperlink{#1}{\code{\wrapletters{#1}}}}
+
+\setlength{\listparindent}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\leftmargin}{0pt}
+\setlength{\parskip}{0pt}
+\offinterlineskip
+
+\lstset{language=JavaScript}
+
+\subimport{}{types}
+\subimport{}{authentication}
+\subimport{}{authorization}
+\subimport{}{items}
+\subimport{}{limits}
+\subimport{}{operations}
+\subimport{}{search}
+\subimport{}{storages}
+\subimport{}{units}
+\subimport{}{users}
+\subimport{}{warehouses}
+\subimport{}{db}
+

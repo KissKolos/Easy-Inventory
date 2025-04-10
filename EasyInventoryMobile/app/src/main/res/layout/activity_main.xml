@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/app_background"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:columnCount="2"
+        android:rowCount="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/editUserName"
+            android:text="@string/login_name"
+            tools:layout_editor_absoluteX="183dp"
+            tools:layout_editor_absoluteY="33dp" />
+
+        <EditText
+            android:id="@+id/editUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints="username"
+            android:ems="10"
+            android:inputType="text"
+            android:minHeight="80dp"
+            tools:layout_editor_absoluteX="234dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/editServer"
+            android:text="@string/login_server"
+            tools:layout_editor_absoluteX="183dp"
+            tools:layout_editor_absoluteY="33dp" />
+
+        <EditText
+            android:id="@+id/editServer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints="url"
+            android:ems="10"
+            android:inputType="text"
+            android:minHeight="80dp"
+            tools:layout_editor_absoluteX="234dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/editPassword"
+            android:text="@string/login_password"
+            tools:layout_editor_absoluteX="183dp"
+            tools:layout_editor_absoluteY="33dp" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:minHeight="80dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <Space />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/login_button"
+            android:textColor="@color/button_text"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="24dp" />
+
+
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

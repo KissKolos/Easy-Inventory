@@ -1,0 +1,123 @@
+\block{
+	\section{\mt{Raktárak}{Storages}}
+
+	\subsection{\mt{Raktárak lekérése}{Retrieval of storages}}
+
+	\getbox {/warehouses/\param{warehouse}/storages?\allowbreak q=\param{q}\&archived=\param{archived}\&\allowbreak offset=\param{offset}\&\allowbreak limit=\param{limit}}
+}
+\params {
+	\warehouseParam
+
+	\paginatorParamA
+}
+\requestHeader{
+    \token
+}
+\listCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{Storage} objektum lista.}{A JSON object where the key is the id of the storage and it's value is the name of the storage}
+	
+	\lstinputlisting{storages.list.response.json}
+}
+
+\block{
+	\subsection{\mt{Raktár azonosítójának változtatása}{Changing the identifier of the storage}}
+
+	\postbox {/warehouses/\param{warehouse}/storages}
+}
+\params {
+	\warehouseParam
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{MoveRequest} objektum.}{Changes the identifier of the given storage.}
+	
+	\lstinputlisting{storages.move.request.json}
+}
+\moveCodes
+
+\block{
+	\subsection{\mt{Raktár lekérése}{Retrieval of storage}}
+
+	\getbox {/warehouses/\param{warehouse}/storages/\param{storage}}
+}
+\params {
+	\storageParam
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+    \contentJson
+}
+\response{
+	\mt{Egy \struct{Storage} objektum.}{The name of the storage in JSON format.}
+	
+	\lstinputlisting{storages.get.response.json}
+}
+
+\block{
+	\subsection{\mt{Raktárak módosítása, létrehozása}{Creating, modifying storages}}
+
+	\putbox {/warehouses/\param{warehouse}/storages/\param{storage}?\allowbreak update=\param{update}\&create=\param{create}}
+}
+\params {
+	\storageParam
+
+	\putParam
+}
+\requestHeader{
+    \token
+
+    \contentJson
+}
+\request{
+	\mt{Egy \struct{StoragePutRequest} objektum.}{The properties of the storage in JSON format}
+	
+	\lstinputlisting{storages.put.request.json}
+}
+\putCodes
+
+\block{
+	\subsection{\mt{Raktár törlése}{Delete a storage}}
+
+	\deletebox {/warehouses/\param{warehouse}/storages/\param{storage}}
+}
+\params {
+	\storageParam
+}
+\requestHeader{
+    \token
+}
+\deleteCodes
+
+\block{
+	\subsection{\mt{Keresés a raktárban}{Search in the storage}}
+
+	\getbox {/warehouses/\param{warehouse}/storages/\param{storage}/search?\allowbreak q=\param{q}\&\allowbreak warehouse=\param{qwarehouse}\&\allowbreak storage=\param{qstorage}\&\allowbreak lot=\param{lot}\&\allowbreak serial=\param{serial}}
+}
+\params {
+	\storageParam
+
+	\searchParam
+}
+\requestHeader{
+    \token
+}
+\getCodes
+\responseHeader{
+	\contentJson
+}
+\response{
+	\mt{Egy \struct{ItemStack} objektum lista.}{A JSON array which contains the items as objects}
+
+	\lstinputlisting{storages.search.response.json}
+}

@@ -1,0 +1,91 @@
+#popup-container,#content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#popup-container {
+    pointer-events: none;
+}
+
+
+.popup-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #00000055;
+    display: flex;
+    align-items: center;
+    pointer-events: all;
+    overflow: auto;
+}
+
+.popup {
+    margin: auto;
+}
+
+.popup-options {
+    margin-top: 20px;
+    display: flex;
+}
+
+.popup-options>*:last-child {
+    margin-left: auto;
+}
+
+.popup>div>.content {
+    max-width: 70vw;
+    max-height: 70vh;
+    overflow: auto;
+}
+
+.popup>div>.popup-body>.content>div>div {
+    display: flex;
+}
+
+.popup>div>.popup-body>.content>.popup-form>div>span {
+    width: 40%;
+    margin-left: 5px;
+}
+
+.popup>div>.popup-body>.content>.popup-form>div>div {
+    width: 60%;
+}
+
+.popup>div>.popup-spinner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup.loading>div>.popup-spinner {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.popup.loading>div>.popup-body {
+    opacity: 0;
+}
+
+.popup-form input,.popup-form select {
+    width: 60%;
+}
+
+.popup-form>div>div>input {
+    width: 40%;
+}
+
+.popup .list-content
+{
+    overflow-y: scroll;
+    height: 50vh;
+}

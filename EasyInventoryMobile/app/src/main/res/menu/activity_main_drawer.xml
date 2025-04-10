@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_users"
+            android:icon="@drawable/user"
+            android:title="@string/tab_users" />
+        <item
+            android:id="@+id/nav_warehouses"
+            android:icon="@drawable/warehouse"
+            android:title="@string/tab_warehouses" />
+        <item
+            android:id="@+id/nav_storages"
+            android:icon="@drawable/storage"
+            android:title="@string/tab_storages" />
+        <item
+            android:id="@+id/nav_items"
+            android:icon="@drawable/item"
+            android:title="@string/tab_items" />
+        <item
+            android:id="@+id/nav_units"
+            android:icon="@drawable/item"
+            android:title="@string/tab_units" />
+        <item
+            android:id="@+id/nav_operations"
+            android:icon="@drawable/operations"
+            android:title="@string/tab_operations" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/search"
+            android:title="@string/tab_search" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/user"
+            android:title="@string/tab_profile" />
+    </group>
+</menu>

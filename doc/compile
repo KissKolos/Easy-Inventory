@@ -1,0 +1,107 @@
+#!/bin/sh
+
+#extract code
+
+python3 codeextractor.py ../api/db.sql units > src/code/generated/database.units.sql
+python3 codeextractor.py ../api/db.sql item_types > src/code/generated/database.item_types.sql
+python3 codeextractor.py ../api/db.sql users > src/code/generated/database.users.sql
+python3 codeextractor.py ../api/db.sql warehouses > src/code/generated/database.warehouses.sql
+python3 codeextractor.py ../api/db.sql storages > src/code/generated/database.storages.sql
+python3 codeextractor.py ../api/db.sql item_stacks > src/code/generated/database.item_stacks.sql
+python3 codeextractor.py ../api/db.sql storage_limits > src/code/generated/database.storage_limits.sql
+python3 codeextractor.py ../api/db.sql operations > src/code/generated/database.operations.sql
+python3 codeextractor.py ../api/db.sql operation_items > src/code/generated/database.operation_items.sql
+python3 codeextractor.py ../api/db.sql authorization > src/code/generated/database.authorization.sql
+python3 codeextractor.py ../api/db.sql global_authorization > src/code/generated/database.global_authorization.sql
+python3 codeextractor.py ../api/db.sql authentication_token > src/code/generated/database.authentication_token.sql
+
+python3 codeextractor.py ../api/db.sql users_view > src/code/generated/database.users_view.sql
+python3 codeextractor.py ../api/db.sql authorization_view > src/code/generated/database.authorization_view.sql
+python3 codeextractor.py ../api/db.sql authentication_token_view > src/code/generated/database.authentication_token_view.sql
+python3 codeextractor.py ../api/db.sql warehouses_view > src/code/generated/database.warehouses_view.sql
+python3 codeextractor.py ../api/db.sql storages_view > src/code/generated/database.storages_view.sql
+python3 codeextractor.py ../api/db.sql item_types_view > src/code/generated/database.item_types_view.sql
+python3 codeextractor.py ../api/db.sql units_view > src/code/generated/database.units_view.sql
+python3 codeextractor.py ../api/db.sql operations_view > src/code/generated/database.operations_view.sql
+
+python3 codeextractor.py ../api/db.sql item_stacks_view > src/code/generated/database.item_stacks_view.sql
+python3 codeextractor.py ../api/db.sql operation_items_view > src/code/generated/database.operation_items_view.sql
+python3 codeextractor.py ../api/db.sql storage_capacity_view > src/code/generated/database.storage_capacity_view.sql
+
+
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/API.java "connect" > src/apilib/generated/connection.connect.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/API.java "logout" > src/apilib/generated/connection.logout.java
+
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/Unit.java "" > src/apilib/generated/unit.class.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/Item.java "" > src/apilib/generated/item.class.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/Warehouse.java "" > src/apilib/generated/warehouse.class.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/Storage.java "" > src/apilib/generated/storage.class.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/Operation.java "" > src/apilib/generated/operation.class.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/User.java "" > src/apilib/generated/user.class.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/ItemStack.java "" > src/apilib/generated/search.class.java
+
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/API.java "getUnits,getUnit,putUnit,deleteUnit,moveUnit" > src/apilib/generated/unit.api.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/API.java "getItems,getItem,putItem,deleteItem,moveItem" > src/apilib/generated/item.api.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/API.java "getWarehouses,getWarehouse,putWarehouse,deleteWarehouse,moveWarehouse" > src/apilib/generated/warehouse.api.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/API.java "getStorage,getStorage,putStorage,deleteStorage,moveStorage,getStorageLimits,setStorageLimit,getStorageCapacity" > src/apilib/generated/storage.api.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/API.java "getOperations,getOperation,putOperation,cancelOperation,finishOperation" > src/apilib/generated/operation.api.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/API.java "getUsers,getUser,putUser,deleteUser,moveUser,changePassword,getUserinfo" > src/apilib/generated/user.api.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/API.java "getSystemAuthorization,getLocalAuthorization,grantSystemAuthorization,grantLocalAuthorization,revokeSystemAuthorization,revokeLocalAuthorization" > src/apilib/generated/authorization.api.java
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/API.java "getCurrentItems" > src/apilib/generated/search.api.java
+
+dot -Tpng src/code/apiserver.classes.dot > src/code/generated/apiserver.classes.png
+dot -Tpng src/code/desktopclient.classes.dot > src/code/generated/desktopclient.classes.png
+dot -Tpng src/code/desktopclient.classes2.dot > src/code/generated/desktopclient.classes2.png
+dot -Tpng src/code/webfrontend.classes.dot > src/code/generated/webfrontend.classes.png
+dot -Tpng src/code/mobileclient.classes.dot > src/code/generated/mobileclient.classes.png
+dot -Tpng src/code/mobileclient.classes2.dot > src/code/generated/mobileclient.classes2.png
+dot -Tpng src/code/mobileclient.classes3.dot > src/code/generated/mobileclient.classes3.png
+dot -Tpng src/code/mobileclient.classes4.dot > src/code/generated/mobileclient.classes4.png
+
+python3 codeextractor.py ../frontend/assets/js/view.js "" "Template" > src/code/generated/web.template.js
+python3 codeextractor.py ../frontend/assets/js/view.js "" "View" > src/code/generated/web.view.js
+python3 codeextractor.py ../frontend/assets/js/view.js "" "ListView" > src/code/generated/web.listview.js
+python3 codeextractor.py ../frontend/assets/js/view.js "" "ListEditView" > src/code/generated/web.listeditview.js
+python3 codeextractor.py ../frontend/assets/js/view.js "" "SelectView" > src/code/generated/web.selectview.js
+python3 codeextractor.py ../frontend/assets/js/dialog.js "" "DialogView" > src/code/generated/web.dialogview.js
+python3 codeextractor.py ../frontend/assets/js/dialog.js "" "EditDialog" > src/code/generated/web.editdialog.js
+
+python3 codeextractor.py ../EasyInventoryDesktop/src/easyinventorydesktop/testutil/NodeMatcher.java "" > src/test/generated/desktop.nodematcher.java
+
+python3 codeextractor.py ../EasyInventoryAPI/src/easyinventoryapi/HTTPConnector.java "" > src/code/generated/apilib.httpconnector.java
+
+python3 codeextractor.py ../api/src/Routing/ApiRouter.php "route" "function" > src/code/generated/api.routing.route.php
+python3 codeextractor.py ../api/src/Routing/ApiRouter.php "handle" > src/code/generated/api.routing.handle.php
+python3 codeextractor.py ../api/src/API/APIUtils.php "validate" "function" > src/code/generated/api.apiutils.validate.php
+python3 codeextractor.py ../api/src/Settings/Settings.php "" > src/code/generated/api.settings.php
+python3 codeextractor.py ../api/src/Logging/Logger.php "" > src/code/generated/api.logger.php
+python3 codeextractor.py ../api/src/Logic/Authentication.php "" > src/code/generated/api.authentication.php
+
+python3 codeextractor.py ../EasyInventoryMobile/app/src/main/java/com/easyinventory/client/MainActivity.java "" > src/code/generated/mobile.mainactivity.java
+python3 codeextractor.py ../EasyInventoryMobile/app/src/main/java/com/easyinventory/client/Worker.java "" > src/code/generated/mobile.worker.java
+python3 codeextractor.py ../EasyInventoryMobile/app/src/main/java/com/easyinventory/client/LoggedInActivity.java "" > src/code/generated/mobile.loggedinactivity.java
+python3 codeextractor.py ../EasyInventoryMobile/app/src/main/java/com/easyinventory/client/ui/BaseEditActivity.java "" > src/code/generated/mobile.baseeditactivity.java
+python3 codeextractor.py ../EasyInventoryMobile/app/src/main/java/com/easyinventory/client/ui/LocalEditActivity.java "" > src/code/generated/mobile.localeditactivity.java
+python3 codeextractor.py ../EasyInventoryMobile/app/src/main/java/com/easyinventory/client/ui/PaginatedListActivity.java "" > src/code/generated/mobile.paginatedlistactivity.java
+python3 codeextractor.py ../EasyInventoryMobile/app/src/main/java/com/easyinventory/client/ui/BaseListActivity.java "" > src/code/generated/mobile.baselistactivity.java
+python3 codeextractor.py ../EasyInventoryMobile/app/src/main/java/com/easyinventory/client/ui/BaseListFragment.java "" > src/code/generated/mobile.baselistfragment.java
+python3 codeextractor.py ../EasyInventoryMobile/app/src/main/java/com/easyinventory/client/ui/LocalListFragment.java "" > src/code/generated/mobile.locallistfragment.java
+
+
+#generate doc
+
+rm -r build
+mkdir build
+
+compile_file() {
+	xelatex -interaction=batchmode -halt-on-error --shell-escape -output-directory=build ${1}
+	xelatex -interaction=batchmode -halt-on-error --shell-escape -output-directory=build ${1}
+}
+
+compile_file src/all.tex
+compile_file src/api.tex
+compile_file src/print.tex
+
+rm -r out
+mkdir out
+mv build/*.pdf out/

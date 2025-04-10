@@ -1,0 +1,90 @@
+<template id="search-template">
+    <div class="search-view fill background">
+        <div class="panel">
+            <div class="search-scope">
+                <button class="warehouse"></button>
+                <button class="storage"></button>
+            </div>
+            <input type="text" class="search">
+            <div class="search-options">
+		        <label class="localize">search.warehouse</label>
+		        <input type="checkbox" class="search-warehouse">
+		        <label class="localize">search.storage</label>
+                <input type="checkbox" class="search-storage">
+		        <label class="localize">search.lot</label>
+                <input type="checkbox" class="search-lot">
+		        <label class="localize">search.serial</label>
+                <input type="checkbox" class="search-serial">
+                <img src="assets/search.svg" class="search-btn button" tabindex="0">
+            </div>
+        </div>
+        <div>
+        <table class="box">
+            <thead>
+                <tr>
+                    <th class="warehouse-header localize">
+	                    itemstack.warehouse
+                    </th>
+                    <th class="storage-header localize">
+                        itemstack.storage
+                    </th>
+                    <th class="localize">
+                        itemstack.type
+                    </th>
+                    <th class="lot-header localize">
+                        itemstack.lot
+                    </th>
+                    <th class="gserial-header localize">
+                        itemstack.serial
+                    </th>
+                    <th class="mserial-header localize">
+                        itemstack.manufacturer_serial
+                    </th>
+                    <th class="localize">
+                        itemstack.amount
+                    </th>
+                    <th class="localize">
+                        itemstack.available
+                    </th>
+                </tr>
+                <tr class="loading hidden">
+                    <td colspan="8">
+                        <img class="spin" src="assets/spinner.svg">
+                    </td>
+                </tr>
+            </thead>
+            <tbody class="results">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <img src="assets/prev.svg" class="prev-btn button" tabindex="0">
+                        <img src="assets/next.svg" class="next-btn button" tabindex="0">
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+    </div>
+</template>
+<template id="search-result-template">
+    <tr>
+        <th class="warehouse warehouse-col">
+        </th>
+        <th class="storage storage-col">
+        </th>
+        <th class="type">
+        </th>
+        <th class="lot lot-col">
+        </th>
+        <th class="global-serial gserial-col">
+        </th>
+        <th class="manufacturer-serial mserial-col">
+        </th>
+        <th class="amount">
+        </th>
+        <th class="available-amount">
+        </th>
+    </tr>
+</template>
