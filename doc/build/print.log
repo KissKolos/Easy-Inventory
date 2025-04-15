@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.3.14)  7 APR 2025 14:16
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.3.14)  14 APR 2025 14:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2140,8 +2140,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[90]) (./src/user/usage.tex
-Underfull \hbox (badness 10000) in paragraph at lines 221--1
+[90]
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
@@ -2154,6 +2164,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
 [91]
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.69003pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.69003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
+
+[92]) (./src/user/usage.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.69003pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.69003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
+
+[93]
 File: ./src/user/resources/web/login.png Graphic file (type bmp)
 <./src/user/resources/web/login.png>
 File: ./src/user/resources/mobile/login.png Graphic file (type bmp)
@@ -2190,7 +2232,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[92]
+[94]
 Package svg Info: Last page of `./svg-inkscape/add_svg-tex.pdf' is 1 on input l
 ine 46.
 (./svg-inkscape/add_svg-tex.pdf_tex
@@ -2245,7 +2287,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[93]
+[95]
 Package svg Info: Last page of `./svg-inkscape/authorizations_svg-tex.pdf' is 1
  on input line 72.
 (./svg-inkscape/authorizations_svg-tex.pdf_tex
@@ -2314,7 +2356,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[94]
+[96]
 Package svg Info: Last page of `./svg-inkscape/add_svg-tex.pdf' is 1 on input l
 ine 107.
 (./svg-inkscape/add_svg-tex.pdf_tex
@@ -2369,7 +2411,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[95]
+[97]
 Package svg Info: Last page of `./svg-inkscape/delete_svg-tex.pdf' is 1 on inpu
 t line 131.
 (./svg-inkscape/delete_svg-tex.pdf_tex
@@ -2406,7 +2448,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[96]
+[98]
 Package svg Info: Last page of `./svg-inkscape/add_svg-tex.pdf' is 1 on input l
 ine 155.
 (./svg-inkscape/add_svg-tex.pdf_tex
@@ -2461,7 +2503,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[97]
+[99]
 Package svg Info: Last page of `./svg-inkscape/delete_svg-tex.pdf' is 1 on inpu
 t line 179.
 (./svg-inkscape/delete_svg-tex.pdf_tex
@@ -2498,7 +2540,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[98]
+[100]
 Package svg Info: Last page of `./svg-inkscape/add_svg-tex.pdf' is 1 on input l
 ine 203.
 (./svg-inkscape/add_svg-tex.pdf_tex
@@ -2553,7 +2595,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[99]
+[101]
 Package svg Info: Last page of `./svg-inkscape/delete_svg-tex.pdf' is 1 on inpu
 t line 228.
 (./svg-inkscape/delete_svg-tex.pdf_tex
@@ -2591,7 +2633,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[100]
+[102]
 Package svg Info: Last page of `./svg-inkscape/add_svg-tex.pdf' is 1 on input l
 ine 253.
 (./svg-inkscape/add_svg-tex.pdf_tex
@@ -2646,7 +2688,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[101]
+[103]
 Package svg Info: Last page of `./svg-inkscape/delete_svg-tex.pdf' is 1 on inpu
 t line 278.
 (./svg-inkscape/delete_svg-tex.pdf_tex
@@ -2712,7 +2754,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[102]
+[104]
 Package svg Info: Last page of `./svg-inkscape/delete_svg-tex.pdf' is 1 on inpu
 t line 314.
 (./svg-inkscape/delete_svg-tex.pdf_tex
@@ -2768,7 +2810,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[103]) (./src/user/examples.tex
+[105]) (./src/user/examples.tex
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
@@ -2781,7 +2823,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[104])
+[106])
 Underfull \hbox (badness 10000) in paragraph at lines 21--57
 
  []
@@ -2794,7 +2836,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[105]) (./src/future.tex
+[107]) (./src/future.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.69003pt, for example:
@@ -2803,9 +2845,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[106]
+[108]
 Fejezet 7.
-[107
+[109
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
@@ -2846,7 +2888,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.92004pt}.
 
-[108]
+[110]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
@@ -2874,7 +2916,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.92004pt}.
 
-[109]
+[111]
 Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
@@ -2893,9 +2935,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.92004pt}.
 
-[110]
+[112]
 Fejezet 8.
-[111
+[113
 
 ]
 
@@ -2906,9 +2948,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[112]
+[114]
 Fejezet 9.
-[113
+[115
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
@@ -2928,7 +2970,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
-[114] (build/print.aux)
+[116] (build/print.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2938,7 +2980,7 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
 Package rerunfilecheck Info: File `print.out' has not changed.
-(rerunfilecheck)             Checksum: 4ED511F848FA7503995552AF4B92386E;26740.
+(rerunfilecheck)             Checksum: 96B5FC95B12256AC10AB548E7A6B8F58;26883.
  ) 
 Here is how much of TeX's memory you used:
  27125 strings out of 476878
@@ -2949,4 +2991,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  107i,12n,117p,941b,2993s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/print.pdf (114 pages).
+Output written on build/print.pdf (116 pages).

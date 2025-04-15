@@ -27,6 +27,7 @@
 
 .search-options {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .search-options button {

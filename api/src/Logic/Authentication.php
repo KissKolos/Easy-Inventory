@@ -22,7 +22,8 @@ class Authentication {
     }
 
     public static function isTestUser():bool {
-        return self::getToken()===Settings::getSettings()->test_token;
+        $token=self::getToken();
+        return $token===Settings::getSettings()->test_token&&$token!==null;
     }
 
     public static function getCurrentUserId():string|null {

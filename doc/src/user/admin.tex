@@ -219,3 +219,71 @@
 		\end{itemize}
 	}
 }
+
+\block{%
+	\subsection{\mt{Beállítások}{}}
+
+	\p{\mt{%
+		A \code{config.json} konfigurációs fájl a szerver beállításait tartalmazza.
+	}{}}
+}
+
+\block{%
+	\subsubsection{\mt{Adatbázis beállítások}{}}
+
+	\p{%
+		\mt{A \code{database} szekció az alkalmazás adatbázis-kapcsolatához szükséges paramétereket tartalmazza.}{}
+
+		\begin{description}
+			\item[host] \mt{Az adatbázis szerver címe.}{}
+			\item[user] \mt{Az adatbázis felhasználó neve.}{}
+			\item[password] \mt{Az adatbázis felhasználó jelszava.}{}
+			\item[database\_name] \mt{Az adatbázis neve, amelyhez csatlakozik az alkalmazás (például: easyinventory).}{}
+			\item[port] \mt{Az adatbázis portja, amelyen a kapcsolatot létesíteni kell.}{}
+		\end{description}
+	}
+}
+
+\block{%
+	\subsubsection{\mt{Token lejárati idő}{}}
+
+	\p{%
+		\mt{A \code{token\_expiration} kulcs határozza meg, hogy hány másodpercig érvényes egy generált token. Ez az érték alapértelmezetten  120 másodperc, tehát 2 perc.}{}
+	}
+}
+
+\block{%
+	\subsubsection{\mt{Teszt token}{}}
+	
+	\p{%
+		\mt{A \code{test\_token} kulcs egy fix token-t ad meg, amelyet a rendszer teszteléséhez használhatunk. Ezt normál futtatáskor \code{null}-ra kell állítani.}{}
+	}
+}
+
+\block{%
+	\subsubsection{\mt{Naplózási beállítások}{}}
+
+	\p{%
+		\mt{A \code{logging} szekció az alkalmazás különböző naplózási beállításait tartalmazza. Négy fő típusú naplózás van: \code{success}, \code{bad}, \code{rejected}, és \code{error}.
+			Mindegyik típusnak van négy különböző beállítása a következő mezők szerint: \code{request\_body}, \code{response\_body}, \code{debug}, és \code{error}.}{}
+	}
+}
+
+\p{%
+	\begin{description}
+		\item[success] \mt{Sikeres kérések naplózása}{}
+		\item[bad] \mt{Hibás kérések naplózása}{}
+		\item[rejected] \mt{Elutasított kérések naplózása}{}
+		\item[error] \mt{Hiba naplózás}{}
+	\end{description}
+}
+
+\p{%
+	\begin{description}
+		\item[request\_body] \mt{A kérés törzsének naplózása}{}
+		\item[response\_body] \mt{A válasz törzsének naplózása}{}
+		\item[debug] \mt{A hibakeresési információk naplózása}{}
+		\item[error] \mt{A hibák naplózása}{}
+	\end{description}
+}
+
