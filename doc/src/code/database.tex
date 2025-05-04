@@ -1,8 +1,7 @@
 \lstset{language=SQL}
 
+\section{\mt{Adatbázis}{Database}}
 \block{
-	\section{\mt{Adatbázis}{Database}}
-
 	\subsection{\mt{Áttekintés}{}}
 
 	\p{\mt{%
@@ -22,7 +21,9 @@
 \end{landscape}
 
 \block{
-	\subsection{untis}
+	\subsection{\mt{Táblaleírások}{}}
+	
+	\subsubsection{untis}
 
 	\p{\mt{%
 			A \code{units} tábla a mértékegységek tárolásáért felelős.
@@ -33,7 +34,7 @@
 }
 
 \block{
-	\subsection{item\_types}
+	\subsubsection{item\_types}
 
 	\p{\mt{%
 			Az \code{item\_types} tábla a különböző cikk típusok tárolásáért felelős.
@@ -44,7 +45,7 @@
 }
 
 \block{
-	\subsection{warehouses}
+	\subsubsection{warehouses}
 
 	\p{\mt{%
 			A \code{warehouses} tábla a különböző telephelyek tárolásáért felelős.
@@ -55,7 +56,7 @@
 }
 
 \block{
-	\subsection{storages}
+	\subsubsection{storages}
 
 	\p{\mt{%
 			A \code{storages} tábla a különböző raktárak tárolásáért felelős.
@@ -66,7 +67,7 @@
 }
 
 \block{
-	\subsection{item\_stacks}
+	\subsubsection{item\_stacks}
 
 	\p{\mt{%
 			Az \code{item\_stacks} tábla az éppen tárolt különböző árucikkek tárolásáért felelős.
@@ -77,7 +78,7 @@
 }
 
 \block{
-	\subsection{storage\_limits}
+	\subsubsection{storage\_limits}
 
 	\p{\mt{%
 			A \code{storage\_limits} tábla a raktár limiteket tárolásáért felelős.
@@ -88,7 +89,7 @@
 }
 
 \block{
-	\subsection{operations}
+	\subsubsection{operations}
 
 	\p{\mt{%
 			Az \code{operations} tábla a műveletek tárolásáért felelős.
@@ -99,7 +100,7 @@
 }
 
 \block{
-	\subsection{operation\_items}
+	\subsubsection{operation\_items}
 
 	\p{\mt{%
 			Az \code{operation\_items} tábla a művelet részek tárolásáért felelős.
@@ -110,7 +111,7 @@
 }
 
 \block{
-	\subsection{users}
+	\subsubsection{users}
 
 	\p{\mt{%
 			A \code{users} tábla a felhasználók tárolásáért felelős.
@@ -121,7 +122,7 @@
 }
 
 \block{
-	\subsection{authorization}
+	\subsubsection{authorization}
 
 	\p{\mt{%
 			Az \code{authorization} tábla a helyi engedélyek tárolásáért felelős.
@@ -132,7 +133,7 @@
 }
 
 \block{
-	\subsection{global\_authorization}
+	\subsubsection{global\_authorization}
 
 
 	\p{\mt{%
@@ -144,7 +145,7 @@
 }
 
 \block{
-	\subsection{authentication\_token}
+	\subsubsection{authentication\_token}
 
 	\p{\mt{%
 			Az \code{authentication\_token} tábla a bejelentkezési tokenek tárolásáért felelős.
@@ -154,10 +155,10 @@
 	}
 }
 
-
-
 \block{
-	\subsection{users\_view}
+	\subsection{\mt{Nézetek}{}}
+	
+	\subsubsection{users\_view}
 
 	\p{\mt{%
 			A \code{users\_view} a felhasználók adatainak lekérését egyszerűsíti.
@@ -168,7 +169,7 @@
 }
 
 \block{
-	\subsection{authorization\_view}
+	\subsubsection{authorization\_view}
 
 	\p{\mt{%
 			Az \code{authorization\_view} tábla a helyi és rendszer engedélyek lekérését egyszerűsíti.
@@ -179,7 +180,7 @@
 }
 
 \block{
-	\subsection{authentication\_token\_view}
+	\subsubsection{authentication\_token\_view}
 
 	\p{\mt{%
 			Az \code{authentication\_token\_view} a bejelentkezési tokenek lekérését egyszerűsíti.
@@ -190,7 +191,7 @@
 }
 
 \block{
-	\subsection{warehouses\_view}
+	\subsubsection{warehouses\_view}
 
 	\p{\mt{%
 			A \code{warehouses\_view} tábla a telephelyek lekérését egyszerűsíti.
@@ -201,7 +202,7 @@
 }
 
 \block{
-	\subsection{storages\_view}
+	\subsubsection{storages\_view}
 
 	\p{\mt{%
 			A \code{storages\_view} tábla a raktárak lekérését egyszerűsíti.
@@ -212,7 +213,7 @@
 }
 
 \block{
-	\subsection{item\_types\_view}
+	\subsubsection{item\_types\_view}
 
 	\p{\mt{%
 			A \code{item\_types\_view} tábla a cikk típusok lekérését egyszerűsíti.
@@ -223,7 +224,7 @@
 }
 
 \block{
-	\subsection{units\_view}
+	\subsubsection{units\_view}
 
 	\p{\mt{%
 			A \code{units\_view} tábla a mérték egységek lekérését egyszerűsíti.
@@ -234,7 +235,7 @@
 }
 
 \block{
-	\subsection{operations\_view}
+	\subsubsection{operations\_view}
 
 	\p{\mt{%
 			A \code{operations\_view} tábla a műveletek lekérését egyszerűsíti.
@@ -245,7 +246,7 @@
 }
 
 \block{
-	\subsection{operation\_items\_view}
+	\subsubsection{operation\_items\_view}
 
 	\p{\mt{%
 			A \code{operation\_items\_view} tábla a művelet részek lekérését egyszerűsíti.
@@ -256,7 +257,7 @@
 }
 
 \block{
-	\subsection{item\_stacks\_view}
+	\subsubsection{item\_stacks\_view}
 
 	\p{\mt{%
 			A \code{item\_stacks\_view} tábla a tárolt áru lekérését egyszerűsíti.

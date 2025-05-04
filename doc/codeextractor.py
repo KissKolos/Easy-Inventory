@@ -87,7 +87,7 @@ def extractClass(file,members,classname):
     
     while True:
         line = file.readline()
-        if ("class "+classname) in line:
+        if (("class "+classname) in line) or (("interface "+classname) in line):
             print(line,end="")
             printClass(file,members)
             return

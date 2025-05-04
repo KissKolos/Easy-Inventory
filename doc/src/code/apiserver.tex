@@ -1,15 +1,15 @@
 \lstset{language=PHP}
 
-\section{\mt{Api szerver}{Api server}}
+\section{\mt{API szerver}{Api server}}
 
 \block{
-	\subsection{\mt{Felépítés}{}}
+	\subsection{\mt{Áttekintés}{}}
 	
 	\subsubsection{\mt{Átirányítási réteg}{}}
 	
 	\p{\mt{%
 		A \code{.htaccess} -nek köszönhetően minden beérkező kérés az \code{index.php} fájlba érkezik, amely ezt követően a \code{src/Routing/Router.php} fájlba továbbítja azokat. 
-		A Router.php fájl megvizsgálja a kérések URL -jét és metódusát, majd a query kivételével dekódolja és továbbítja az URL paramétereket a \code{src/API} mappában található fájlokba.
+		A \code{Router.php} fájl megvizsgálja a kérések URL -jét és metódusát, majd a query kivételével dekódolja és továbbítja az URL paramétereket a \code{src/API} mappában található fájlokba.
 	}{}}
 }
 
@@ -31,7 +31,9 @@
 }
 
 \block{
-	\subsection{ApiRouter.php}
+	\subsection{\mt{Osztályleírások}{}}
+	
+	\subsubsection{ApiRouter.php}
 	
 	\p{\mt{%
 			Amennyiben a kérés metódusa megegyezik a \code{\$method} -al, illetve a kérés URL -je hasonlít a \code{\$pattern} -ben található mintával, a route funkció feladata, hogy lefuttassa a code{\$function} funkciót az URL -ből kiszedett és dekódolt paraméterekkel.
@@ -49,7 +51,7 @@
 }
 
 \block{
-	\subsection{APIUtils.php}
+	\subsubsection{APIUtils.php}
 	
 	\p{\mt{%
 			A validate funkció feladata megvizsgálni, hogy a \code{\$data} értéke a \code{\$template} szerint van-e formázva.
@@ -101,12 +103,12 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{apiserver.classes.png}
-		\caption{\mt{Osztálydiagramm}{}}
+		\caption{\mt{Adatbázis kapcsolati réteg osztálydiagrammja}{}}
 	\end{figure}
 \end{landscape}
 
 \block{
-	\subsection{\mt{DB.php}{}}
+	\subsubsection{\mt{DB.php}{}}
 	
 	\p{\mt{%
 		A \code{DB} osztály felelős az adatbázishoz való kapcsolódásért.
@@ -116,7 +118,7 @@
 }
 
 \block{
-	\subsection{\mt{BaseTrait.php}{}}
+	\subsubsection{\mt{BaseTrait.php}{}}
 	
 	\p{\mt{%
 		Sok hasznos SQL lekérdezéssel foglalkozó metódus van implementálva a \code{BaseTrait}-ben, így az összes többi \code{trait} használja a \code{BaseTrait}-et ezeknek a bizonyos funkcióknak az eléréséhez.
@@ -124,7 +126,7 @@
 }
 
 \block{
-	\subsection{\mt{Logger.php}{}}
+	\subsubsection{\mt{Logger.php}{}}
 	
 	\p{\mt{%
 			A \code{Logger} osztály az eseménynapló kezelésével foglalkozik.
@@ -135,7 +137,7 @@
 }
 
 \block{
-	\subsection{\mt{Settings.php}{}}
+	\subsubsection{\mt{Settings.php}{}}
 	
 	\p{\mt{%
 			A \code{Settings} osztály a \code{config.json} olvasásáért felelős.
@@ -146,7 +148,7 @@
 }
 
 \block{
-	\subsection{\mt{Authentication.php}{}}
+	\subsubsection{\mt{Authentication.php}{}}
 	
 	\p{\mt{%
 			A \code{Authentication} osztály a hiteletísért felelős.

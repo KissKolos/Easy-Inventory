@@ -1,18 +1,16 @@
-\block{%
-	\section{\mt{Dokumentáció}{}}
+\chapter{\mt{Dokumentáció generálása}{}}
 
-	\subsection{\mt{Áttekintés}{}}
-	
-	\p{\mt{%
-		A projekt dokumentációja \LaTeX dokumentum leíró nyelvet használja.
-		A forrás fájlok a \code{doc/src} mappában találhatók.
-		A legtöbb stílus elem és a csomagok importálása a \code{shared.tex} fájllban van beállítva.
-	}{}}
-}
+\section{\mt{Áttekintés}{}}
+
+\p{\mt{%
+	A projekt dokumentációja \LaTeX dokumentum leíró nyelvet használja.
+	A forrás fájlok a \code{doc/src} mappában találhatók.
+	A legtöbb stílus elem és a csomagok importálása a \code{shared.tex} fájllban van beállítva.
+}{}}
+
+\section{\mt{Felhasználói dokumentáció}{}}
 
 \block{%
-	\subsection{\mt{Felhasználói dokumentáció}{}}
-	
 	\p{\mt{%
 		A felhasználói dokumentáció a \code{user} mappában található.
 		A dokumentum által használt ikonok a \code{user/resources/icon} mappában találhatóak.
@@ -22,9 +20,11 @@
 	}{}}
 }
 
+\section{\mt{Fejlesztői dokumentáció}{}}
+
 \block{%
-	\subsection{\mt{Kód dokumentáció}{}}
-	
+	\subsection{\mt{Kóddokumentáció}{}}
+
 	\p{\mt{%
 		A kód dokumentáció a \code{code} mappában találhatóak.
 		Az dokumentum által használt kód részek a \code{code/generated} mappában találhatóak.
@@ -32,26 +32,28 @@
 	}{}}
 }
 
+
 \block{%
-	\subsection{\mt{Teszt dokumentáció}{}}
-	
+	\subsection{\mt{Tesztdokumentáció}{}}
+
 	\p{\mt{%
 		A teszt dokumentáció a \code{test} mappában, a dokumentum által használt kód részletek pedig a \code{test/generated} mappában találhatóak.
 		Ezeket a kód részleteket az építő program autómatikusan generálja.
 	}{}}
 }
 
+
 \block{%
 	\subsection{\mt{Kód beillesztő}{}}
-	
+
 	\p{\mt{%
 		A kód beillesztő program a \code{codeextractor.py} python program.
 	}{}}
 }
 
+\section{\mt{Építés}{}}
+
 \block{%
-	\subsection{\mt{Építés}{}}
-	
 	\p{\mt{%
 		A dokumentáció építéséhez a \code{compile} fájlt kell futtatni.
 		Ez generált pdf fájlokat az \code{out} mappába helyezi.

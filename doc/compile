@@ -96,11 +96,10 @@ mkdir build
 compile_file() {
 	xelatex -interaction=batchmode -halt-on-error --shell-escape -output-directory=build ${1}
 	xelatex -interaction=batchmode -halt-on-error --shell-escape -output-directory=build ${1}
+	xelatex -interaction=batchmode -halt-on-error --shell-escape -output-directory=build ${1}
 }
 
 compile_file src/all.tex
-compile_file src/api.tex
-compile_file src/print.tex
 
 rm -r out
 mkdir out

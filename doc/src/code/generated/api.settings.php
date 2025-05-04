@@ -6,6 +6,7 @@ class Settings {
     public readonly LogSettings $error_log;
     public readonly string|null $test_token;
     public readonly int $token_length;
-        string|null $test_token,int $token_length) { ... }
+    public readonly int $token_expiration;
+        string|null $test_token,int $token_length,int $token_expiration) { ... }
     public static function getSettings():Settings { ... }
 }

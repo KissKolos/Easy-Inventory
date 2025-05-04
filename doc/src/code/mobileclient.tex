@@ -1,8 +1,8 @@
 \lstset{language=Java}
 
-\block{
-	\section{Mobil kliens}
+\section{Mobil kliens}
 
+\block{
 	\subsection{\mt{Áttekintés}{}}
 
 	\p{\mt{%
@@ -15,7 +15,9 @@
 }
 
 \block {
-	\subsection{\mt{MainActivity osztály}{}}
+	\subsection{\mt{Osztályleírások}{}}
+	
+	\subsubsection{\mt{MainActivity osztály}{}}
 
 	\p{\mt{%
 			A program a \code{MainActivity} osztályban kezdődik, ami megjeleníti a bejelentkezési felületet, illetve amennyiben még nincs, engedélyt kér a hálózat használatához.
@@ -26,7 +28,7 @@
 }
 
 \block {
-	\subsection{LoggedInActivity \mt{osztály}{}}
+	\subsubsection{LoggedInActivity \mt{osztály}{}}
 
 	\p{\mt{%
 			A \code{LoggedInActivity} osztály megjeleníti a bejelentkezett felületet.
@@ -38,7 +40,7 @@
 }
 
 \block {
-	\subsection{Worker \mt{osztály}{}}
+	\subsubsection{Worker \mt{osztály}{}}
 
 	\p{\mt{%
 			A \code{Worker} osztály a háttérben futó folyamatok kezeléséért felelős.
@@ -52,12 +54,12 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{mobileclient.classes.png}
-		\caption{\mt{Osztálydiagramm}{}}
+		\caption{\mt{Szerkesztő osztályok diagrammja}{}}
 	\end{figure}
 \end{landscape}
 
 \block {
-	\subsection{BaseEditActivity \mt{osztály}{}}
+	\subsubsection{BaseEditActivity \mt{osztály}{}}
 
 	\p{\mt{%
 			A \code{BaseEditActivity} absztrakt osztály a szerkesztési vagy hozzáadási tevékenységeknek a szülőosztálya.
@@ -72,7 +74,7 @@
 }
 
 \block {
-	\subsection{LocalEditActivity \mt{osztály}{}}
+	\subsubsection{LocalEditActivity \mt{osztály}{}}
 
 	\p{\mt{%
 			A \code{LocalEditActivity} absztrakt osztály a \code{BaseEditActivity} osztályt telephely bekéréssel egészíti ki.
@@ -87,12 +89,12 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{mobileclient.classes2.png}
-		\caption{\mt{Osztálydiagramm}{}}
+		\caption{\mt{Listázó activity osztályok diagrammja}{}}
 	\end{figure}
 \end{landscape}
 
 \block {
-	\subsection{PaginatedListActivity \mt{osztály}{}}
+	\subsubsection{PaginatedListActivity \mt{osztály}{}}
 
 	\p{\mt{%
 			A \code{PaginatedListActivity} absztrakt osztály olyan tevékenységek szülőosztálya, amelyek lapozható listát mutatnak.
@@ -104,7 +106,7 @@
 }
 
 \block {
-	\subsection{BaseListActivity \mt{osztály}{}}
+	\subsubsection{BaseListActivity \mt{osztály}{}}
 
 	\p{\mt{%
 			A \code{BaseListActivity} absztrakt osztály a kiválasztási felületek szülőosztálya.
@@ -119,12 +121,12 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{mobileclient.classes3.png}
-		\caption{\mt{Osztálydiagramm}{}}
+		\caption{\mt{Listázó fragment osztályok diagrammja}{}}
 	\end{figure}
 \end{landscape}
 
 \block {
-	\subsection{BaseListFragment \mt{osztály}{}}
+	\subsubsection{BaseListFragment \mt{osztály}{}}
 
 	\p{\mt{%
 			A \code{BaseListFragment} absztrakt osztály a lista \code{Fragment}-ek
@@ -137,7 +139,7 @@ szülőosztálya, melynek feladata a lapozás, a keresés, az újratöltés, a t
 }
 
 \block {
-	\subsection{LocalListFragment \mt{osztály}{}}
+	\subsubsection{LocalListFragment \mt{osztály}{}}
 
 	\p{\mt{%
 			A \code{LocalListFragment} absztrakt osztály a \code{BaseListFragment} osztályt telephely bekéréssel egészíti ki.
@@ -157,10 +159,10 @@ szülőosztálya, melynek feladata a lapozás, a keresés, az újratöltés, a t
 \end{landscape}
 
 \block {
-	\subsection{SelectableArrayAdapter \mt{osztály}{}}
+	\subsubsection{SelectableArrayAdapter \mt{osztály}{}}
 
 	\p{\mt{%
-			A \code{SelectableArrayAdapter} absztrakt osztály az \code{ArrayAdapter} osztály implementálását segíti kijelölhető listákra.
+			A \code{SelectableArrayAdapter} absztrakt osztály az \code{ArrayAdapter} o\-sz\-tály implementálását segíti kijelölhető listákra.
 		}{}
 	}
 }

@@ -1,9 +1,7 @@
-\documentclass{book}
+\documentclass[openany]{book}
 
 \usepackage{import}
 \import{src}{shared}
-
-%\title{\mt{Project Dokumentáció}{}}
 
 \begin{document}
 
@@ -16,25 +14,31 @@
 
 \import{src}{work}
 
-\chapter{\mt{API Dokumentáció}{}}
+\part{\mt{Fejlesztői dokumentáció}{}}
+
+\chapter{\mt{API dokumentáció}{}}
 
 \import{src/api}{apidoc}
 
-\chapter{\mt{API Könyvtár Dokumentáció}{}}
+\chapter{\mt{API könyvtár dokumentáció}{}}
 
 \import{src/apilib}{apilibdoc}
 
-\chapter{\mt{Kód Dokumentáció}{}}
+\chapter{\mt{Kóddokumentáció}{}}
 
 \import{src/code}{codedoc}
 
-\chapter{\mt{Teszt Dokumentáció}{}}
+\chapter{\mt{Tesztdokumentáció}{}}
 
 \import{src/test}{testdoc}
 
-\chapter{\mt{Felhasználói Dokumentáció}{}}
+\part{\mt{Felhasználói dokumentáció}{}}
+
+\chapter{\mt{Felhasználói dokumentáció}{}}
 
 \import{src/user}{userdoc}
+
+\part{\mt{Utószó}{}}
 
 \import{src}{future}
 

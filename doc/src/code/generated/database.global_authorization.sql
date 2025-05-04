@@ -11,7 +11,8 @@ create table if not exists global_authorization (
         "view_users",
         "delete_users",
         "create_users",
-        "modify_users"),
+        "modify_users",
+        "view_statistics"),
 
     primary key(user,authorization),
     foreign key(user) references users(id)

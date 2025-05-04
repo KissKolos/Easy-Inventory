@@ -1,8 +1,8 @@
 \lstset{language=Java}
 
-\block{
-	\section{\mt{Asztali kliens}{}}
+\section{\mt{Asztali kliens}{}}
 
+\block{
 	\subsection{\mt{Bevezetés}{}}
 
 	\p{\mt{%
@@ -13,7 +13,9 @@
 }
 
 \block{
-	\subsection{\mt{Worker osztály}{}}
+	\subsection{\mt{Asztali kliens osztályai}{}}
+	
+	\subsubsection{\mt{Worker osztály}{}}
 	
 	\p{\mt{%
 		A \code{Worker} osztály a háttérben futó folyamatok kezeléséért felelős.
@@ -21,7 +23,7 @@
 }
 
 \block{
-	\subsection{\mt{EasyInventoryDesktop osztály}{}}
+	\subsubsection{\mt{EasyInventoryDesktop osztály}{}}
 	
 	\p{\mt{%
 		A program az \code{EasyInventoryDesktop} osztályban kezdődik, ahol a kezdő metódus betölti a nyelvfájlokat, beállítja az ablakot és elindítja a bejelentkezési felület létrehozását.
@@ -33,12 +35,12 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{desktopclient.classes.png}
-		\caption{\mt{Osztálydiagramm}{}}
+		\caption{\mt{Listázó osztályok diagrammja}{}}
 	\end{figure}
 \end{landscape}
 
 \block{
-	\subsection{\mt{BasicView osztály}{}}
+	\subsubsection{\mt{BasicView osztály}{}}
 	
 	\p{\mt{%
 		A \code{BasicView} absztrakt osztály a különböző listázási felületek szülőosztálya.
@@ -50,7 +52,7 @@
 }
 
 \block{
-	\subsection{\mt{SelectView osztály}{}}
+	\subsubsection{\mt{SelectView osztály}{}}
 	
 	\p{\mt{%
 		A \code{SelectView} absztrakt osztály a különböző kiválasztási felületek szülőosztálya.
@@ -60,7 +62,7 @@
 }
 
 \block{
-	\subsection{\mt{CardView osztály}{}}
+	\subsubsection{\mt{CardView osztály}{}}
 	
 	\p{\mt{%
 		A \code{CardView} absztrakt osztály olyan listázási felületek szülőosztálya amelyek káryákban jelenítik meg az adatokat.
@@ -71,7 +73,7 @@
 }
 
 \block{
-	\subsection{\mt{EditableView osztály}{}}
+	\subsubsection{\mt{EditableView osztály}{}}
 	
 	\p{\mt{%
 		A \code{EditableView} absztrakt osztály a \code{CardView} osztályt szerkesztési gombokkal egészíti ki.
@@ -82,7 +84,7 @@
 }
 
 \block{
-	\subsection{\mt{LocalEditableView osztály}{}}
+	\subsubsection{\mt{LocalEditableView osztály}{}}
 	
 	\p{\mt{%
 		A \code{LocalEditableView} absztrakt osztály a \code{EditableView} osztályt telephely kiválasztási menüvel egészíti ki.
@@ -93,12 +95,12 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{desktopclient.classes2.png}
-		\caption{\mt{Osztálydiagramm}{}}
+		\caption{\mt{Dalógus osztályok diagrammja}{}}
 	\end{figure}
 \end{landscape}
 
 \block{
-	\subsection{\mt{FormDialog osztály}{}}
+	\subsubsection{\mt{FormDialog osztály}{}}
 	
 	\p{\mt{%
 		A \code{FormDialog} absztrakt osztály a bemeneti felügró ablakok szülőosztálya.
@@ -108,7 +110,7 @@
 }
 
 \block{
-	\subsection{\mt{EditDialog osztály}{}}
+	\subsubsection{\mt{EditDialog osztály}{}}
 	
 	\p{\mt{%
 		Az \code{EditDialog} absztrakt osztály a \code{FormDialog} osztályt mentéssel egészíti ki.

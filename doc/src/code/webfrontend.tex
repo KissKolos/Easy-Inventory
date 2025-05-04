@@ -1,8 +1,8 @@
 \lstset{language=JavaScript}
 
-\block{
-	\section{Web frontend}
+\section{Frontend}
 
+\block{%
 	\subsection{\mt{Áttekintés}{}}
 
 	\p{\mt{%
@@ -17,12 +17,14 @@
 	
 	\p{\mt{%
 		A frontend építéséhez a Linux alapú rendszeren \code{build} vagy Windowson \code{build.bat} fájlt kell futtatni.
-		Ez kétrehozza az \code{index.html} fájlt a széttagolt html fájlokból.
+		Ez létrehozza az \code{index.html} fájlt a széttagolt html fájlokból.
 	}{}}
 }
 
 \block{
-	\subsection{\mt{Template osztály}{}}
+	\subsection{\mt{Osztályleírások}{}}
+	
+	\subsubsection{\mt{Template osztály}{}}
 	
 	\p{\mt{%
 			A \code{Template} osztály segíti a html minták kezelését.
@@ -44,7 +46,7 @@
 \end{landscape}
 
 \block{
-	\subsection{\mt{View osztály}{}}
+	\subsubsection{\mt{View osztály}{}}
 	
 	\p{\mt{%
 			A \code{View} osztály a felhasználói felület részek szülőosztálya.
@@ -56,7 +58,7 @@
 }
 
 \block{
-	\subsection{\mt{ListView osztály}{}}
+	\subsubsection{\mt{ListView osztály}{}}
 	
 	\p{\mt{%
 			A \code{ListView} osztály a listák szülőosztálya. Ebben a listában lehet
@@ -73,7 +75,7 @@
 }
 
 \block{
-	\subsection{\mt{ListEditView osztály}{}}
+	\subsubsection{\mt{ListEditView osztály}{}}
 	
 	\p{\mt{%
 			A \code{ListEditView} osztály a \code{ListView} osztályt szerkesztési menüvel egészíti ki.
@@ -89,7 +91,7 @@
 }
 
 \block{
-	\subsection{\mt{SelectView osztály}{}}
+	\subsubsection{\mt{SelectView osztály}{}}
 	
 	\p{\mt{%
 			A \code{SelectView} osztály a kiválasztási listák szülőosztálya.
@@ -101,7 +103,7 @@
 }
 
 \block{
-	\subsection{\mt{DialogView osztály}{}}
+	\subsubsection{\mt{DialogView osztály}{}}
 	
 	\p{\mt{%
 			A \code{DialogView} osztály a felugró menük szülőosztálya. A \code{hasOk} funkció
@@ -115,7 +117,7 @@
 }
 
 \block{
-	\subsection{\mt{EditDialog osztály}{}}
+	\subsubsection{\mt{EditDialog osztály}{}}
 	
 	\p{\mt{%
 			A \code{EditDialog} osztály a szerkesztési menük szülőosztálya.

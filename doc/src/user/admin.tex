@@ -1,26 +1,24 @@
 \newpage
-\block{
-    \section{Adminisztráció}
+\section{Adminisztráció}
 
+\block{%
     \subsection{\mt{Arhivált adatok törlése}{}}
 
     \warning{\mt{%
-	    Az arhivált adatok törlése visszafordíthatatlan!
-	    Ezek az adatok adják a statisztikákat.
-	    Régi adatok törlésével az akkori statisztika is törlődik.
+		Az arhivált adatok törlése visszafordíthatatlan! Ezek az adatok adják a statisztikákat. Régi adatok törlésével a velük egyidejű statisztika is törlődik.
     }{}}
 }
 
 \p{\mt{%
 		Az arhivált adatok törlése hasznos lehet ha az adatbázis mérete már túl nagy.
-		Az összes adat törlésére az alábbi parancsot kell futtatni
+		Az összes adat törlésére az alábbi parancsot kell futtatni:
 	}{}
 	
 	\cli{php archive delete all}
 	
 	\mt{%
-		Általában nem akarjuk az összes arhivált adatot törölni.
-		Ehez meg kell adni hány évnyi,heti vagy napi adatot akarunk megtartani az időegység jelével.
+		Általában nem akarjuk az összes arhivált adatot törölni. Ebben az esetben meg kell adnunk, hogy hány évnyi, heti vagy napi adatot szeretnénk megtartani.
+		Ezt az adott időegység jelével tudjuk megtenni.
 	}{}
 	\begin{description}
 		\item[d] \mt{nap}{}
@@ -28,13 +26,13 @@
 		\item[y] \mt{év}{}
 	\end{description}
 	\mt{%
-		Például: ez a parancs kitöli az összes arhivált adatot ami 5 évnél régebben lett törölve.
+		Például: ez a parancs kitörli az összes arhivált adatot, ami 5 évnél régebben lett törölve.
 	}{}
 
 	\cli{php archive delete 5y}
 }
 
-\block{
+\block{%
     \subsection{Eseménynapló kezelése}
 
     \p{\mt{%
@@ -44,12 +42,11 @@
     }{}}
 }
 
-\block{
+\block{%
     \subsubsection{\mt{Eseménynapló megtekintése}{}}
 
     \p{\mt{%
-		    Az eseménynapló megjelenítésére van a \code{log show} parancs.
-			Ha nem adunk meg semmilyen kapcsolót akkor az összes adatot rövid formában írja ki.
+			Az eseménynapló megjelenítését a \code{log show} parancs használatával érhetjük el. Abban az esetben, ha nem adunk meg semmilyen kapcsolót, az összes adat rövid formátumban lesz kiírva.
 	    }{}
 	    
 	    \cli{php log show}
@@ -57,12 +54,11 @@
 }
 
 \p{\paragraph{-u,--user \mt{kapcsoló}{}}
-	Ezzel megadhatjuk a felhasználói azonosítót amihez tartozó eseményeket akarjuk megtekinteni.
+	Ennek a segítségével megadhatjuk azt a felhasználói azonosítót, amelyhez tartozó eseményeket kívánjuk megtekinteni.
 }
 
 \p{\paragraph{-e, --error \mt{kapcsoló}{}}
-	Szerverhibát okozó kéréseketre szűri le az eseményeket.
-	Ezek lehetnek adatbázis kapcsolódási hibák.
+	Szerverhibát okozó kéréseketre szűri le az eseményeket. Ezek lehetnek adatbázis kapcsolódási hibák is.
 }
 
 \p{\paragraph{-r, --rejected \mt{kapcsoló}{}}
@@ -82,32 +78,32 @@
 }
 
 \p{\paragraph{\mt{Pédák}{}}
-	\mt{Megmutatja az összes kérést amit az \code{admin} felhasználó végzett}{}
+	\mt{Megmutatja az összes kérést, amit az \code{admin} felhasználó végzett:}{}
 	
 	\cli{php log -u admin show}
 	
-	\mt{Megmutatja az összes szerverhibát és elutasított kérést}{}
+	\mt{Megmutatja az összes szerverhibát és elutasított kérést:}{}
 	
 	\cli{php log -er show}
 	
-	\mt{Megmutatja az összes szerverhibát részletesen}{}
+	\mt{Részletesen megmutatja az összes szerverhibát:}{}
 	
 	\cli{php log -ev show}
 }
 
-\block{
+\block{%
     \subsubsection{\mt{Egy esemény megtekintése}{}}
 
     \p{\mt{%
 			Ha csak egy kérést akarunk megtekinteni akkor a kérés sorszámának megadásával tudjuk.
-			Ehez a kéréshez nincsenek kapcsolók.
+			Abban az esetben, ha csak egy kérést akarunk megtekinteni, akkor a kérés sorszámának megadásával tudjuk azt megtenni. Ehhez a kéréshez nem tartoznak kapcsolók.
 		}{}
 		
 		\cli{php log show 100}
 	}
 }
 
-\block{
+\block{%
     \subsubsection{\mt{Eseménynapló törlése}{}}
 
     \p{\mt{%
@@ -119,8 +115,7 @@
 }
 
 \p{\mt{%
-		Általában nem akarjuk az összes eseményt törölni.
-		Ehez meg kell adni hány évnyi,heti vagy napi adatot akarunk megtartani az időegység jelével.
+		Legtöbbször nem akarjuk az összes eseményt törölni. Ebben az esetben meg kell adnunk, hogy hány évnyi, heti vagy napi adatot szeretnénk megtartani. Ezt az adott időegység jelével tudjuk megtenni.
 	}{}
 	\begin{description}
 		\item[d] \mt{nap}{}
@@ -128,12 +123,12 @@
 		\item[y] \mt{év}{}
 	\end{description}
 	\mt{%
-		Például: ez a parancs kitöli az összes eseményt ami 5 napnál régebbi.
+		Például: ez a parancs kitörli az összes eseményt, ami 5 napnál régebbi.
 	}{}
 	\cli{php log clear 5d}
 }
 
-\block{
+\block{%
     \subsection{\mt{Felhasználó kezelés}{}}
 
     \p{\mt{%
@@ -141,7 +136,7 @@
     }{}}
 }
 
-\block{
+\block{%
     \subsubsection{\mt{Adminisztrátor létrehozása}{}}
 
     \p{\mt{%
@@ -152,7 +147,7 @@
     }
 }
 
-\block{
+\block{%
     \subsubsection{\mt{Felhasználó törlése}{}}
 
     \p{\mt{%
@@ -164,26 +159,25 @@
     }
 }
 
-\block{
+\block{%
     \subsubsection{\mt{Új jelszó adása}{}}
 
     \p{\mt{%
-		    Az új jelszó adáshoz meh kell adni a felhasználó azonosítóját és az új jelszót.
+			Az új jelszó adáshoz meg kell adni a felhasználó azonosítóját és az új jelszót.
 	    }{}
 	    
 	    \cli{php user password admin password123}
     }
 }
 
-\block{
+\block{%
     \subsection{\mt{Engedélyek}{}}
 
     \p{\mt{%
-	    Két féle engedély típus van: a rendszer és a helyi.
-	    A rendszer engedélyek az egész rendszerre vonatkoznak.
-	    Azaz ha egy felhasználó egy ilyen engedélyt kap akkor az minden telephelyen érvényes, de a rendszer engedélyek között rendszer adminisztrációval kapcsolatosak engedélyek is vannak.
-	    A helyi engedélyek telephelyhez vannak kötve.
-	    Azaz ha egy felhasználó egy ilyen engedélyt kap akkor csak az adott telephelyen érvényes.
+		Két féle engedély típus létezik: a rendszer és a helyi.
+		A rendszer engedélyek az egész rendszerre vonatkoznak, tehát, amennyiben egy felhasználó egy ilyen engedélyt kap, akkor az minden telephelyen érvényes.
+		Ezzel ellentétben a rendszerengedélyek között a rendszer adminisztrációjával kapcsolatos engedélyek is találhatóak.
+		A helyi engedélyek telephelyhez vannak kötve, tehát, amennyiben egy felhasználó egy ilyen engedélyt kap, abban az esetben az csupán az adott telephelyen érvényes.
     }{}}
 }
 

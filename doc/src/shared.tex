@@ -7,6 +7,7 @@
 \usepackage{fancyhdr}
 \usepackage{pdflscape}
 \usepackage{arydshln}
+\usepackage{ifthen}
 \usepackage{setspace}
 \setstretch{1.5}
 
@@ -93,7 +94,7 @@
 
 \newcommand{\doclang}{\langhu}
 
-\newcommand{\mt}[2]{
+\newcommand{\mt}[2]{%
 	\ifcase\doclang
 	\or
 	{#1}
@@ -104,7 +105,7 @@
 	\fi
 }
 
-\renewcommand*\contentsname{Tartalom}
+\renewcommand*\contentsname{Tartalomjegyzék}
 \renewcommand{\chaptername}{Fejezet}
 
 
@@ -139,12 +140,20 @@
 	{\color{white}\hrule height 15pt}
 }
 
+\renewcommand\figurename{Kép}
+%\titleformat{\chapter}[display]
+%	{}{}{0pt}{\fontsize{48pt}{48pt}\selectfont\vfil\begin{center}\ifthenelse{\equal{\thechapter}{\string 0}}{}{\thechapter. }\title\bfseries}[\end{center}\vfil\newpage]
 
+\titlespacing*{\chapter}{0pt}{-19pt}{0pt}
 \titleformat{\chapter}[display]
-	{}{}{0pt}{\fontsize{48pt}{48pt}\selectfont\vfil\begin{center}\title\bfseries}[\end{center}\vfil\newpage]
+	{}{}{0pt}{{\color{gray}\hrule height 10pt}\fontsize{48pt}{48pt}\selectfont\begin{center}\ifthenelse{\equal{\thechapter}{\string 0}}{}{\thechapter. }\title\bfseries}[\end{center}{\color{gray}\hrule height 10pt}]
+
+\titleformat{\part}[display]
+	{}{}{0pt}
+	{\fontsize{48pt}{48pt}\selectfont\begin{center}\thepart. \MakeUppercase}[\end{center}{\color{gray}\hrule height 10pt}]
 
 \let\oldsection\section
-\renewcommand{\section}[1]{
+\renewcommand{\section}[1]{%
 	\begin{center}
 		\item\oldsection{#1}
 	\end{center}
@@ -169,10 +178,10 @@
 	\oldparagraph{#1}\mbox{}\\
 }
 
-\newcommand{\block}[1]{
+\newcommand{\block}[1]{%
 	\noindent\begin{minipage}[t]{\textwidth}
 		#1
-	\end{minipage}
+	\end{minipage}%
 }
 
 \newcommand{\code}[1]{
